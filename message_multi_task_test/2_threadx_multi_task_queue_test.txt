@@ -1,0 +1,203 @@
+Initializing ThreadX system...
+Starting Main Thread...
+[Init] Multi Producer/Consumer Message Queue Benchmark started.
+**** Multi Producer/Consumer Message Queue Test **** Time: 10 sec
+Messages Sent in Period: 20365103
+Messages Received in Period: 20365091
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 20 sec
+Messages Sent in Period: 20365486
+Messages Received in Period: 20365496
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 30 sec
+Messages Sent in Period: 20364850
+Messages Received in Period: 20364830
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 40 sec
+Messages Sent in Period: 20365677
+Messages Received in Period: 20365698
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 50 sec
+Messages Sent in Period: 20365601
+Messages Received in Period: 20365590
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 60 sec
+Messages Sent in Period: 20365171
+Messages Received in Period: 20365155
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 70 sec
+Messages Sent in Period: 20365821
+Messages Received in Period: 20365822
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 80 sec
+Messages Sent in Period: 20364679
+Messages Received in Period: 20364706
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 90 sec
+Messages Sent in Period: 20364488
+Messages Received in Period: 20364489
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 100 sec
+Messages Sent in Period: 20364643
+Messages Received in Period: 20364644
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 110 sec
+Messages Sent in Period: 20365996
+Messages Received in Period: 20365977
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 120 sec
+Messages Sent in Period: 20365405
+Messages Received in Period: 20365419
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 130 sec
+Messages Sent in Period: 20365282
+Messages Received in Period: 20365264
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 140 sec
+Messages Sent in Period: 20365147
+Messages Received in Period: 20365141
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 150 sec
+Messages Sent in Period: 20365512
+Messages Received in Period: 20365521
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 160 sec
+Messages Sent in Period: 20365134
+Messages Received in Period: 20365130
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 170 sec
+Messages Sent in Period: 20365702
+Messages Received in Period: 20365698
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 180 sec
+Messages Sent in Period: 20366078
+Messages Received in Period: 20366101
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 190 sec
+Messages Sent in Period: 20365754
+Messages Received in Period: 20365732
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 200 sec
+Messages Sent in Period: 20365574
+Messages Received in Period: 20365574
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 210 sec
+Messages Sent in Period: 20365002
+Messages Received in Period: 20365013
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 220 sec
+Messages Sent in Period: 20365250
+Messages Received in Period: 20365264
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 230 sec
+Messages Sent in Period: 20365549
+Messages Received in Period: 20365543
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 240 sec
+Messages Sent in Period: 20364262
+Messages Received in Period: 20364241
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 250 sec
+Messages Sent in Period: 20366038
+Messages Received in Period: 20366039
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 260 sec
+Messages Sent in Period: 20364460
+Messages Received in Period: 20364467
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 270 sec
+Messages Sent in Period: 20364706
+Messages Received in Period: 20364722
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 280 sec
+Messages Sent in Period: 20366132
+Messages Received in Period: 20366107
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 290 sec
+Messages Sent in Period: 20366070
+Messages Received in Period: 20366085
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 300 sec
+Messages Sent in Period: 20365937
+Messages Received in Period: 20365931
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 310 sec
+Messages Sent in Period: 20365335
+Messages Received in Period: 20365356
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 320 sec
+Messages Sent in Period: 20364954
+Messages Received in Period: 20364936
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 330 sec
+Messages Sent in Period: 20364241
+Messages Received in Period: 20364239
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 340 sec
+Messages Sent in Period: 20365218
+Messages Received in Period: 20365223
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 350 sec
+Messages Sent in Period: 20365022
+Messages Received in Period: 20365016
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 360 sec
+Messages Sent in Period: 20364992
+Messages Received in Period: 20364985
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 370 sec
+Messages Sent in Period: 20365751
+Messages Received in Period: 20365760
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 380 sec
+Messages Sent in Period: 20365637
+Messages Received in Period: 20365636
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 390 sec
+Messages Sent in Period: 20365274
+Messages Received in Period: 20365294
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 400 sec
+Messages Sent in Period: 20364272
+Messages Received in Period: 20364242
+Integrity Errors: 0
+

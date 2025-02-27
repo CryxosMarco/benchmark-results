@@ -1,0 +1,258 @@
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+Initializing PMU...
+PMU Initialized.
+**** Thread Locking Benchmark **** Relative Time: 30
+Locking Operations in Period: 4711581
+
+Profile Entry: L00
+Cycle Count: 5218
+ICache Miss Count: 4
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L01
+Cycle Count: 5181
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L02
+Cycle Count: 5138
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L03
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L04
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L05
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L06
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L07
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L08
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L09
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L10
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L11
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L12
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L13
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L14
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L15
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L16
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L17
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L18
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L19
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L20
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L21
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L22
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L23
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L24
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L25
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L26
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L27
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L28
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L29
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L30
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+Profile Entry: L31
+Cycle Count: 5125
+ICache Miss Count: 0
+DCache Access Count: 35
+DCache Miss Count: 0
+
+**** Thread Locking Benchmark **** Relative Time: 60
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 90
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 120
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 150
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 180
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 210
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 240
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 270
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 300
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 330
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 360
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 390
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 420
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 450
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 480
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 510
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 540
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 570
+Locking Operations in Period: 4711583
+
+**** Thread Locking Benchmark **** Relative Time: 600
+Locking Operations in Period: 4711583
+
+

@@ -1,0 +1,12 @@
+RTOS: Freertos
+  Critical Section Time Period Total - Avg: 260534422.70, Min: 260528558, Max: 260539359
+  Data Points: 20
+----------------------------------------
+RTOS: Threadx
+  Critical Section Time Period Total - Avg: 413373796.57, Min: 413366921, Max: 413379638
+  Data Points: 14
+----------------------------------------
+RTOS: Zephyr
+  Critical Section Time Period Total - Avg: 266675540.23, Min: 266675449, Max: 266675548
+  Data Points: 13
+----------------------------------------

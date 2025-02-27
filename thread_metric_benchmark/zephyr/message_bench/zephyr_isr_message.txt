@@ -1,0 +1,41 @@
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...Initializing PMU...
+PMU Initialized.
+[Init] ISR-to-Task Message Queue Benchmark started.
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Entry: msg_latency
+Cycle Count: 1541
+[ICache Miss]: 19
+[DCache Access]: 155
+[DCache Miss]: 4
+
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...Initializing PMU...
+PMU Initialized.
+[Init] ISR-to-Task Message Queue Benchmark started.
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Entry: msg_latency
+Cycle Count: 1541
+[ICache Miss]: 19
+[DCache Access]: 155
+[DCache Miss]: 4
+
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...Initializing PMU...
+PMU Initialized.
+[Init] ISR-to-Task Message Queue Benchmark started.
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Entry: msg_latency
+Cycle Count: 1541
+[ICache Miss]: 19
+[DCache Access]: 155
+[DCache Miss]: 4

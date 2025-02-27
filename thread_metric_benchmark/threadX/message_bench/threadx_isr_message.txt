@@ -1,0 +1,29 @@
+Initializing ThreadX system...
+Starting Main Thread...
+[Init] ISR-to-Task Message Queue Benchmark started.
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Point: msg_latency                     
+Cycle Count: 3765
+ICache Miss Count: 46
+DCache Access Count: 313
+DCache Miss Count: 0
+
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Point: msg_latency                     
+Cycle Count: 3660
+ICache Miss Count: 43
+DCache Access Count: 313
+DCache Miss Count: 1
+
+==== OneShot Benchmark Complete ====
+Total messages processed: 1
+Total interrupts processed: 1
+Profile Point: msg_latency                     
+Cycle Count: 3698
+ICache Miss Count: 43
+DCache Access Count: 313
+DCache Miss Count: 3

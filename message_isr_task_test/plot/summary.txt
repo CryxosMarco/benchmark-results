@@ -1,0 +1,180 @@
+File: 16_freertos_isr_task_queue_test.txt
+RTOS: Freertos
+Message Size: 64 bytes
+Average Receive Cycle: 617.38
+Average Send Cycle: 644.05
+Average Cycle (Overall): 630.71
+Ramp-up (Receive): 2
+Ramp-up (Send): 4
+ICache Miss Range: 0.00 - 5.83
+DCache Access Range: 178.00 - 190.00
+DCache Miss Range: 0.00 - 3.00
+----------------------------------------
+File: 16_threadx_isr_task_queue_test.txt
+RTOS: Threadx
+Message Size: 64 bytes
+Average Receive Cycle: 379.34
+Average Send Cycle: 393.58
+Average Cycle (Overall): 386.46
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 12.83
+DCache Access Range: 125.00 - 133.00
+DCache Miss Range: 0.00 - 3.00
+----------------------------------------
+File: 16_zephyr_isr_task_queue_test.txt
+RTOS: Zephyr
+Message Size: 64 bytes
+Average Receive Cycle: 156.00
+Average Send Cycle: 179.00
+Average Cycle (Overall): 167.50
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 6.00
+DCache Access Range: 51.00 - 60.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 2_freertos_isr_task_queue_test.txt
+RTOS: Freertos
+Message Size: 8 bytes
+Average Receive Cycle: 288.13
+Average Send Cycle: 310.88
+Average Cycle (Overall): 299.50
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 8.83
+DCache Access Range: 66.00 - 78.00
+DCache Miss Range: 0.00 - 2.00
+----------------------------------------
+File: 2_threadx_isr_task_queue_test.txt
+RTOS: Threadx
+Message Size: 8 bytes
+Average Receive Cycle: 124.04
+Average Send Cycle: 152.50
+Average Cycle (Overall): 138.27
+Ramp-up (Receive): 30
+Ramp-up (Send): 30
+ICache Miss Range: 0.00 - 13.83
+DCache Access Range: 41.00 - 49.00
+DCache Miss Range: 0.00 - 2.00
+----------------------------------------
+File: 2_zephyr_isr_task_queue_test.txt
+RTOS: Zephyr
+Message Size: 8 bytes
+Average Receive Cycle: 120.00
+Average Send Cycle: 138.00
+Average Cycle (Overall): 129.00
+Ramp-up (Receive): 3
+Ramp-up (Send): 3
+ICache Miss Range: 0.00 - 8.00
+DCache Access Range: 32.00 - 40.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 32_freertos_isr_task_queue_test.txt
+RTOS: Freertos
+Message Size: 128 bytes
+Average Receive Cycle: 1000.38
+Average Send Cycle: 1021.96
+Average Cycle (Overall): 1011.17
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 7.83
+DCache Access Range: 306.00 - 318.00
+DCache Miss Range: 0.00 - 5.00
+----------------------------------------
+File: 32_threadx_isr_task_queue_test.txt
+RTOS: Threadx
+Message Size: 128 bytes
+Average Receive Cycle: 642.46
+Average Send Cycle: 645.46
+Average Cycle (Overall): 643.96
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 13.83
+DCache Access Range: 224.00 - 229.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 32_zephyr_isr_task_queue_test.txt
+RTOS: Zephyr
+Message Size: 128 bytes
+Average Receive Cycle: 204.00
+Average Send Cycle: 220.00
+Average Cycle (Overall): 212.00
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 6.00
+DCache Access Range: 79.00 - 88.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 4_freertos_isr_task_queue_test.txt
+RTOS: Freertos
+Message Size: 16 bytes
+Average Receive Cycle: 343.71
+Average Send Cycle: 367.05
+Average Cycle (Overall): 355.38
+Ramp-up (Receive): 30
+Ramp-up (Send): 3
+ICache Miss Range: 0.00 - 5.83
+DCache Access Range: 82.00 - 234.00
+DCache Miss Range: 0.00 - 2.00
+----------------------------------------
+File: 4_threadx_isr_task_queue_test.txt
+RTOS: Threadx
+Message Size: 16 bytes
+Average Receive Cycle: 156.58
+Average Send Cycle: 185.96
+Average Cycle (Overall): 171.27
+Ramp-up (Receive): 30
+Ramp-up (Send): 30
+ICache Miss Range: 0.00 - 11.83
+DCache Access Range: 53.00 - 61.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 4_zephyr_isr_task_queue_test.txt
+RTOS: Zephyr
+Message Size: 16 bytes
+Average Receive Cycle: 90.00
+Average Send Cycle: 124.00
+Average Cycle (Overall): 107.00
+Ramp-up (Receive): 30
+Ramp-up (Send): 30
+ICache Miss Range: 0.00 - 9.00
+DCache Access Range: 30.00 - 38.00
+DCache Miss Range: 0.00 - 2.00
+----------------------------------------
+File: 8_freertos_isr_task_queue_test.txt
+RTOS: Freertos
+Message Size: 32 bytes
+Average Receive Cycle: 425.05
+Average Send Cycle: 446.96
+Average Cycle (Overall): 436.00
+Ramp-up (Receive): 2
+Ramp-up (Send): 3
+ICache Miss Range: 0.00 - 5.83
+DCache Access Range: 114.00 - 126.00
+DCache Miss Range: 0.00 - 2.00
+----------------------------------------
+File: 8_threadx_isr_task_queue_test.txt
+RTOS: Threadx
+Message Size: 32 bytes
+Average Receive Cycle: 243.92
+Average Send Cycle: 261.21
+Average Cycle (Overall): 252.56
+Ramp-up (Receive): 3
+Ramp-up (Send): 30
+ICache Miss Range: 0.00 - 11.83
+DCache Access Range: 77.00 - 85.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------
+File: 8_zephyr_isr_task_queue_test.txt
+RTOS: Zephyr
+Message Size: 32 bytes
+Average Receive Cycle: 117.00
+Average Send Cycle: 135.00
+Average Cycle (Overall): 126.00
+Ramp-up (Receive): 2
+Ramp-up (Send): 2
+ICache Miss Range: 0.00 - 6.00
+DCache Access Range: 37.00 - 45.00
+DCache Miss Range: 0.00 - 1.00
+----------------------------------------

@@ -1,0 +1,254 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+**** Critical Section Benchmark **** Relative Time: 30
+Time Period Total:  260539359
+
+Profile Point: S00                             
+Cycle Count: 603
+ICache Miss Count: 4
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S01                             
+Cycle Count: 319
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S02                             
+Cycle Count: 339
+ICache Miss Count: 1
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S03                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S04                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S05                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S06                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S07                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S08                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S09                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S10                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S11                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S12                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S13                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S14                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S15                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S16                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S17                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S18                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S19                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S20                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S21                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S22                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S23                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S24                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S25                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S26                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S27                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S28                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S29                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S30                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+Profile Point: S31                             
+Cycle Count: 286
+ICache Miss Count: 0
+DCache Access Count: 48
+DCache Miss Count: 0
+
+**** Critical Section Benchmark **** Relative Time: 60
+Time Period Total:  260528558
+
+**** Critical Section Benchmark **** Relative Time: 90
+Time Period Total:  260529132
+
+**** Critical Section Benchmark **** Relative Time: 120
+Time Period Total:  260529535
+
+**** Critical Section Benchmark **** Relative Time: 150
+Time Period Total:  260532918
+
+**** Critical Section Benchmark **** Relative Time: 180
+Time Period Total:  260532868
+
+**** Critical Section Benchmark **** Relative Time: 210
+Time Period Total:  260538600
+
+**** Critical Section Benchmark **** Relative Time: 240
+Time Period Total:  260536976
+
+**** Critical Section Benchmark **** Relative Time: 270
+Time Period Total:  260538386
+
+**** Critical Section Benchmark **** Relative Time: 300
+Time Period Total:  260530181
+
+**** Critical Section Benchmark **** Relative Time: 330
+Time Period Total:  260536643
+
+**** Critical Section Benchmark **** Relative Time: 360
+Time Period Total:  260539020
+
+**** Critical Section Benchmark **** Relative Time: 390
+Time Period Total:  260536781
+
+**** Critical Section Benchmark **** Relative Time: 420
+Time Period Total:  260533233
+
+**** Critical Section Benchmark **** Relative Time: 450
+Time Period Total:  260535384
+
+**** Critical Section Benchmark **** Relative Time: 480
+Time Period Total:  260531581
+
+**** Critical Section Benchmark **** Relative Time: 510
+Time Period Total:  260536998
+
+**** Critical Section Benchmark **** Relative Time: 540
+Time Period Total:  260531456
+
+**** Critical Section Benchmark **** Relative Time: 570
+Time Period Total:  260531525
+
+**** Critical Section Benchmark **** Relative Time: 600
+Time Period Total:  260539320
+

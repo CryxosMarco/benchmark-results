@@ -1,0 +1,38 @@
+Zephyr Kalibration: 1 Sekunde gemessen
+Profile Entry: PMU_Test
+Cycle Count: 800804947
+[ICache Miss]: 28
+[DCache Access]: 223
+[DCache Miss]: 3
+start/stop Messung (Overhead):
+Profile Entry: PMU_Test
+Cycle Count: 192
+[ICache Miss]: 6
+[DCache Access]: 17
+[DCache Miss]: 0
+------------------------------------
+FreeRTOS Kalibration:
+Profile Point: PMU_Test                        
+Cycle Count: 799763022
+ICache Miss Count: 28
+DCache Access Count: 99998198
+DCache Miss Count: 20
+start/stop Messung (Overhead):
+Profile Point: PMU_Test                        
+Cycle Count: 364
+ICache Miss Count: 3
+DCache Access Count: 29
+DCache Miss Count: 0
+------------------------------------
+ThreadX Kalibration:
+Profile Point: PMU_Test                        
+Cycle Count: 799422627
+ICache Miss Count: 59
+DCache Access Count: 159826211
+DCache Miss Count: 7
+start/stop Messung (Overhead):
+Profile Point: PMU_Test                        
+Cycle Count: 426
+ICache Miss Count: 3
+DCache Access Count: 31
+DCache Miss Count: 0

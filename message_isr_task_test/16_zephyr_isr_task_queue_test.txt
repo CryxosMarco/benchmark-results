@@ -1,0 +1,370 @@
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+Initializing PMU...
+PMU Initialized.
+==== ISR-to-Task Benchmark Complete ====
+Total messages processed: 30
+Total interrupts processed: 30
+Receive Latency: Profile Entry: R00
+Cycle Count: 513
+ICache Miss: 6
+DCache Access: 69
+DCache Miss: 1
+
+Send Latency: Profile Entry: S00
+Cycle Count: 528
+ICache Miss: 6
+DCache Access: 77
+DCache Miss: 1
+
+Receive Latency: Profile Entry: R01
+Cycle Count: 192
+ICache Miss: 0
+DCache Access: 69
+DCache Miss: 0
+
+Send Latency: Profile Entry: S01
+Cycle Count: 222
+ICache Miss: 0
+DCache Access: 76
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R02
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S02
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R03
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S03
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R04
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S04
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R05
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S05
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R06
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S06
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R07
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 69
+DCache Miss: 0
+
+Send Latency: Profile Entry: S07
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 76
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R08
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S08
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R09
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S09
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R10
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S10
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R11
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S11
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R12
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S12
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R13
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S13
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R14
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S14
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R15
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 69
+DCache Miss: 0
+
+Send Latency: Profile Entry: S15
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 76
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R16
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S16
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R17
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S17
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R18
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S18
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R19
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S19
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R20
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S20
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R21
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S21
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R22
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S22
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R23
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 69
+DCache Miss: 0
+
+Send Latency: Profile Entry: S23
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 76
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R24
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S24
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R25
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S25
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R26
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S26
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R27
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S27
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R28
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S28
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+Receive Latency: Profile Entry: R29
+Cycle Count: 185
+ICache Miss: 0
+DCache Access: 68
+DCache Miss: 0
+
+Send Latency: Profile Entry: S29
+Cycle Count: 208
+ICache Miss: 0
+DCache Access: 75
+DCache Miss: 0
+
+

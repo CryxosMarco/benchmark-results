@@ -1,0 +1,68 @@
+Initializing ThreadX system...
+Starting Main Thread...
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 30
+Time Period Total:  21996002
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 60
+Time Period Total:  21995946
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 90
+Time Period Total:  21996172
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 120
+Time Period Total:  21995865
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 150
+Time Period Total:  21996068
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 180
+Time Period Total:  21996099
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 210
+Time Period Total:  21995841
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 240
+Time Period Total:  21995606
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 270
+Time Period Total:  21996019
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 300
+Time Period Total:  21996044
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 330
+Time Period Total:  21995593
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 360
+Time Period Total:  21996158
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 390
+Time Period Total:  21995581
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 420
+Time Period Total:  21996148
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 450
+Time Period Total:  21995822
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 480
+Time Period Total:  21996185
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 510
+Time Period Total:  21996000
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 540
+Time Period Total:  21996098
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 570
+Time Period Total:  21995677
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 600
+Time Period Total:  21995846
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 630
+Time Period Total:  21995992
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 660
+Time Period Total:  21996207
+
