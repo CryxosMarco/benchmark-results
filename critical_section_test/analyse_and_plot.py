@@ -82,7 +82,7 @@ def parse_overall_performance(filename):
     It looks for lines containing "Relative Time:" and "Time Period Total:".
     Returns two lists:
       - relative_times: list of relative time markers
-      - processing_times: corresponding "Time Period Total" values (representing critical section Time Period Total)
+      - processing_times: corresponding "Time Period Total" values
     """
     relative_times = []
     processing_times = []
@@ -246,6 +246,45 @@ def plot_overall_comparison(summary):
     plt.savefig(outfile)
     plt.close()
 
+def plot_overall_jitter_comparison(summary):
+    """
+    Generate separate bar charts for jitter total and jitter percentage across RTOSes.
+    Saves the plots as "plot/jitter_total_comparison.png" and "plot/jitter_percentage_comparison.png".
+    """
+    rtoses = [item['rtos'] for item in summary]
+    jitter_totals = [item['jitter_total'] for item in summary]
+    jitter_pcts = [item['jitter_pct'] for item in summary]
+    x = np.arange(len(rtoses))
+    
+    # Jitter Total Plot
+    plt.figure(figsize=(8,6))
+    plt.bar(x, jitter_totals, color='orange', edgecolor='black')
+    plt.xticks(x, rtoses)
+    plt.xlabel("RTOS")
+    plt.ylabel("Jitter Total")
+    plt.title("Jitter Total Comparison")
+    plt.grid(True, axis='y')
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+    outfile1 = os.path.join(plot_dir, "jitter_total_comparison.png")
+    plt.tight_layout()
+    plt.savefig(outfile1)
+    plt.close()
+    
+    # Jitter Percentage Plot
+    plt.figure(figsize=(8,6))
+    plt.bar(x, jitter_pcts, color='purple', edgecolor='black')
+    plt.xticks(x, rtoses)
+    plt.xlabel("RTOS")
+    plt.ylabel("Jitter Percentage (%)")
+    plt.title("Jitter Percentage Comparison")
+    plt.grid(True, axis='y')
+    outfile2 = os.path.join(plot_dir, "jitter_percentage_comparison.png")
+    plt.tight_layout()
+    plt.savefig(outfile2)
+    plt.close()
+
 # -------------------------------
 # Main function
 # -------------------------------
@@ -260,34 +299,35 @@ def main():
         cal_file = f"{rtos}_pmu_calibaration.txt"
         
         if not os.path.exists(test_file):
-            print(f"Test file for {rtos} not found; skipping...")
             continue
         
         if not os.path.exists(cal_file):
-            print(f"Calibration file for {rtos} not found; using zeros for calibration.")
             calibration = {'cycle': 0.0, 'icache': 0.0, 'dcache_access': 0.0, 'dcache_miss': 0.0}
         else:
             calibration = parse_calibration_file(cal_file)
-            print(f"Calibration for {rtos}: {calibration}")
         
         # Parse overall Time Period Total data.
         rel_times, processing_times = parse_overall_performance(test_file)
         if not processing_times:
-            print(f"No overall Time Period Total data found in {test_file}.")
             continue
         
         avg_overall, min_overall, max_overall = compute_stats(processing_times)
+        # Compute jitter metrics for overall performance.
+        jitter_total = max_overall - min_overall
+        jitter_pct = (jitter_total / avg_overall * 100) if avg_overall else 0
+        
         summary.append({
             'rtos': rtos.capitalize(),
             'avg_overall': avg_overall,
             'min_overall': min_overall,
             'max_overall': max_overall,
+            'jitter_total': jitter_total,
+            'jitter_pct': jitter_pct,
             'num_overall': len(processing_times)
         })
         
         # Plot overall Time Period Total.
         plot_overall_performance(rtos, rel_times, processing_times)
-        print(f"{rtos.capitalize()}: Time Period Total data points = {len(processing_times)}")
         
         # Parse PMU metrics from profile blocks.
         pmu_measurements = parse_pmu_metrics(test_file, calibration)
@@ -302,24 +342,21 @@ def main():
                 plot_pmu_metric("Cycle Count", cycles, rtos, base_filename)
             if icache or dcache_access or dcache_miss:
                 plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss)
-            print(f"{rtos.capitalize()}: Parsed {len(pmu_measurements)} PMU measurement blocks.")
-        else:
-            print(f"{rtos.capitalize()}: No PMU measurement blocks found.")
     
     # Generate overall Time Period Total comparison bar chart.
     if summary:
         plot_overall_comparison(summary)
+        plot_overall_jitter_comparison(summary)
     
-    # Write summary file.
+    # Write summary file in table form.
     summary_file = os.path.join("plot", "summary_critical_section.txt")
     with open(summary_file, "w") as f:
+        header = ("RTOS\tAvg Total\tMin Total\tMax Total\tJitter Total\tJitter (%)\tData Points\n")
+        f.write(header)
         for item in summary:
-            f.write(f"RTOS: {item['rtos']}\n")
-            f.write(f"  Critical Section Time Period Total - Avg: {item['avg_overall']:.2f}, Min: {item['min_overall']}, Max: {item['max_overall']}\n")
-            f.write(f"  Data Points: {item['num_overall']}\n")
-            f.write("-" * 40 + "\n")
-    
-    print("Critical section analysis complete. Summary and plots saved in the 'plot' directory.")
+            line = (f"{item['rtos']}\t{item['avg_overall']:.2f}\t{item['min_overall']}\t{item['max_overall']}\t"
+                    f"{item['jitter_total']}\t{item['jitter_pct']:.2f}\t{item['num_overall']}\n")
+            f.write(line)
 
 if __name__ == "__main__":
     main()
