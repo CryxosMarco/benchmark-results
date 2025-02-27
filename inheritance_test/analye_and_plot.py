@@ -229,6 +229,51 @@ def plot_inheritance_metrics(filename, measurements, rtos):
     }
 
 # --------------------------------
+# New: Plotting Cycle Count Jitter
+# --------------------------------
+
+def plot_cycle_jitter(summary):
+    """
+    Using the cycle count min and max values from the summary,
+    compute the absolute jitter (max - min) and the percentage jitter relative
+    to the robust average for Cycle Count. Then plot these values as bar charts.
+    """
+    rtoses = [item['rtos'] for item in summary]
+    # Compute jitter values for each RTOS.
+    jitter_abs = [item['cycle_max'] - item['cycle_min'] for item in summary]
+    jitter_pct = [
+        ((item['cycle_max'] - item['cycle_min']) / item['cycle_robust'] * 100) if item['cycle_robust'] != 0 else 0 
+        for item in summary
+    ]
+    
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+    
+    # Plot Absolute Jitter
+    plt.figure(figsize=(8,6))
+    x = np.arange(len(rtoses))
+    plt.bar(x, jitter_abs, color='skyblue')
+    plt.xticks(x, rtoses)
+    plt.ylabel("Cycle Count Jitter (Absolute)")
+    plt.title("Cycle Count Jitter (Absolute)")
+    plt.grid(True, axis='y')
+    plt.tight_layout()
+    plt.savefig(os.path.join(plot_dir, "cycle_jitter_absolute.png"))
+    plt.close()
+    
+    # Plot Percentage Jitter
+    plt.figure(figsize=(8,6))
+    plt.bar(x, jitter_pct, color='lightgreen')
+    plt.xticks(x, rtoses)
+    plt.ylabel("Cycle Count Jitter (%)")
+    plt.title("Cycle Count Jitter (%)")
+    plt.grid(True, axis='y')
+    plt.tight_layout()
+    plt.savefig(os.path.join(plot_dir, "cycle_jitter_percentage.png"))
+    plt.close()
+
+# --------------------------------
 # New: Comparison Plot for All RTOSes
 # --------------------------------
 
@@ -377,6 +422,8 @@ def main():
 
     # Generate the comparison plot for all RTOSes.
     plot_comparison_all_rtoses(summary)
+    # Generate the new Cycle Count jitter plots.
+    plot_cycle_jitter(summary)
 
 if __name__ == "__main__":
     main()
