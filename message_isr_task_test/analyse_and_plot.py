@@ -330,6 +330,38 @@ def plot_average_cycle_counts(summary):
         plt.savefig(f"plot/avg_cycle_{rtos.lower()}.png")
         plt.close()
 
+def plot_robust_average_comparison(summary):
+    """
+    Create a comparison plot with the robust average cycle counts for each RTOS
+    across message sizes. All RTOS are plotted on one figure.
+    """
+    # Group data by RTOS
+    rtos_groups = {}
+    for item in summary:
+        rtos = item['rtos']
+        if rtos not in rtos_groups:
+            rtos_groups[rtos] = []
+        rtos_groups[rtos].append((item['message_size_bytes'], item['avg_cycle']))
+    
+    plt.figure(figsize=(10, 6))
+    # Plot each RTOS data series
+    for rtos, data in rtos_groups.items():
+        # Sort by message size for a smooth line plot
+        data_sorted = sorted(data, key=lambda x: x[0])
+        sizes = [d[0] for d in data_sorted]
+        avg_cycles = [d[1] for d in data_sorted]
+        plt.plot(sizes, avg_cycles, marker='o', linestyle='-', label=rtos)
+    
+    plt.xlabel("Message Size (bytes)")
+    plt.ylabel("Robust Average Cycle Count")
+    plt.title("Comparison of Robust Average Cycle Counts Among RTOS")
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig("plot/robust_average_comparison.png")
+    plt.close()
+
+
 # -------------------------------
 # Main function
 # -------------------------------
@@ -399,6 +431,8 @@ def main():
     plot_cache_comparison(summary)
     # Create average cycle count plots for each RTOS
     plot_average_cycle_counts(summary)
+    # Create a single comparison plot for robust average cycle counts across all RTOS
+    plot_robust_average_comparison(summary)
     
     print("Analysis complete. Summary written to summary.txt and plots saved in the 'plot' directory.")
 

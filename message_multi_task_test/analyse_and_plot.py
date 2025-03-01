@@ -144,11 +144,15 @@ def main():
     # Plot 2: Comparison of Average Throughput Among RTOS for Each Message Size
     pivot_avg = summary_df.pivot(index='message_size', columns='rtos', values='avg_sent').sort_index()
     ax = pivot_avg.plot(kind='bar', figsize=(10, 6))
-    ax.set_xlabel("Message Size Factor (multiplied by 4 gives Bytes)")
+    # Check the pivot index to ensure it matches expectations
+    print("Pivot index:", pivot_avg.index)
+    # Set custom x-axis tick labels to 2, 4, 8, 16, 32
+    ax.set_xticks(range(len(pivot_avg.index)))
+    ax.set_xticklabels([2, 4, 8, 16, 32])
+    ax.set_xlabel("Message Size (in multiples corresponding to bytes)")
     ax.set_ylabel("Average Messages Sent in Period")
     ax.set_title("Average Throughput Comparison per Message Size Category")
     ax.grid(axis='y')
-    set_custom_formatter(ax)
     plt.tight_layout()
     plt.savefig("plot/avg_throughput_comparison.png")
     plt.close()
