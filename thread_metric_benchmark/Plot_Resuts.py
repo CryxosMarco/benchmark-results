@@ -72,7 +72,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
 
 if __name__ == "__main__":
     # Path to the input file (the previously generated CSV file)
-    base_dir = r"E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse"
+    base_dir = r"E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark"
     input_file = os.path.join(base_dir, "Test_Results.txt")
 
     # Folder for the output plots
