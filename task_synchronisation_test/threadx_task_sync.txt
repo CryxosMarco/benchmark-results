@@ -1,0 +1,435 @@
+Initializing ThreadX system...
+Starting Main Thread...
+[Main] Starting Synchronisation Test.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  36679215
+Task1 Counter:  18339607
+Task2 Counter:  18339608
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  36679168
+Task1 Counter:  36679191
+Task2 Counter:  36679192
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  36679185
+Task1 Counter:  55018784
+Task2 Counter:  55018784
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  36679181
+Task1 Counter:  73358374
+Task2 Counter:  73358375
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  36679084
+Task1 Counter:  91697916
+Task2 Counter:  91697917
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 180
+Time Period Total:  36679077
+Task1 Counter:  110037455
+Task2 Counter:  110037455
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 210
+Time Period Total:  36678850
+Task1 Counter:  128376880
+Task2 Counter:  128376880
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 240
+Time Period Total:  36678865
+Task1 Counter:  146716312
+Task2 Counter:  146716313
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 270
+Time Period Total:  36678861
+Task1 Counter:  165055743
+Task2 Counter:  165055743
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 300
+Time Period Total:  36678861
+Task1 Counter:  183395173
+Task2 Counter:  183395174
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 330
+Time Period Total:  36678857
+Task1 Counter:  201734602
+Task2 Counter:  201734602
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 360
+Time Period Total:  36662999
+Task1 Counter:  220066101
+Task2 Counter:  220066102
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 390
+Time Period Total:  36662954
+Task1 Counter:  238397578
+Task2 Counter:  238397579
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 420
+Time Period Total:  36678840
+Task1 Counter:  256736998
+Task2 Counter:  256736999
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 450
+Time Period Total:  36678855
+Task1 Counter:  275076426
+Task2 Counter:  275076426
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 480
+Time Period Total:  36676811
+Task1 Counter:  293414831
+Task2 Counter:  293414832
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 510
+Time Period Total:  36678861
+Task1 Counter:  311754262
+Task2 Counter:  311754262
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 540
+Time Period Total:  36678856
+Task1 Counter:  330093690
+Task2 Counter:  330093690
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 570
+Time Period Total:  36678818
+Task1 Counter:  348433099
+Task2 Counter:  348433099
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 600
+Time Period Total:  36678845
+Task1 Counter:  366772521
+Task2 Counter:  366772522
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 630
+Time Period Total:  36678851
+Task1 Counter:  385111947
+Task2 Counter:  385111947
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 660
+Time Period Total:  36678837
+Task1 Counter:  403451365
+Task2 Counter:  403451366
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 690
+Time Period Total:  36678848
+Task1 Counter:  421790789
+Task2 Counter:  421790790
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 720
+Time Period Total:  36678851
+Task1 Counter:  440130215
+Task2 Counter:  440130215
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 750
+Time Period Total:  36678850
+Task1 Counter:  458469640
+Task2 Counter:  458469640
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 780
+Time Period Total:  36678853
+Task1 Counter:  476809066
+Task2 Counter:  476809067
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 810
+Time Period Total:  36678847
+Task1 Counter:  495148490
+Task2 Counter:  495148490
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 840
+Time Period Total:  36678850
+Task1 Counter:  513487915
+Task2 Counter:  513487915
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 870
+Time Period Total:  36678858
+Task1 Counter:  531827344
+Task2 Counter:  531827344
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 900
+Time Period Total:  36678852
+Task1 Counter:  550166770
+Task2 Counter:  550166770
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 930
+Time Period Total:  36678841
+Task1 Counter:  568506190
+Task2 Counter:  568506191
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 960
+Time Period Total:  36676821
+Task1 Counter:  586844601
+Task2 Counter:  586844601
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 990
+Time Period Total:  36678855
+Task1 Counter:  605184028
+Task2 Counter:  605184029
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 1020
+Time Period Total:  36678855
+Task1 Counter:  623523456
+Task2 Counter:  623523456
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 1050
+Time Period Total:  36678741
+Task1 Counter:  641862826
+Task2 Counter:  641862827
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 1080
+Time Period Total:  36678737
+Task1 Counter:  660202195
+Task2 Counter:  660202195
+Average Time per Iteration:    4.832810e+231 ns
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 1482
+ICache Miss Count: 11
+DCache Access Count: 233
+DCache Miss Count: 0

@@ -1,27 +1,27 @@
 RTOS: Freertos
 File: freertos_inheritance_test.txt
-Total Inversion Cycles: 30
-Number of Measurements: 60
-Cycle Count - Min: 149.38, Robust Avg: 1717.38, Median: 206.88, Max: 3677.38
-ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 1.83
-DCache Access - Min: 27.00, Robust Avg: 235.67, Median: 27.00, Max: 699.00
+Total Inversion Cycles: 32
+Number of Measurements: 32
+Cycle Count - Min: 144.38, Robust Avg: 2139.76, Median: 3487.38, Max: 5365.38
+ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 3.83
+DCache Access - Min: 27.00, Robust Avg: 371.04, Median: 360.00, Max: 749.00
 DCache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 0.00
 ----------------------------------------
 RTOS: Threadx
 File: threadx_inheritance_test.txt
 Total Inversion Cycles: 32
-Number of Measurements: 64
-Cycle Count - Min: 32.46, Robust Avg: 2160.13, Median: 2418.46, Max: 2556.46
-ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 4.83
-DCache Access - Min: 1.00, Robust Avg: 363.79, Median: 555.00, Max: 559.00
-DCache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 0.00
+Number of Measurements: 32
+Cycle Count - Min: 15.46, Robust Avg: 2218.92, Median: 2397.46, Max: 3423.46
+ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 20.83
+DCache Access - Min: 1.00, Robust Avg: 363.31, Median: 555.00, Max: 559.00
+DCache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 1.00
 ----------------------------------------
 RTOS: Zephyr
 File: zephyr_inheritance_test.txt
 Total Inversion Cycles: 32
-Number of Measurements: 64
-Cycle Count - Min: 26.00, Robust Avg: 502.42, Median: 33.00, Max: 3241.00
-ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 25.00
-DCache Access - Min: 1.00, Robust Avg: 163.46, Median: 225.00, Max: 261.00
-DCache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 4.00
+Number of Measurements: 32
+Cycle Count - Min: 25.00, Robust Avg: 1100.12, Median: 40.00, Max: 3496.00
+ICache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 10.00
+DCache Access - Min: 1.00, Robust Avg: 182.19, Median: 226.00, Max: 267.00
+DCache Miss - Min: 0.00, Robust Avg: 0.00, Median: 0.00, Max: 1.00
 ----------------------------------------

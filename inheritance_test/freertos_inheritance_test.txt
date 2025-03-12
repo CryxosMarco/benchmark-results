@@ -1,372 +1,200 @@
+*** Test Complete ***
+Total inversion cycles completed: 32
+[MedPrioTask] Test ended. Suspending task.
 Initializing FreeRTOS system...
 Starting Thread-Metric tests...
-[Init] Priority Inheritance detection test started for 30 cycles.
+[Init] Priority Inheritance detection test started for 32 cycles.
 
 *** Test Complete ***
-Total inversion cycles completed: 30
+Total inversion cycles completed: 32
 Profile Point: INV00                           
-Cycle Count: 450
-ICache Miss Count: 2
+Cycle Count: 5572
+ICache Miss Count: 4
 DCache Access Count: 59
 DCache Miss Count: 0
 
 Profile Point: INV01                           
-Cycle Count: 377
+Cycle Count: 382
 ICache Miss Count: 0
 DCache Access Count: 59
 DCache Miss Count: 0
 
 Profile Point: INV02                           
-Cycle Count: 3740
+Cycle Count: 370
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV03                           
+Cycle Count: 351
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV04                           
+Cycle Count: 370
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV05                           
+Cycle Count: 3704
+ICache Miss Count: 0
+DCache Access Count: 730
+DCache Miss Count: 0
+
+Profile Point: INV06                           
+Cycle Count: 3869
+ICache Miss Count: 0
+DCache Access Count: 776
+DCache Miss Count: 0
+
+Profile Point: INV07                           
+Cycle Count: 3638
+ICache Miss Count: 0
+DCache Access Count: 725
+DCache Miss Count: 0
+
+Profile Point: INV08                           
+Cycle Count: 360
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV09                           
+Cycle Count: 3710
+ICache Miss Count: 0
+DCache Access Count: 730
+DCache Miss Count: 0
+
+Profile Point: INV10                           
+Cycle Count: 377
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV11                           
+Cycle Count: 3749
+ICache Miss Count: 0
+DCache Access Count: 730
+DCache Miss Count: 0
+
+Profile Point: INV12                           
+Cycle Count: 3901
+ICache Miss Count: 0
+DCache Access Count: 776
+DCache Miss Count: 0
+
+Profile Point: INV13                           
+Cycle Count: 3757
 ICache Miss Count: 0
 DCache Access Count: 726
 DCache Miss Count: 0
 
-Profile Point: INV03                           
+Profile Point: INV14                           
+Cycle Count: 3889
+ICache Miss Count: 0
+DCache Access Count: 776
+DCache Miss Count: 0
+
+Profile Point: INV15                           
+Cycle Count: 360
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV16                           
+Cycle Count: 360
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV17                           
+Cycle Count: 3684
+ICache Miss Count: 0
+DCache Access Count: 725
+DCache Miss Count: 0
+
+Profile Point: INV18                           
+Cycle Count: 3967
+ICache Miss Count: 0
+DCache Access Count: 781
+DCache Miss Count: 0
+
+Profile Point: INV19                           
+Cycle Count: 370
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV20                           
+Cycle Count: 3977
+ICache Miss Count: 0
+DCache Access Count: 781
+DCache Miss Count: 0
+
+Profile Point: INV21                           
 Cycle Count: 368
 ICache Miss Count: 0
 DCache Access Count: 59
 DCache Miss Count: 0
 
-Profile Point: INV04                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV05                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV06                           
-Cycle Count: 356
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV07                           
-Cycle Count: 3735
-ICache Miss Count: 0
-DCache Access Count: 726
-DCache Miss Count: 0
-
-Profile Point: INV08                           
-Cycle Count: 376
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV09                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV10                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV11                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV12                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV13                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV14                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV15                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV16                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV17                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV18                           
-Cycle Count: 376
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV19                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV20                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV21                           
-Cycle Count: 356
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
 Profile Point: INV22                           
-Cycle Count: 377
+Cycle Count: 3987
 ICache Miss Count: 0
-DCache Access Count: 59
+DCache Access Count: 781
 DCache Miss Count: 0
 
 Profile Point: INV23                           
-Cycle Count: 356
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV24                           
-Cycle Count: 356
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV25                           
-Cycle Count: 356
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV26                           
-Cycle Count: 3770
-ICache Miss Count: 0
-DCache Access Count: 731
-DCache Miss Count: 0
-
-Profile Point: INV27                           
-Cycle Count: 365
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV28                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV29                           
-Cycle Count: 377
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Initializing FreeRTOS system...
-Starting Thread-Metric tests...
-[Init] Priority Inheritance detection test started for 30 cycles.
-
-*** Test Complete ***
-Total inversion cycles completed: 30
-Profile Point: INV00                           
-Cycle Count: 450
-ICache Miss Count: 2
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV01                           
-Cycle Count: 3884
-ICache Miss Count: 2
-DCache Access Count: 731
-DCache Miss Count: 0
-
-Profile Point: INV02                           
-Cycle Count: 366
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV03                           
-Cycle Count: 3765
-ICache Miss Count: 0
-DCache Access Count: 731
-DCache Miss Count: 0
-
-Profile Point: INV04                           
-Cycle Count: 3729
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV05                           
-Cycle Count: 3765
-ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV06                           
-Cycle Count: 3791
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV07                           
-Cycle Count: 3770
-ICache Miss Count: 0
-DCache Access Count: 726
-DCache Miss Count: 0
-
-Profile Point: INV08                           
-Cycle Count: 3699
-ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV09                           
-Cycle Count: 3755
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV10                           
-Cycle Count: 366
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV11                           
-Cycle Count: 366
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV12                           
-Cycle Count: 369
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV13                           
-Cycle Count: 3778
-ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV14                           
 Cycle Count: 3758
 ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV15                           
-Cycle Count: 3773
-ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV16                           
-Cycle Count: 3755
-ICache Miss Count: 0
-DCache Access Count: 726
-DCache Miss Count: 0
-
-Profile Point: INV17                           
-Cycle Count: 3793
-ICache Miss Count: 0
-DCache Access Count: 731
-DCache Miss Count: 0
-
-Profile Point: INV18                           
-Cycle Count: 3866
-ICache Miss Count: 0
-DCache Access Count: 731
-DCache Miss Count: 0
-
-Profile Point: INV19                           
-Cycle Count: 3717
-ICache Miss Count: 0
-DCache Access Count: 727
-DCache Miss Count: 0
-
-Profile Point: INV20                           
-Cycle Count: 3783
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV21                           
-Cycle Count: 3748
-ICache Miss Count: 0
-DCache Access Count: 726
-DCache Miss Count: 0
-
-Profile Point: INV22                           
-Cycle Count: 3793
-ICache Miss Count: 0
-DCache Access Count: 59
-DCache Miss Count: 0
-
-Profile Point: INV23                           
-Cycle Count: 3816
-ICache Miss Count: 0
-DCache Access Count: 731
+DCache Access Count: 730
 DCache Miss Count: 0
 
 Profile Point: INV24                           
-Cycle Count: 3718
+Cycle Count: 3878
 ICache Miss Count: 0
-DCache Access Count: 726
+DCache Access Count: 777
 DCache Miss Count: 0
 
 Profile Point: INV25                           
-Cycle Count: 3730
+Cycle Count: 382
 ICache Miss Count: 0
 DCache Access Count: 59
 DCache Miss Count: 0
 
 Profile Point: INV26                           
-Cycle Count: 3788
+Cycle Count: 3996
 ICache Miss Count: 0
-DCache Access Count: 731
+DCache Access Count: 781
 DCache Miss Count: 0
 
 Profile Point: INV27                           
-Cycle Count: 3729
+Cycle Count: 3718
 ICache Miss Count: 0
-DCache Access Count: 726
+DCache Access Count: 730
 DCache Miss Count: 0
 
 Profile Point: INV28                           
-Cycle Count: 3747
+Cycle Count: 377
 ICache Miss Count: 0
 DCache Access Count: 59
 DCache Miss Count: 0
 
 Profile Point: INV29                           
-Cycle Count: 3704
+Cycle Count: 360
 ICache Miss Count: 0
-DCache Access Count: 726
+DCache Access Count: 59
 DCache Miss Count: 0
 
+Profile Point: INV30                           
+Cycle Count: 360
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0
+
+Profile Point: INV31                           
+Cycle Count: 3731
+ICache Miss Count: 0
+DCache Access Count: 59
+DCache Miss Count: 0

@@ -1,0 +1,17 @@
+Additional timings:                                     FreeRTOS              Zephyr            ThreadX
+
+basic_proocessing_test: Average Time per Iteration:    12.833544 us
+cooperative scheduling: Average Time per Iteration:    0.321159 us
+Interrupt preempption:  Average Time per Iteration:    2.544418 us
+Interrupt processing:   Average Time per Iteration:    1.148662 us
+Memory allocation Test: Average Time per Iteration:    0.914923 us
+tm five funktioniert nicht mehr:
+Preemtive Scheduling:   Average Time per Iteration:    1.347749 us
+Synchronization Proc:   Average Time per Iteration:    0.418039 us
+-----------------------------------------------------------------------------------------------------------------
+specific snyc. test:    Average Time per Iteration:    1.851118 us
+Task Synchronisation:   Average Time per Iteration:    2.621682 us
+Multi Task Queue Test:  Average Time per Send:         12.106220 us
+                        Average Time per Receive:      12.106244 us
+Thread Locking Test:    Average Time per Iteration:    1.570942 us
+Critical Section:       Average Time per Iteration:    1.468109 us

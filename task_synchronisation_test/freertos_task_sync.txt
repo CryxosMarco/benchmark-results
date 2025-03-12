@@ -1,0 +1,365 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+[Main] Starting Synchronisation Test.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  11488197
+Task1 Counter:  5744098
+Task2 Counter:  5744099
+Average Time per Iteration:    2.611376 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  11489633
+Task1 Counter:  11488915
+Task2 Counter:  11488915
+Average Time per Iteration:    2.611049 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  11489946
+Task1 Counter:  17233888
+Task2 Counter:  17233888
+Average Time per Iteration:    2.610978 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  11489944
+Task1 Counter:  22978860
+Task2 Counter:  22978860
+Average Time per Iteration:    2.610979 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  11489910
+Task1 Counter:  28723815
+Task2 Counter:  28723815
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 180
+Time Period Total:  11489908
+Task1 Counter:  34468769
+Task2 Counter:  34468769
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 210
+Time Period Total:  11489909
+Task1 Counter:  40213723
+Task2 Counter:  40213724
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 240
+Time Period Total:  11489913
+Task1 Counter:  45958680
+Task2 Counter:  45958680
+Average Time per Iteration:    2.610986 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 270
+Time Period Total:  11489912
+Task1 Counter:  51703636
+Task2 Counter:  51703636
+Average Time per Iteration:    2.610986 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 300
+Time Period Total:  11489909
+Task1 Counter:  57448590
+Task2 Counter:  57448591
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 330
+Time Period Total:  11489910
+Task1 Counter:  63193545
+Task2 Counter:  63193546
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 360
+Time Period Total:  11489909
+Task1 Counter:  68938500
+Task2 Counter:  68938500
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 390
+Time Period Total:  11489906
+Task1 Counter:  74683453
+Task2 Counter:  74683453
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 420
+Time Period Total:  11489907
+Task1 Counter:  80428406
+Task2 Counter:  80428407
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 450
+Time Period Total:  11489911
+Task1 Counter:  86173362
+Task2 Counter:  86173362
+Average Time per Iteration:    2.610986 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 480
+Time Period Total:  11489911
+Task1 Counter:  91918317
+Task2 Counter:  91918318
+Average Time per Iteration:    2.610986 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 510
+Time Period Total:  11489908
+Task1 Counter:  97663271
+Task2 Counter:  97663272
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 540
+Time Period Total:  11489910
+Task1 Counter:  103408226
+Task2 Counter:  103408227
+Average Time per Iteration:    2.610987 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 570
+Time Period Total:  11489840
+Task1 Counter:  109153146
+Task2 Counter:  109153147
+Average Time per Iteration:    2.611002 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 600
+Time Period Total:  11489832
+Task1 Counter:  114898062
+Task2 Counter:  114898063
+Average Time per Iteration:    2.611004 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 630
+Time Period Total:  11489841
+Task1 Counter:  120642983
+Task2 Counter:  120642983
+Average Time per Iteration:    2.611002 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 660
+Time Period Total:  11489836
+Task1 Counter:  126387901
+Task2 Counter:  126387901
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 690
+Time Period Total:  11489840
+Task1 Counter:  132132821
+Task2 Counter:  132132821
+Average Time per Iteration:    2.611002 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 720
+Time Period Total:  11489838
+Task1 Counter:  137877740
+Task2 Counter:  137877740
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 750
+Time Period Total:  11489830
+Task1 Counter:  143622655
+Task2 Counter:  143622655
+Average Time per Iteration:    2.611005 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 780
+Time Period Total:  11489837
+Task1 Counter:  149367573
+Task2 Counter:  149367574
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 810
+Time Period Total:  11489837
+Task1 Counter:  155112492
+Task2 Counter:  155112492
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 840
+Time Period Total:  11489837
+Task1 Counter:  160857410
+Task2 Counter:  160857411
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 870
+Time Period Total:  11489840
+Task1 Counter:  166602330
+Task2 Counter:  166602331
+Average Time per Iteration:    2.611002 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 900
+Time Period Total:  11489836
+Task1 Counter:  172347248
+Task2 Counter:  172347249
+Average Time per Iteration:    2.611003 us
+
+Profile Point: SEM_A_perf                      
+Cycle Count: 3200
+ICache Miss Count: 12
+DCache Access Count: 494
+DCache Miss Count: 0
+
+

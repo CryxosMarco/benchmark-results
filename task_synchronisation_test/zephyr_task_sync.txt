@@ -1,0 +1,348 @@
+
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+[Main] Starting Synchronisation Test.
+Initializing PMU...
+PMU Initialized.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  53040402
+Task1 Counter:  26520201
+Task2 Counter:  26520201
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  53040441
+Task1 Counter:  53040421
+Task2 Counter:  53040422
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  53040440
+Task1 Counter:  79560641
+Task2 Counter:  79560642
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  53040441
+Task1 Counter:  106080862
+Task2 Counter:  106080862
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  53040440
+Task1 Counter:  132601082
+Task2 Counter:  132601082
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 180
+Time Period Total:  53040441
+Task1 Counter:  159121302
+Task2 Counter:  159121303
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 210
+Time Period Total:  53040440
+Task1 Counter:  185641522
+Task2 Counter:  185641523
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 240
+Time Period Total:  53040441
+Task1 Counter:  212161743
+Task2 Counter:  212161743
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 270
+Time Period Total:  53040440
+Task1 Counter:  238681963
+Task2 Counter:  238681963
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 300
+Time Period Total:  53040441
+Task1 Counter:  265202183
+Task2 Counter:  265202184
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 330
+Time Period Total:  53040440
+Task1 Counter:  291722403
+Task2 Counter:  291722404
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 360
+Time Period Total:  53040441
+Task1 Counter:  318242624
+Task2 Counter:  318242624
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 390
+Time Period Total:  53040440
+Task1 Counter:  344762844
+Task2 Counter:  344762844
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 420
+Time Period Total:  53040441
+Task1 Counter:  371283064
+Task2 Counter:  371283065
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 450
+Time Period Total:  53040440
+Task1 Counter:  397803284
+Task2 Counter:  397803285
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 480
+Time Period Total:  53040441
+Task1 Counter:  424323505
+Task2 Counter:  424323505
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 510
+Time Period Total:  53040440
+Task1 Counter:  450843725
+Task2 Counter:  450843725
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 540
+Time Period Total:  53040441
+Task1 Counter:  477363945
+Task2 Counter:  477363946
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 570
+Time Period Total:  53040440
+Task1 Counter:  503884165
+Task2 Counter:  503884166
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 600
+Time Period Total:  53040441
+Task1 Counter:  530404386
+Task2 Counter:  530404386
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 630
+Time Period Total:  53040440
+Task1 Counter:  556924606
+Task2 Counter:  556924606
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 660
+Time Period Total:  53040441
+Task1 Counter:  583444826
+Task2 Counter:  583444827
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 690
+Time Period Total:  53040440
+Task1 Counter:  609965046
+Task2 Counter:  609965047
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 720
+Time Period Total:  53040441
+Task1 Counter:  636485267
+Task2 Counter:  636485267
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 750
+Time Period Total:  53040440
+Task1 Counter:  663005487
+Task2 Counter:  663005487
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 780
+Time Period Total:  53040441
+Task1 Counter:  689525707
+Task2 Counter:  689525708
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 810
+Time Period Total:  53040440
+Task1 Counter:  716045927
+Task2 Counter:  716045928
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 840
+Time Period Total:  53040441
+Task1 Counter:  742566148
+Task2 Counter:  742566148
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 870
+Time Period Total:  53040440
+Task1 Counter:  769086368
+Task2 Counter:  769086368
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 900
+Time Period Total:  53040441
+Task1 Counter:  795606588
+Task2 Counter:  795606589
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 930
+Time Period Total:  53040440
+Task1 Counter:  822126808
+Task2 Counter:  822126809
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 960
+Time Period Total:  53040441
+Task1 Counter:  848647029
+Task2 Counter:  848647029
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 990
+Time Period Total:  53040440
+Task1 Counter:  875167249
+Task2 Counter:  875167249
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
+
+**** Task Synchronistation Test **** Relative Time: 1020
+Time Period Total:  53040441
+Task1 Counter:  901687469
+Task2 Counter:  901687470
+Profile Entry: SEM_A_perf
+Cycle Count: 848
+ICache Miss Count: 6
+DCache Access Count: 128
+DCache Miss Count: 2
