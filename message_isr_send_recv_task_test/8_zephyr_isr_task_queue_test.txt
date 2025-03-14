@@ -1,0 +1,201 @@
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+Initializing PMU...
+PMU Initialized.
+==== ISR-to-Task Benchmark Complete ====
+Total messages processed: 32
+Total interrupts processed: 32
+Send Latency: Profile Entry: S00
+Cycle Count: 1111
+ICache Miss Count: 16
+DCache Access Count: 116
+DCache Miss Count: 2
+
+Send Latency: Profile Entry: S01
+Cycle Count: 494
+ICache Miss Count: 1
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S02
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S03
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S04
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S05
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S06
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S07
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 117
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S08
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S09
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S10
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S11
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S12
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S13
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S14
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S15
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 117
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S16
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S17
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S18
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S19
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S20
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S21
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S22
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S23
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 117
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S24
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S25
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S26
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S27
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S28
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S29
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S30
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 115
+DCache Miss Count: 0
+
+Send Latency: Profile Entry: S31
+Cycle Count: 395
+ICache Miss Count: 0
+DCache Access Count: 117
+DCache Miss Count: 0
+
+
