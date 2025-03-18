@@ -245,7 +245,8 @@ def main():
         # Build list of robust averages for each RTOS.
         values = [summary_dict[rtos][metric]['robust_avg'] for rtos in rtoses]
         plt.figure()
-        plt.bar(rtoses, values)
+        # plot bars in different colors
+        plt.bar(rtoses, values, color=['skyblue', 'lightgreen', 'darkorange'])
         plt.xlabel("RTOS")
         plt.ylabel(ylabel)
         plt.title(title)
