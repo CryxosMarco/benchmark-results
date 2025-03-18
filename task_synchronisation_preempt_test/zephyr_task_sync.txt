@@ -1,0 +1,330 @@
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+[Main] Starting Synchronisation Test.
+Initializing PMU...
+PMU Initialized.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  62911638
+Task1 Counter:  31455819
+Task2 Counter:  31455819
+No profile entry found for name: Cycle00
+Profile Entry: Cycle01
+Cycle Count: 653
+ICache Miss Count: 6
+DCache Access Count: 101
+DCache Miss Count: 0
+
+Profile Entry: Cycle02
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle03
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle04
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle05
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle06
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle07
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle08
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle09
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle10
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle11
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle12
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle13
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle14
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle15
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle16
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle17
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle18
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle19
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle20
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle21
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle22
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle23
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle24
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle25
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle26
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle27
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle28
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle29
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle30
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+Profile Entry: Cycle31
+Cycle Count: 389
+ICache Miss Count: 0
+DCache Access Count: 100
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  62911663
+Task1 Counter:  62911650
+Task2 Counter:  62911651
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  62911663
+Task1 Counter:  94367482
+Task2 Counter:  94367482
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  62911663
+Task1 Counter:  125823313
+Task2 Counter:  125823314
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  62911663
+Task1 Counter:  157279145
+Task2 Counter:  157279145
+**** Task Synchronistation Test **** Relative Time: 180
+Time Period Total:  62911663
+Task1 Counter:  188734976
+Task2 Counter:  188734977
+**** Task Synchronistation Test **** Relative Time: 210
+Time Period Total:  62911663
+Task1 Counter:  220190808
+Task2 Counter:  220190808
+**** Task Synchronistation Test **** Relative Time: 240
+Time Period Total:  62911662
+Task1 Counter:  251646639
+Task2 Counter:  251646639
+**** Task Synchronistation Test **** Relative Time: 270
+Time Period Total:  62911663
+Task1 Counter:  283102470
+Task2 Counter:  283102471
+**** Task Synchronistation Test **** Relative Time: 300
+Time Period Total:  62911663
+Task1 Counter:  314558302
+Task2 Counter:  314558302
+**** Task Synchronistation Test **** Relative Time: 330
+Time Period Total:  62911663
+Task1 Counter:  346014133
+Task2 Counter:  346014134
+**** Task Synchronistation Test **** Relative Time: 360
+Time Period Total:  62911663
+Task1 Counter:  377469965
+Task2 Counter:  377469965
+**** Task Synchronistation Test **** Relative Time: 390
+Time Period Total:  62911663
+Task1 Counter:  408925796
+Task2 Counter:  408925797
+**** Task Synchronistation Test **** Relative Time: 420
+Time Period Total:  62911663
+Task1 Counter:  440381628
+Task2 Counter:  440381628
+**** Task Synchronistation Test **** Relative Time: 450
+Time Period Total:  62911663
+Task1 Counter:  471837459
+Task2 Counter:  471837460
+**** Task Synchronistation Test **** Relative Time: 480
+Time Period Total:  62911663
+Task1 Counter:  503293291
+Task2 Counter:  503293291
+**** Task Synchronistation Test **** Relative Time: 510
+Time Period Total:  62911663
+Task1 Counter:  534749122
+Task2 Counter:  534749123
+**** Task Synchronistation Test **** Relative Time: 540
+Time Period Total:  62911663
+Task1 Counter:  566204954
+Task2 Counter:  566204954
+**** Task Synchronistation Test **** Relative Time: 570
+Time Period Total:  62911662
+Task1 Counter:  597660785
+Task2 Counter:  597660785
+**** Task Synchronistation Test **** Relative Time: 600
+Time Period Total:  62911663
+Task1 Counter:  629116616
+Task2 Counter:  629116617
+**** Task Synchronistation Test **** Relative Time: 630
+Time Period Total:  62911663
+Task1 Counter:  660572448
+Task2 Counter:  660572448
+**** Task Synchronistation Test **** Relative Time: 660
+Time Period Total:  62911662
+Task1 Counter:  692028279
+Task2 Counter:  692028279
+**** Task Synchronistation Test **** Relative Time: 690
+Time Period Total:  62911663
+Task1 Counter:  723484110
+Task2 Counter:  723484111
+**** Task Synchronistation Test **** Relative Time: 720
+Time Period Total:  62911663
+Task1 Counter:  754939942
+Task2 Counter:  754939942
+**** Task Synchronistation Test **** Relative Time: 750
+Time Period Total:  62911663
+Task1 Counter:  786395773
+Task2 Counter:  786395774
+**** Task Synchronistation Test **** Relative Time: 780
+Time Period Total:  62911663
+Task1 Counter:  817851605
+Task2 Counter:  817851605
+**** Task Synchronistation Test **** Relative Time: 810
+Time Period Total:  62911663
+Task1 Counter:  849307436
+Task2 Counter:  849307437
+**** Task Synchronistation Test **** Relative Time: 840
+Time Period Total:  62911663
+Task1 Counter:  880763268
+Task2 Counter:  880763268
+**** Task Synchronistation Test **** Relative Time: 870
+Time Period Total:  62911663
+Task1 Counter:  912219099
+Task2 Counter:  912219100
+**** Task Synchronistation Test **** Relative Time: 900
+Time Period Total:  62911663
+Task1 Counter:  943674931
+Task2 Counter:  943674931
+**** Task Synchronistation Test **** Relative Time: 930
+Time Period Total:  62911663
+Task1 Counter:  975130762
+Task2 Counter:  975130763
+**** Task Synchronistation Test **** Relative Time: 960
+Time Period Total:  62911663
+Task1 Counter:  1006586594
+Task2 Counter:  1006586594
+**** Task Synchronistation Test **** Relative Time: 990
+Time Period Total:  62911663
+Task1 Counter:  1038042425
+Task2 Counter:  1038042426
+**** Task Synchronistation Test **** Relative Time: 1020
+Time Period Total:  62911663
+Task1 Counter:  1069498257
+Task2 Counter:  1069498257

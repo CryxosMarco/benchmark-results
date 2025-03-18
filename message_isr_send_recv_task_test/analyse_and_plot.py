@@ -22,20 +22,6 @@ def robust_average(values, trim_fraction=0.1):
     trimmed = np.sort(arr)[trim_count:n - trim_count]
     return np.mean(trimmed)
 
-def find_ramp_up(values, tolerance=0.1, window=3):
-    """
-    Find the iteration (starting at 1) at which the values become stable.
-    "Stable" is defined as a window of consecutive iterations all within tolerance * overall mean.
-    """
-    if not values:
-        return 0
-    avg = np.mean(values)
-    for i in range(len(values) - window + 1):
-        window_vals = values[i:i+window]
-        if all(abs(v - avg) <= tolerance * avg for v in window_vals):
-            return i + 1  # iterations are 1-indexed
-    return len(values)
-
 # -------------------------------
 # Calibration parsing
 # -------------------------------
@@ -148,7 +134,6 @@ def analyze_file(filepath, calibration):
     """
     Analyze one benchmark file:
       - Compute robust average cycle counts for both Receive and Send (after subtracting overhead).
-      - Estimate the ramp-up iteration.
       - Determine the min and max values for each cache metric.
     Returns a dictionary with all extracted data.
     """
@@ -159,9 +144,6 @@ def analyze_file(filepath, calibration):
     avg_receive_cycle = round(robust_average(receive_cycles), 2) if receive_cycles else 0.0
     avg_send_cycle    = round(robust_average(send_cycles), 2) if send_cycles else 0.0
     avg_cycle = round((avg_receive_cycle + avg_send_cycle) / 2, 2)
-    
-    ramp_receive = find_ramp_up(receive_cycles) if receive_cycles else 0
-    ramp_send    = find_ramp_up(send_cycles) if send_cycles else 0
 
     icache_values = []
     dcache_access_values = []
@@ -185,8 +167,6 @@ def analyze_file(filepath, calibration):
         'avg_receive_cycle': avg_receive_cycle,
         'avg_send_cycle': avg_send_cycle,
         'avg_cycle': avg_cycle,
-        'ramp_receive': ramp_receive,
-        'ramp_send': ramp_send,
         'icache_min': icache_min,
         'icache_max': icache_max,
         'dcache_access_min': dcache_access_min,
@@ -204,43 +184,33 @@ def analyze_file(filepath, calibration):
 
 def plot_cycle_counts(filename, analysis, rtos, size):
     """
-    Create a cycle count over time plot (for a given file) split into two parts:
-      - The ramp-up phase (first 5 measurements)
-      - The steady-state (remaining measurements)
+    Create a cycle count over time plot (for a given file) and removes the first measurement.
     Saves the plot in the "plot" directory.
     """
     receive_cycles = analysis['receive_cycles']
     send_cycles = analysis['send_cycles']
-    iterations_r = list(range(1, len(receive_cycles) + 1))
-    iterations_s = list(range(1, len(send_cycles) + 1))
-    
-    fig, axs = plt.subplots(2, 1, figsize=(10, 8))
-    ramp_limit = 5
-    
-    # Plot ramp-up phase (first 5 measurements or as many as available)
-    end_idx = min(ramp_limit, len(receive_cycles), len(send_cycles))
-    axs[0].plot(iterations_r[:end_idx], receive_cycles[:end_idx], marker='o', label='Receive Cycle (Ramp-up)')
-    axs[0].plot(iterations_s[:end_idx], send_cycles[:end_idx], marker='x', label='Send Cycle (Ramp-up)')
-    axs[0].set_title(f"{rtos} {size*4} bytes Cycle Count (Ramp-up)")
-    axs[0].set_xlabel("Iteration")
-    axs[0].set_ylabel("Adjusted Cycle Count")
-    axs[0].legend()
-    axs[0].grid(True)
-    
-    # Plot steady-state (remaining measurements)
-    if len(receive_cycles) > ramp_limit or len(send_cycles) > ramp_limit:
-        axs[1].plot(iterations_r[ramp_limit:], receive_cycles[ramp_limit:], marker='o', label='Receive Cycle')
-        axs[1].plot(iterations_s[ramp_limit:], send_cycles[ramp_limit:], marker='x', label='Send Cycle')
-        axs[1].set_title(f"{rtos} {size*4} bytes Cycle Count (Steady-state)")
-        axs[1].set_xlabel("Iteration")
-        axs[1].set_ylabel("Adjusted Cycle Count")
-        axs[1].legend()
-        axs[1].grid(True)
+
+    # Remove the first measurement if available.
+    if len(receive_cycles) > 1:
+        receive_cycles = receive_cycles[1:]
+        iterations_r = list(range(2, len(analysis['receive_cycles']) + 1))
     else:
-        axs[1].text(0.5, 0.5, "Not enough data for steady-state", ha='center')
-        axs[1].axis('off')
+        iterations_r = list(range(1, len(receive_cycles) + 1))
+    if len(send_cycles) > 1:
+        send_cycles = send_cycles[1:]
+        iterations_s = list(range(2, len(analysis['send_cycles']) + 1))
+    else:
+        iterations_s = list(range(1, len(send_cycles) + 1))
     
-    plt.tight_layout()
+    plt.figure(figsize=(10, 6))
+    plt.plot(iterations_r, receive_cycles, marker='o', label='Receive Cycle')
+    plt.plot(iterations_s, send_cycles, marker='x', label='Send Cycle')
+    plt.title(f"{rtos} {size*4} bytes Cycle Count")
+    plt.xlabel("Iteration")
+    plt.ylabel("Adjusted Cycle Count")
+    plt.legend()
+    plt.grid(True)
+    
     plot_dir = "plot"
     if not os.path.exists(plot_dir):
         os.makedirs(plot_dir)
@@ -289,7 +259,11 @@ def plot_cache_comparison(summary):
                 means.append(mean_val)
                 errors.append(err)
             x = np.arange(len(rtos_names))
-            axs[i].bar(x, means, yerr=errors, capsize=5, color='skyblue', edgecolor='black')
+            # Use a colormap to assign distinct colors for each RTOS bar.
+            import matplotlib.cm as cm
+            cmap = cm.get_cmap('viridis', len(rtos_names))
+            colors = [cmap(j) for j in range(len(rtos_names))]
+            axs[i].bar(x, means, yerr=errors, capsize=5, color=colors, edgecolor='black')
             axs[i].set_xticks(x)
             axs[i].set_xticklabels(rtos_names)
             axs[i].set_title(f"{metric} (Msg Size: {size} bytes)")
@@ -391,7 +365,7 @@ def main():
                 continue
             cal = calibration_data[rtos]
             analysis = analyze_file(file, cal)
-            # Plot cycle counts (split into ramp-up and steady-state)
+            # Plot cycle counts (first measurement removed)
             plot_cycle_counts(file, analysis, rtos.capitalize(), size)
             # Add summary data with numeric cache values and computed average cycle count
             summary.append({
@@ -401,8 +375,6 @@ def main():
                 'avg_receive_cycle': analysis['avg_receive_cycle'],
                 'avg_send_cycle': analysis['avg_send_cycle'],
                 'avg_cycle': analysis['avg_cycle'],
-                'ramp_receive': analysis['ramp_receive'],
-                'ramp_send': analysis['ramp_send'],
                 'icache_min': analysis['icache_min'],
                 'icache_max': analysis['icache_max'],
                 'dcache_access_min': analysis['dcache_access_min'],
@@ -420,8 +392,6 @@ def main():
             f.write(f"Average Receive Cycle: {item['avg_receive_cycle']:.2f}\n")
             f.write(f"Average Send Cycle: {item['avg_send_cycle']:.2f}\n")
             f.write(f"Average Cycle (Overall): {item['avg_cycle']:.2f}\n")
-            f.write(f"Ramp-up (Receive): {item['ramp_receive']}\n")
-            f.write(f"Ramp-up (Send): {item['ramp_send']}\n")
             f.write(f"ICache Miss Range: {item['icache_min']:.2f} - {item['icache_max']:.2f}\n")
             f.write(f"DCache Access Range: {item['dcache_access_min']:.2f} - {item['dcache_access_max']:.2f}\n")
             f.write(f"DCache Miss Range: {item['dcache_miss_min']:.2f} - {item['dcache_miss_max']:.2f}\n")
