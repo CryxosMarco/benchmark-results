@@ -1,0 +1,203 @@
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+Initializing PMU...
+PMU Initialized.
+[Init] Priority Inheritance detection test started for 32 cycles.
+
+*** Test Complete ***
+Total inversion cycles completed: 32
+Profile Entry: INV00
+Cycle Count: 1905
+ICache Miss Count: 18
+DCache Access Count: 225
+DCache Miss Count: 1
+
+Profile Entry: INV01
+Cycle Count: 1012
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV02
+Cycle Count: 1075
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV03
+Cycle Count: 1001
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV04
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV05
+Cycle Count: 1053
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV06
+Cycle Count: 997
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV07
+Cycle Count: 964
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV08
+Cycle Count: 1036
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV09
+Cycle Count: 986
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV10
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV11
+Cycle Count: 1028
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV12
+Cycle Count: 989
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV13
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV14
+Cycle Count: 1036
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV15
+Cycle Count: 986
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV16
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV17
+Cycle Count: 1028
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV18
+Cycle Count: 989
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV19
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV20
+Cycle Count: 1036
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV21
+Cycle Count: 986
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV22
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV23
+Cycle Count: 1028
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV24
+Cycle Count: 989
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV25
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV26
+Cycle Count: 1036
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV27
+Cycle Count: 986
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV28
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV29
+Cycle Count: 1028
+ICache Miss Count: 0
+DCache Access Count: 226
+DCache Miss Count: 0
+
+Profile Entry: INV30
+Cycle Count: 989
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+Profile Entry: INV31
+Cycle Count: 966
+ICache Miss Count: 0
+DCache Access Count: 223
+DCache Miss Count: 0
+
+
