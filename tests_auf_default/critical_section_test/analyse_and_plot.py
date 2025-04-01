@@ -1,7 +1,32 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
 import os
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import csv 
 
 # -------------------------------
 # Set working directory to script directory
@@ -232,7 +257,7 @@ def plot_overall_comparison(summary):
     avg_processing = [item['avg_overall'] for item in summary]
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    plt.bar(x, avg_processing, color='skyblue', edgecolor='black')
+    plt.bar(x, avg_processing, color=['skyblue', 'forestgreen', 'darkorange'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Average Counter Value for Time Period")
@@ -258,7 +283,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Total Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_totals, color='orange', edgecolor='black')
+    plt.bar(x, jitter_totals, color=['skyblue', 'forestgreen', 'darkorange'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Total")
@@ -274,7 +299,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Percentage Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pcts, color='purple', edgecolor='black')
+    plt.bar(x, jitter_pcts, color=['skyblue', 'lightgreen', 'darkorange'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Percentage (%)")
@@ -348,15 +373,29 @@ def main():
         plot_overall_comparison(summary)
         plot_overall_jitter_comparison(summary)
     
-    # Write summary file in table form.
-    summary_file = os.path.join("plot", "summary_critical_section.txt")
-    with open(summary_file, "w") as f:
-        header = ("RTOS\tAvg Total\tMin Total\tMax Total\tJitter Total\tJitter (%)\tData Points\n")
-        f.write(header)
+        # Define the output CSV file path
+    summary_file = os.path.join("plot", "summary_critical_section.csv")
+
+    # Open the CSV file for writing
+    with open(summary_file, mode='w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        
+        # Write the header row
+        header = ["RTOS", "Avg Total", "Min Total", "Max Total", "Jitter Total", "Jitter (%)", "Data Points"]
+        csvwriter.writerow(header)
+        
+        # Write each summary item as a row in the CSV file
         for item in summary:
-            line = (f"{item['rtos']}\t{item['avg_overall']:.2f}\t{item['min_overall']}\t{item['max_overall']}\t"
-                    f"{item['jitter_total']}\t{item['jitter_pct']:.2f}\t{item['num_overall']}\n")
-            f.write(line)
+            row = [
+                item['rtos'],
+                f"{item['avg_overall']:.2f}",
+                item['min_overall'],
+                item['max_overall'],
+                item['jitter_total'],
+                f"{item['jitter_pct']:.2f}",
+                item['num_overall']
+            ]
+            csvwriter.writerow(row)
 
 if __name__ == "__main__":
     main()
