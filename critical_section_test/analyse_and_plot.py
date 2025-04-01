@@ -257,7 +257,7 @@ def plot_overall_comparison(summary):
     avg_processing = [item['avg_overall'] for item in summary]
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    plt.bar(x, avg_processing, color=['skyblue', 'forestgreen', 'darkorange'], edgecolor='black')
+    plt.bar(x, avg_processing, color=['steelblue', 'forestgreen', 'darkorange'])
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Average Counter Value for Time Period")
@@ -283,7 +283,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Total Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_totals, color=['skyblue', 'forestgreen', 'darkorange'], edgecolor='black')
+    plt.bar(x, jitter_totals, color=['steelblue', 'forestgreen', 'darkorange'])
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Total")
@@ -299,7 +299,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Percentage Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pcts, color=['skyblue', 'lightgreen', 'darkorange'], edgecolor='black')
+    plt.bar(x, jitter_pcts, color=['steelblue', 'forestgreen', 'darkorange'])
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Percentage (%)")
