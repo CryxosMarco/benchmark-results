@@ -1,3 +1,26 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import os
 import re
 import numpy as np
@@ -70,19 +93,19 @@ def plot_sync_comparison(rtos, rel_times, opti_vals, ref_vals):
     
     # First subplot: overlayed curves.
     plt.subplot(2, 1, 1)
-    plt.plot(rel_times, opti_vals, 'bo-', label='Specific Sync')
-    plt.plot(rel_times, ref_vals, 'ro-', label='Reference (Semaphores)')
+    plt.plot(rel_times, opti_vals, 'bo-', label='Specific Sync. Mechnisms')
+    plt.plot(rel_times, ref_vals, 'ro-', label='Reference (via. Semaphores)')
     plt.xlabel("Relative Time")
     plt.ylabel("Time Period Total")
-    plt.title(f"{rtos.capitalize()} - Synchronization Benchmark")
+    plt.title(f"{rtos.capitalize()} - RTOS specific Sync. Mechanisms Evaluation")
     plt.legend()
     plt.grid(True)
     
     # Second subplot: difference curve.
     plt.subplot(2, 1, 2)
-    plt.plot(rel_times, differences, 'ko-', label='Difference (Ref - Opti)')
+    plt.plot(rel_times, differences, 'ko-', label='Difference (Reference - Specific)')
     plt.xlabel("Relative Time")
-    plt.ylabel("Difference")
+    plt.ylabel("Difference (Reference - Specific)")
     plt.legend()
     plt.grid(True)
     
@@ -96,8 +119,10 @@ def plot_sync_comparison(rtos, rel_times, opti_vals, ref_vals):
 
 def plot_average_comparison(summary):
     """
-    Generate a bar chart comparing the average 'Time Period Total' for the rtos specific and reference tests
-    across all three RTOSes.
+    Generate a bar chart comparing the average 'Time Period Total' for the RTOS-specific
+    and reference tests across all RTOSes. For each RTOS, the left bar (steelblue)
+    represents the specific sync mechanism, while the right bar (darkorange) represents
+    the reference test (via semaphores).
     """
     rtoses = [item['rtos'] for item in summary]
     avg_opti = [item['avg_opti'] for item in summary]
@@ -107,8 +132,10 @@ def plot_average_comparison(summary):
     bar_width = 0.35
     
     plt.figure(figsize=(8, 6))
-    plt.bar(x - bar_width/2, avg_opti, width=bar_width, label="Specific Sync")
-    plt.bar(x + bar_width/2, avg_ref, width=bar_width, label="Reference")
+    plt.bar(x - bar_width/2, avg_opti, width=bar_width, color='indianred',
+            label="Specific Sync. Mechanisms")
+    plt.bar(x + bar_width/2, avg_ref, width=bar_width, color='yellowgreen',
+            label="Reference (via Semaphores)")
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Average Time Period Total")
@@ -122,6 +149,7 @@ def plot_average_comparison(summary):
     plt.tight_layout()
     plt.savefig(os.path.join(plot_dir, "average_sync_comparison.png"))
     plt.close()
+
 
 # --------------------------------
 # Main analysis function
@@ -172,14 +200,36 @@ def main():
     
     # Generate a combined average comparison plot.
     plot_average_comparison(summary)
-    
-    # Write a summary file.
-    with open("summary_sync.txt", "w") as f:
+    import csv
+    # Write a summary CSV file.
+    output_csv = "summary_sync.csv"
+    with open(output_csv, "w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile)
+        
+        # Write the header row
+        header = [
+            "RTOS",
+            "Specific Sync Mechanism Avg",
+            "Specific Sync Mechanism Min",
+            "Specific Sync Mechanism Max",
+            "Reference Avg",
+            "Reference Min",
+            "Reference Max"
+        ]
+        csvwriter.writerow(header)
+        
+        # Write each summary item as a row
         for item in summary:
-            f.write(f"RTOS: {item['rtos']}\n")
-            f.write(f"  specific sync mechanism - Avg: {item['avg_opti']:.2f}, Min: {item['min_opti']}, Max: {item['max_opti']}\n")
-            f.write(f"  Reference      - Avg: {item['avg_ref']:.2f}, Min: {item['min_ref']}, Max: {item['max_ref']}\n")
-            f.write("-" * 40 + "\n")
+            row = [
+                item["rtos"],
+                f"{item['avg_opti']:.2f}",
+                item["min_opti"],
+                item["max_opti"],
+                f"{item['avg_ref']:.2f}",
+                item["min_ref"],
+                item["max_ref"]
+            ]
+            csvwriter.writerow(row)
     print("Synchronization analysis complete. Summary written to summary_sync.txt and plots saved in the 'plot' directory.")
 
 if __name__ == "__main__":
