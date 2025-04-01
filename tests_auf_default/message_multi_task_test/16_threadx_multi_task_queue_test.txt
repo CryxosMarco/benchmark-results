@@ -1,8 +1,3 @@
-**** Multi Producer/Consumer Message Queue Test **** Time: 230 sec
-Messages Sent in Period: 8282790
-Messages Received in Period: 8282786
-Integrity Errors: 0
-
 Initializing ThreadX system...
 Starting Main Thread...
 [Init] Multi Producer/Consumer Message Queue Benchmark started.

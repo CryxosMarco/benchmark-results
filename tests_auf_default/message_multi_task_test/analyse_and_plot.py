@@ -1,3 +1,25 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import os
 import glob
@@ -67,11 +89,19 @@ def parse_file(file_path):
 # --- Function to Output Summary Statistics as Text ---
 def output_summary(summary_df):
     os.makedirs("plot", exist_ok=True)
-    summary_file = "plot/summary_statistics.txt"
-    with open(summary_file, "w") as f:
+    
+    # Write summary as text file
+    summary_txt_file = "plot/summary_statistics.txt"
+    with open(summary_txt_file, "w") as f:
         f.write("Summary Statistics:\n")
         f.write(summary_df.to_string(index=False))
-    print(f"Summary written to {summary_file}")
+    print(f"Summary written to {summary_txt_file}")
+    
+    # Write summary as CSV file
+    summary_csv_file = "plot/summary_statistics.csv"
+    summary_df.to_csv(summary_csv_file, index=False)
+    print(f"Summary written to {summary_csv_file}")
+
 
 # --- Main Analysis and Plotting ---
 def main():
@@ -138,7 +168,7 @@ def main():
         ax = plt.gca()
         set_custom_formatter(ax)
         plt.tight_layout()
-        plt.savefig(f"plot/{size}_{rtos}_throughput_time.png")
+        plt.savefig(f"plot/{size}_{rtos}_throughput_over_time.png")
         plt.close()
 
     # Plot 2: Comparison of Average Throughput Among RTOS for Each Message Size
@@ -149,8 +179,8 @@ def main():
     # Set custom x-axis tick labels to 2, 4, 8, 16, 32
     ax.set_xticks(range(len(pivot_avg.index)))
     ax.set_xticklabels([2, 4, 8, 16, 32])
-    ax.set_xlabel("Message Size (in multiples corresponding to bytes)")
-    ax.set_ylabel("Average Messages Sent in Period")
+    ax.set_xlabel("Message Size (x4 Bytes)")
+    ax.set_ylabel("Average Messages Sent&Recv in Period")
     ax.set_title("Average Throughput Comparison per Message Size Category")
     ax.grid(axis='y')
     plt.tight_layout()
@@ -201,15 +231,15 @@ def main():
                 diff_series = df['sent'] - df['received']
                 plt.plot(df['time'], diff_series, marker='o', label=rtos.capitalize())
         plt.xlabel("Time (sec)")
-        plt.ylabel("Difference (Messages)")
-        plt.title(f"{size*4} Bytes Queue: Difference Over Time (All RTOS)")
+        plt.ylabel("Difference in Messages Send/Received")
+        plt.title(f"{size*4} Bytes Queue: Difference in Send/Receive Over Time (All RTOS)")
         plt.xlim(0, 300)  # Limit x-axis to a maximum of 300 seconds
         plt.legend()
         plt.grid(True)
         ax = plt.gca()
         set_custom_formatter(ax)
         plt.tight_layout()
-        plt.savefig(f"plot/{size}_combined_diff_over_time.png")
+        plt.savefig(f"plot/{size}_diff_over_time_comparison.png")
         plt.close()
 
     output_summary(summary_df)
