@@ -1,0 +1,21 @@
+Initializing ThreadX system...
+Starting Main Thread...
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 30
+Time Period Total:  25739371
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 60
+Time Period Total:  25708339
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 90
+Time Period Total:  25708331
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 120
+Time Period Total:  25708347
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 150
+Time Period Total:  25708262
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 180
+Time Period Total:  25708257
+
+

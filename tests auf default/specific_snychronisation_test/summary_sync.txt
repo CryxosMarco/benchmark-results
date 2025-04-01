@@ -1,0 +1,12 @@
+RTOS: Freertos
+  specific sync mechanism - Avg: 16832207.50, Min: 16831941, Max: 16832487
+  Reference      - Avg: 9999079.77, Min: 9989909, Max: 10019753
+----------------------------------------
+RTOS: Threadx
+  specific sync mechanism - Avg: 21995953.14, Min: 21995581, Max: 21996207
+  Reference      - Avg: 25739108.54, Min: 25738711, Max: 25739501
+----------------------------------------
+RTOS: Zephyr
+  specific sync mechanism - Avg: 26667554.93, Min: 26667552, Max: 26667555
+  Reference      - Avg: 36364847.50, Min: 36364847, Max: 36364848
+----------------------------------------

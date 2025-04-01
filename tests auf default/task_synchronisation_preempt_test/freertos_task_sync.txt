@@ -1,0 +1,211 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+[Main] Starting Synchronisation Test.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  11038242
+Task1 Counter:  5519121
+Task2 Counter:  5519121
+Profile Point: Cycle01                         
+Cycle Count: 2632
+ICache Miss Count: 16
+DCache Access Count: 363
+DCache Miss Count: 0
+
+Profile Point: Cycle02                         
+Cycle Count: 1681
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle03                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle04                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle05                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle06                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle07                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle08                         
+Cycle Count: 1679
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 1
+
+Profile Point: Cycle09                         
+Cycle Count: 1673
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 1
+
+Profile Point: Cycle10                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle11                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle12                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle13                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle14                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle15                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle16                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle17                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle18                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle19                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle20                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle21                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle22                         
+Cycle Count: 1724
+ICache Miss Count: 0
+DCache Access Count: 363
+DCache Miss Count: 2
+
+Profile Point: Cycle23                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle24                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle25                         
+Cycle Count: 1622
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle26                         
+Cycle Count: 1621
+ICache Miss Count: 0
+DCache Access Count: 361
+DCache Miss Count: 1
+
+Profile Point: Cycle27                         
+Cycle Count: 1616
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle28                         
+Cycle Count: 1616
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle29                         
+Cycle Count: 1616
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle30                         
+Cycle Count: 1615
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+Profile Point: Cycle31                         
+Cycle Count: 1616
+ICache Miss Count: 0
+DCache Access Count: 362
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  11057596
+Task1 Counter:  11047919
+Task2 Counter:  11047919
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  11057562
+Task1 Counter:  16576700
+Task2 Counter:  16576700
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  11057414
+Task1 Counter:  22105407
+Task2 Counter:  22105407
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  11056340
+Task1 Counter:  27633577
+Task2 Counter:  27633577
+

@@ -1,0 +1,227 @@
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+[Main] Starting Synchronisation Test.
+Initializing PMU...
+PMU Initialized.
+[Main] tm_initialize returned, threads started.
+**** Task Synchronistation Test **** Relative Time: 30
+Time Period Total:  54423559
+Task1 Counter:  27211779
+Task2 Counter:  27211780
+No profile entry found for name: Cycle00
+Profile Entry: Cycle01
+Cycle Count: 703
+ICache Miss Count: 4
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle02
+Cycle Count: 520
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle03
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle04
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle05
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle06
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle07
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle08
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle09
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle10
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle11
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle12
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle13
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle14
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle15
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle16
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle17
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle18
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle19
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle20
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle21
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle22
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle23
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle24
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle25
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle26
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle27
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle28
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle29
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle30
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+Profile Entry: Cycle31
+Cycle Count: 444
+ICache Miss Count: 0
+DCache Access Count: 114
+DCache Miss Count: 0
+
+**** Task Synchronistation Test **** Relative Time: 60
+Time Period Total:  54423581
+Task1 Counter:  54423570
+Task2 Counter:  54423570
+**** Task Synchronistation Test **** Relative Time: 90
+Time Period Total:  54423581
+Task1 Counter:  81635360
+Task2 Counter:  81635361
+**** Task Synchronistation Test **** Relative Time: 120
+Time Period Total:  54423581
+Task1 Counter:  108847151
+Task2 Counter:  108847151
+**** Task Synchronistation Test **** Relative Time: 150
+Time Period Total:  54423581
+Task1 Counter:  136058941
+Task2 Counter:  136058942
+**** Task Synchronistation Test **** Relative Time: 180
+Time Period Total:  54423581
+Task1 Counter:  163270732
+Task2 Counter:  163270732
+**** Task Synchronistation Test **** Relative Time: 210
+Time Period Total:  54423581
+Task1 Counter:  190482522
+Task2 Counter:  190482523
+**** Task Synchronistation Test **** Relative Time: 240
+Time Period Total:  54423581
+Task1 Counter:  217694313
+Task2 Counter:  217694313

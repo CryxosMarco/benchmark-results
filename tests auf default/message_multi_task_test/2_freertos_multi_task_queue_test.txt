@@ -1,0 +1,79 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+[Init] Multi Producer/Consumer Message Queue Benchmark started.
+**** Multi Producer/Consumer Message Queue Test **** Time: 10 sec
+Messages Sent in Period: 3512130
+Messages Received in Period: 3512120
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 20 sec
+Messages Sent in Period: 3514470
+Messages Received in Period: 3514478
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 30 sec
+Messages Sent in Period: 3514468
+Messages Received in Period: 3514462
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 40 sec
+Messages Sent in Period: 3514472
+Messages Received in Period: 3514472
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 50 sec
+Messages Sent in Period: 5047270
+Messages Received in Period: 5047276
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 60 sec
+Messages Sent in Period: 5041289
+Messages Received in Period: 5041281
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 70 sec
+Messages Sent in Period: 3504540
+Messages Received in Period: 3504540
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 80 sec
+Messages Sent in Period: 3504540
+Messages Received in Period: 3504540
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 90 sec
+Messages Sent in Period: 3504540
+Messages Received in Period: 3504540
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 100 sec
+Messages Sent in Period: 3504533
+Messages Received in Period: 3504540
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 110 sec
+Messages Sent in Period: 3504507
+Messages Received in Period: 3504510
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 120 sec
+Messages Sent in Period: 3504510
+Messages Received in Period: 3504500
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 130 sec
+Messages Sent in Period: 5044380
+Messages Received in Period: 5044390
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 140 sec
+Messages Sent in Period: 3504510
+Messages Received in Period: 3504500
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 150 sec
+Messages Sent in Period: 3504501
+Messages Received in Period: 3504510
+Integrity Errors: 0
+
+

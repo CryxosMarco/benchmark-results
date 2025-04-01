@@ -1,0 +1,113 @@
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+Initializing PMU...
+PMU Initialized.
+[Init] Multi Producer/Consumer Message Queue Benchmark started.
+**** Multi Producer/Consumer Message Queue Test **** Time: 10 sec
+Messages Sent in Period: 3809772
+Messages Received in Period: 3809769
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 20 sec
+Messages Sent in Period: 3810552
+Messages Received in Period: 3810554
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 30 sec
+Messages Sent in Period: 3810557
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 40 sec
+Messages Sent in Period: 3810549
+Messages Received in Period: 3810555
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 50 sec
+Messages Sent in Period: 3810552
+Messages Received in Period: 3810555
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 60 sec
+Messages Sent in Period: 3810556
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 70 sec
+Messages Sent in Period: 3810550
+Messages Received in Period: 3810554
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 80 sec
+Messages Sent in Period: 3810551
+Messages Received in Period: 3810556
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 90 sec
+Messages Sent in Period: 3810557
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 100 sec
+Messages Sent in Period: 3810550
+Messages Received in Period: 3810553
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 110 sec
+Messages Sent in Period: 3810550
+Messages Received in Period: 3810557
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 120 sec
+Messages Sent in Period: 3810557
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 130 sec
+Messages Sent in Period: 3810551
+Messages Received in Period: 3810552
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 140 sec
+Messages Sent in Period: 3810549
+Messages Received in Period: 3810558
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 150 sec
+Messages Sent in Period: 3810557
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 160 sec
+Messages Sent in Period: 3810552
+Messages Received in Period: 3810551
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 170 sec
+Messages Sent in Period: 3810549
+Messages Received in Period: 3810559
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 180 sec
+Messages Sent in Period: 3810555
+Messages Received in Period: 3810548
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 190 sec
+Messages Sent in Period: 3810554
+Messages Received in Period: 3810550
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 200 sec
+Messages Sent in Period: 3810548
+Messages Received in Period: 3810557
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 210 sec
+Messages Sent in Period: 3810555
+Messages Received in Period: 3810551
+Integrity Errors: 0
+
+

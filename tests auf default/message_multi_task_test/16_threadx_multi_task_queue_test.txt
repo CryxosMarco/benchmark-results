@@ -1,0 +1,84 @@
+**** Multi Producer/Consumer Message Queue Test **** Time: 230 sec
+Messages Sent in Period: 8282790
+Messages Received in Period: 8282786
+Integrity Errors: 0
+
+Initializing ThreadX system...
+Starting Main Thread...
+[Init] Multi Producer/Consumer Message Queue Benchmark started.
+**** Multi Producer/Consumer Message Queue Test **** Time: 10 sec
+Messages Sent in Period: 6684854
+Messages Received in Period: 6684852
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 20 sec
+Messages Sent in Period: 6684338
+Messages Received in Period: 6684340
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 30 sec
+Messages Sent in Period: 6684340
+Messages Received in Period: 6684342
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 40 sec
+Messages Sent in Period: 6684341
+Messages Received in Period: 6684337
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 50 sec
+Messages Sent in Period: 6684336
+Messages Received in Period: 6684340
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 60 sec
+Messages Sent in Period: 6684341
+Messages Received in Period: 6684337
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 70 sec
+Messages Sent in Period: 6684337
+Messages Received in Period: 6684340
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 80 sec
+Messages Sent in Period: 6684340
+Messages Received in Period: 6684337
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 90 sec
+Messages Sent in Period: 6684338
+Messages Received in Period: 6684340
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 100 sec
+Messages Sent in Period: 6684341
+Messages Received in Period: 6684342
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 110 sec
+Messages Sent in Period: 6684943
+Messages Received in Period: 6684944
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 120 sec
+Messages Sent in Period: 6684950
+Messages Received in Period: 6684946
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 130 sec
+Messages Sent in Period: 6684945
+Messages Received in Period: 6684949
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 140 sec
+Messages Sent in Period: 6684950
+Messages Received in Period: 6684946
+Integrity Errors: 0
+
+**** Multi Producer/Consumer Message Queue Test **** Time: 150 sec
+Messages Sent in Period: 6684945
+Messages Received in Period: 6684949
+Integrity Errors: 0
+
+

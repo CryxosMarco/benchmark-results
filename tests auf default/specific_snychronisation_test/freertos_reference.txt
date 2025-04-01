@@ -1,0 +1,16 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 30
+Time Period Total:  6115522
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 60
+Time Period Total:  6114225
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 90
+Time Period Total:  6115219
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 120
+Time Period Total:  6114350
+
+**** Thread-Metric Synchronization Processing Test **** Relative Time: 150
+Time Period Total:  6115140

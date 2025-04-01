@@ -1,0 +1,207 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+**** Thread Locking Benchmark **** Relative Time: 30
+Locking Operations in Period: 18549588
+Profile Point: L00                             
+Cycle Count: 2185
+ICache Miss Count: 10
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L01                             
+Cycle Count: 1541
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L02                             
+Cycle Count: 1513
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L03                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L04                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L05                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L06                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L07                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L08                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L09                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L10                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L11                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L12                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L13                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L14                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L15                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L16                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L17                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L18                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L19                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L20                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L21                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L22                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L23                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L24                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L25                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L26                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L27                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L28                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L29                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L30                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+Profile Point: L31                             
+Cycle Count: 1487
+ICache Miss Count: 0
+DCache Access Count: 78
+DCache Miss Count: 0
+
+**** Thread Locking Benchmark **** Relative Time: 60
+Locking Operations in Period: 18549432
+**** Thread Locking Benchmark **** Relative Time: 90
+Locking Operations in Period: 18549558
+**** Thread Locking Benchmark **** Relative Time: 120
+Locking Operations in Period: 18549557
+**** Thread Locking Benchmark **** Relative Time: 150
+Locking Operations in Period: 18549500
+**** Thread Locking Benchmark **** Relative Time: 180
+Locking Operations in Period: 18549500
+
