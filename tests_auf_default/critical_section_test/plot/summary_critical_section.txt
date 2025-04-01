@@ -1,0 +1,4 @@
+RTOS	Avg Total	Min Total	Max Total	Jitter Total	Jitter (%)	Data Points
+Freertos	20434530.50	20434284	20434624	340	0.00	6
+Threadx	21086858.57	21086721	21086931	210	0.00	7
+Zephyr	5853853.80	5853852	5853854	2	0.00	10
