@@ -3,193 +3,193 @@ Starting Thread-Metric tests...
 ==== ISR-to-Task Benchmark Complete ====
 Total messages processed: 32
 Total interrupts processed: 32
-Receive Latency: Send Latency: Profile Point: S00                             
+Send Latency: Profile Point: S00                             
 Cycle Count: 2368
 ICache Miss Count: 24
 DCache Access Count: 248
 DCache Miss Count: 2
 
-Receive Latency: Send Latency: Profile Point: S01                             
+Send Latency: Profile Point: S01                             
 Cycle Count: 1210
 ICache Miss Count: 2
 DCache Access Count: 246
 DCache Miss Count: 1
 
-Receive Latency: Send Latency: Profile Point: S02                             
+Send Latency: Profile Point: S02                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S03                             
+Send Latency: Profile Point: S03                             
 Cycle Count: 1066
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 1
 
-Receive Latency: Send Latency: Profile Point: S04                             
+Send Latency: Profile Point: S04                             
 Cycle Count: 1066
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S05                             
+Send Latency: Profile Point: S05                             
 Cycle Count: 1068
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 1
 
-Receive Latency: Send Latency: Profile Point: S06                             
+Send Latency: Profile Point: S06                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S07                             
+Send Latency: Profile Point: S07                             
 Cycle Count: 1066
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 1
 
-Receive Latency: Send Latency: Profile Point: S08                             
+Send Latency: Profile Point: S08                             
 Cycle Count: 1074
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S09                             
+Send Latency: Profile Point: S09                             
 Cycle Count: 1111
 ICache Miss Count: 0
 DCache Access Count: 249
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S10                             
+Send Latency: Profile Point: S10                             
 Cycle Count: 1054
 ICache Miss Count: 0
 DCache Access Count: 248
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S11                             
+Send Latency: Profile Point: S11                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S12                             
+Send Latency: Profile Point: S12                             
 Cycle Count: 1066
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S13                             
+Send Latency: Profile Point: S13                             
 Cycle Count: 1067
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S14                             
+Send Latency: Profile Point: S14                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S15                             
+Send Latency: Profile Point: S15                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S16                             
+Send Latency: Profile Point: S16                             
 Cycle Count: 1067
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S17                             
+Send Latency: Profile Point: S17                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S18                             
+Send Latency: Profile Point: S18                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S19                             
+Send Latency: Profile Point: S19                             
 Cycle Count: 1104
 ICache Miss Count: 0
 DCache Access Count: 249
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S20                             
+Send Latency: Profile Point: S20                             
 Cycle Count: 1055
 ICache Miss Count: 0
 DCache Access Count: 248
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S21                             
+Send Latency: Profile Point: S21                             
 Cycle Count: 1067
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S22                             
+Send Latency: Profile Point: S22                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S23                             
+Send Latency: Profile Point: S23                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S24                             
+Send Latency: Profile Point: S24                             
 Cycle Count: 1067
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S25                             
+Send Latency: Profile Point: S25                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S26                             
+Send Latency: Profile Point: S26                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S27                             
+Send Latency: Profile Point: S27                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S28                             
+Send Latency: Profile Point: S28                             
 Cycle Count: 1066
 ICache Miss Count: 0
 DCache Access Count: 246
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S29                             
+Send Latency: Profile Point: S29                             
 Cycle Count: 1106
 ICache Miss Count: 0
 DCache Access Count: 249
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S30                             
+Send Latency: Profile Point: S30                             
 Cycle Count: 1054
 ICache Miss Count: 0
 DCache Access Count: 248
 DCache Miss Count: 0
 
-Receive Latency: Send Latency: Profile Point: S31                             
+Send Latency: Profile Point: S31                             
 Cycle Count: 1065
 ICache Miss Count: 0
 DCache Access Count: 246

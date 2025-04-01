@@ -1,3 +1,26 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import os
 import re
 import numpy as np
@@ -184,7 +207,7 @@ def analyze_file(filepath, calibration):
 
 def plot_cycle_counts(filename, analysis, rtos, size):
     """
-    Create a cycle count over time plot (for a given file) and removes the first measurement.
+    Create a cycle count over time plot (for a given file) and remove the first measurement.
     Saves the plot in the "plot" directory.
     """
     receive_cycles = analysis['receive_cycles']
@@ -262,52 +285,25 @@ def plot_cache_comparison(summary):
             # Use a colormap to assign distinct colors for each RTOS bar.
             import matplotlib.cm as cm
             cmap = cm.get_cmap('viridis', len(rtos_names))
-            colors = [cmap(j) for j in range(len(rtos_names))]
-            axs[i].bar(x, means, yerr=errors, capsize=5, color=colors, edgecolor='black')
+            # colors = [cmap(j) for j in range(len(rtos_names))]
+            axs[i].bar(x, means, yerr=errors, capsize=5, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
             axs[i].set_xticks(x)
             axs[i].set_xticklabels(rtos_names)
             axs[i].set_title(f"{metric} (Msg Size: {size} bytes)")
             axs[i].set_ylabel("Adjusted Value")
             axs[i].grid(True, axis='y')
         plt.tight_layout()
-        plt.savefig(f"plot/cache_comparison_{size}.png")
+        plt.savefig(os.path.join("plot", f"cache_comparison_{size}.png"))
         plt.close()
 
 # -------------------------------
-# Plotting function for average cycle count per RTOS
+# Plotting function for combined average cycle counts
 # -------------------------------
 
-def plot_average_cycle_counts(summary):
+def plot_combined_average_cycle_counts(summary):
     """
-    Group summary data by RTOS and plot the average cycle count (averaged from receive and send)
-    versus the message size.
-    One plot is generated per RTOS.
-    """
-    rtos_groups = {}
-    for item in summary:
-        rtos = item['rtos']
-        if rtos not in rtos_groups:
-            rtos_groups[rtos] = []
-        rtos_groups[rtos].append(item)
-    
-    for rtos, items in rtos_groups.items():
-        items_sorted = sorted(items, key=lambda x: x['message_size_bytes'])
-        sizes = [x['message_size_bytes'] for x in items_sorted]
-        avg_cycles = [x['avg_cycle'] for x in items_sorted]
-        plt.figure(figsize=(8, 6))
-        plt.plot(sizes, avg_cycles, marker='o', linestyle='-', label=f'{rtos} Avg Cycle')
-        plt.title(f"Average Cycle Count for {rtos}")
-        plt.xlabel("Message Size (bytes)")
-        plt.ylabel("Average Adjusted Cycle Count")
-        plt.grid(True)
-        plt.legend()
-        plt.savefig(f"plot/avg_cycle_{rtos.lower()}.png")
-        plt.close()
-
-def plot_robust_average_comparison(summary):
-    """
-    Create a comparison plot with the robust average cycle counts for each RTOS
-    across message sizes. All RTOS are plotted on one figure.
+    Create a single plot showing the average cycle counts for each RTOS
+    across message sizes for better comparability.
     """
     # Group data by RTOS
     rtos_groups = {}
@@ -318,23 +314,86 @@ def plot_robust_average_comparison(summary):
         rtos_groups[rtos].append((item['message_size_bytes'], item['avg_cycle']))
     
     plt.figure(figsize=(10, 6))
-    # Plot each RTOS data series
     for rtos, data in rtos_groups.items():
-        # Sort by message size for a smooth line plot
         data_sorted = sorted(data, key=lambda x: x[0])
         sizes = [d[0] for d in data_sorted]
         avg_cycles = [d[1] for d in data_sorted]
         plt.plot(sizes, avg_cycles, marker='o', linestyle='-', label=rtos)
     
     plt.xlabel("Message Size (bytes)")
-    plt.ylabel("Robust Average Cycle Count")
-    plt.title("Comparison of Robust Average Cycle Counts Among RTOS")
+    plt.ylabel("Robust Average Adjusted Cycle Count")
+    plt.title("Comparison of Rubust Average Cycle Counts Among RTOS over Message Sizes")
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("plot/robust_average_comparison.png")
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+    plot_filename = os.path.join(plot_dir, "combined_average_cycle_counts.png")
+    plt.savefig(plot_filename)
     plt.close()
+    print(f"Combined average cycle counts plot saved to {plot_filename}")
 
+# -------------------------------
+# New Plotting function: Stacked send cycles per RTOS
+# -------------------------------
+
+def plot_stacked_send_cycles_by_rtos(time_series_list):
+    """
+    For each RTOS, create one figure with stacked subplots showing send cycle counts 
+    over time for message sizes 2, 4, 8, 16, and 32 (as parsed from filenames).
+    Each subplot (for a given message size) plots all send cycle time series for that size.
+    """
+    sizes_to_plot = [2, 4, 8, 16, 32]
+    
+    # Group entries by RTOS, filtering only for the selected message sizes.
+    rtos_groups = {}
+    for entry in time_series_list:
+        if entry['original_size'] in sizes_to_plot:
+            rtos = entry['rtos']
+            rtos_groups.setdefault(rtos, []).append(entry)
+    
+    # For each RTOS, further group by original_size and create a stacked figure.
+    for rtos, entries in rtos_groups.items():
+        # Group by message size.
+        size_groups = {}
+        for entry in entries:
+            orig_size = entry['original_size']
+            size_groups.setdefault(orig_size, []).append(entry)
+        
+        sorted_sizes = sorted(size_groups.keys())
+        num_plots = len(sorted_sizes)
+        
+        fig, axs = plt.subplots(num_plots, 1, figsize=(10, 4*num_plots), sharex=True)
+        if num_plots == 1:
+            axs = [axs]
+        
+        for ax, size in zip(axs, sorted_sizes):
+            group_entries = size_groups[size]
+            for entry in group_entries:
+                send_cycles = entry['send_cycles']
+                # Remove the first measurement if available.
+                if len(send_cycles) > 1:
+                    s_cycles = send_cycles[1:]
+                    iterations = list(range(2, len(send_cycles) + 1))
+                else:
+                    s_cycles = send_cycles
+                    iterations = list(range(1, len(send_cycles) + 1))
+                ax.plot(iterations, s_cycles, marker='o', label=entry['file'])
+            ax.set_title(f"{rtos} - {size*4} bytes Send Cycle Count")
+            ax.set_ylabel("Adjusted Cycle Count")
+            ax.grid(True)
+            ax.legend(fontsize='small', loc='best')
+        
+        plt.xlabel("Iteration")
+        plt.tight_layout()
+        plot_dir = "plot"
+        if not os.path.exists(plot_dir):
+            os.makedirs(plot_dir)
+        filename = os.path.join(plot_dir, f"stacked_send_cycles_{rtos.lower()}.png")
+        plt.savefig(filename)
+        plt.close()
+        print(f"Stacked send cycles plot saved for {rtos} to {filename}")
 
 # -------------------------------
 # Main function
@@ -355,6 +414,7 @@ def main():
             calibration_data[rtos] = {'cycle': 0.0, 'icache': 0.0, 'dcache_access': 0.0, 'dcache_miss': 0.0}
     
     summary = []
+    time_series_list = []
     # Process benchmark files matching <size>_<rtos>_isr_task_queue_test.txt
     for file in os.listdir('.'):
         m = re.match(r'(\d+)_([a-zA-Z]+)_isr_task_queue_test\.txt', file)
@@ -365,8 +425,17 @@ def main():
                 continue
             cal = calibration_data[rtos]
             analysis = analyze_file(file, cal)
-            # Plot cycle counts (first measurement removed)
+            # Optionally, plot individual file cycle counts
             plot_cycle_counts(file, analysis, rtos.capitalize(), size)
+            # Append time series data for the stacked send cycles plots
+            time_series_list.append({
+                'file': file,
+                'rtos': rtos.capitalize(),
+                'original_size': size,
+                'message_size_bytes': size * 4,
+                'receive_cycles': analysis['receive_cycles'],
+                'send_cycles': analysis['send_cycles']
+            })
             # Add summary data with numeric cache values and computed average cycle count
             summary.append({
                 'file': file,
@@ -382,29 +451,58 @@ def main():
                 'dcache_miss_min': analysis['dcache_miss_min'],
                 'dcache_miss_max': analysis['dcache_miss_max']
             })
-    
+    import csv
     # Write summary file (rounded to two decimals)
-    with open("plot/summary.txt", "w") as f:
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+    csv_filename = os.path.join(plot_dir, "summary.csv")
+    with open(csv_filename, mode="w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile)
+        
+        # Write header row
+        header = [
+            "File",
+            "RTOS",
+            "Message Size (bytes)",
+            "Average Receive Cycle",
+            "Average Send Cycle",
+            "Average Cycle (Overall)",
+            "ICache Miss Min",
+            "ICache Miss Max",
+            "DCache Access Min",
+            "DCache Access Max",
+            "DCache Miss Min",
+            "DCache Miss Max"
+        ]
+        csvwriter.writerow(header)
+        
+        # Write data rows
         for item in summary:
-            f.write(f"File: {item['file']}\n")
-            f.write(f"RTOS: {item['rtos']}\n")
-            f.write(f"Message Size: {item['message_size_bytes']} bytes\n")
-            f.write(f"Average Receive Cycle: {item['avg_receive_cycle']:.2f}\n")
-            f.write(f"Average Send Cycle: {item['avg_send_cycle']:.2f}\n")
-            f.write(f"Average Cycle (Overall): {item['avg_cycle']:.2f}\n")
-            f.write(f"ICache Miss Range: {item['icache_min']:.2f} - {item['icache_max']:.2f}\n")
-            f.write(f"DCache Access Range: {item['dcache_access_min']:.2f} - {item['dcache_access_max']:.2f}\n")
-            f.write(f"DCache Miss Range: {item['dcache_miss_min']:.2f} - {item['dcache_miss_max']:.2f}\n")
-            f.write("-" * 40 + "\n")
+            row = [
+                item["file"],
+                item["rtos"],
+                item["message_size_bytes"],
+                f"{item['avg_receive_cycle']:.2f}",
+                f"{item['avg_send_cycle']:.2f}",
+                f"{item['avg_cycle']:.2f}",
+                f"{item['icache_min']:.2f}",
+                f"{item['icache_max']:.2f}",
+                f"{item['dcache_access_min']:.2f}",
+                f"{item['dcache_access_max']:.2f}",
+                f"{item['dcache_miss_min']:.2f}",
+                f"{item['dcache_miss_max']:.2f}"
+            ]
+            csvwriter.writerow(row)
     
     # Create grouped cache comparison plots (per message size)
     plot_cache_comparison(summary)
-    # Create average cycle count plots for each RTOS
-    plot_average_cycle_counts(summary)
-    # Create a single comparison plot for robust average cycle counts across all RTOS
-    plot_robust_average_comparison(summary)
+    # Create one combined average cycle count plot for better comparability
+    plot_combined_average_cycle_counts(summary)
+    # Create a stacked send cycles plot per RTOS for message sizes 2,4,8,16,32
+    plot_stacked_send_cycles_by_rtos(time_series_list)
     
-    print("Analysis complete. Summary written to summary.txt and plots saved in the 'plot' directory.")
+    print("Analysis complete. Summary written to summary.csv and plots saved in the 'plot' directory.")
 
 if __name__ == "__main__":
     main()
