@@ -1,3 +1,27 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
 import os, re, glob, statistics, argparse
 import numpy as np
 import matplotlib.pyplot as plt
@@ -185,14 +209,14 @@ def main():
         ops = tests[system]["locking_ops"]
         if rt and ops:
             ax1.plot(rt, ops, marker='o', label=system)
-    ax1.set_title("Locking Operations vs Relative Time")
+    ax1.set_title("Locking Operations over Time Period")
     ax1.set_xlabel("Relative Time")
     ax1.set_ylabel("Locking Operations")
     handles, labels = ax1.get_legend_handles_labels()
     if handles:
         ax1.legend()
     plt.tight_layout()
-    file1 = os.path.join(output_dir, "locking_operations_vs_time.png")
+    file1 = os.path.join(output_dir, "locking_operations_over_time.png")
     fig1.savefig(file1)
     plt.close(fig1)
     
@@ -201,15 +225,15 @@ def main():
     systems_list = list(jitter_metrics.keys())
     # Jitter Total
     jitter_totals = [jitter_metrics[s]["jitter_total"] for s in systems_list]
-    ax2a.bar(systems_list, jitter_totals, color='skyblue')
-    ax2a.set_title("Jitter Total")
-    ax2a.set_xlabel("System")
-    ax2a.set_ylabel("Jitter (Locking Ops Difference)")
+    ax2a.bar(systems_list, jitter_totals, color=['steelblue', 'forestgreen', 'darkorange'])
+    ax2a.set_title("Jitter Total in Absolute")
+    ax2a.set_xlabel("RTOS")
+    ax2a.set_ylabel("Jitter Absolute")
     # Jitter Percentage
     jitter_pct = [jitter_metrics[s]["jitter_pct"] for s in systems_list]
-    ax2b.bar(systems_list, jitter_pct, color='salmon')
+    ax2b.bar(systems_list, jitter_pct, color=['steelblue', 'forestgreen', 'darkorange'])
     ax2b.set_title("Jitter Percentage")
-    ax2b.set_xlabel("System")
+    ax2b.set_xlabel("RTOS")
     ax2b.set_ylabel("Jitter (%)")
     plt.suptitle("Jitter Comparison")
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
@@ -221,12 +245,12 @@ def main():
     fig3, ax3 = plt.subplots(figsize=(8, 6))
     systems_list = list(robust_locking.keys())
     locking_vals = [robust_locking[s] for s in systems_list]
-    ax3.bar(systems_list, locking_vals, color='mediumseagreen')
-    ax3.set_title("Robust Locking Operations")
-    ax3.set_xlabel("System")
-    ax3.set_ylabel("Robust Locking Ops (Median)")
+    ax3.bar(systems_list, locking_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    ax3.set_title("Robust Locking Operations Over Time Period")
+    ax3.set_xlabel("RTOS")
+    ax3.set_ylabel("Average Locking Operations")
     plt.tight_layout()
-    file3 = os.path.join(output_dir, "robust_locking_ops.png")
+    file3 = os.path.join(output_dir, "average_locking_ops.png")
     fig3.savefig(file3)
     plt.close(fig3)
     
@@ -234,12 +258,12 @@ def main():
     fig4, ax4 = plt.subplots(figsize=(8, 6))
     systems_list = list(robust_cycle.keys())
     cycle_vals = [robust_cycle[s] for s in systems_list]
-    ax4.bar(systems_list, cycle_vals, color='mediumpurple')
-    ax4.set_title("Robust Cycle Count")
-    ax4.set_xlabel("System")
-    ax4.set_ylabel("Robust Cycle Count (Median, Adjusted)")
+    ax4.bar(systems_list, cycle_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    ax4.set_title("Average Cycle Count for Locking a Thread")
+    ax4.set_xlabel("RTOS")
+    ax4.set_ylabel("Average Cycle Count")
     plt.tight_layout()
-    file4 = os.path.join(output_dir, "robust_cycle_count.png")
+    file4 = os.path.join(output_dir, "average_cycle_count_comparison.png")
     fig4.savefig(file4)
     plt.close(fig4)
     
@@ -263,13 +287,27 @@ def main():
     fig5.savefig(file5)
     plt.close(fig5)
     
-    # --- Write Summary Table to a .txt File ---
-    summary_file = os.path.join(output_dir, "benchmark_summary.txt")
-    with open(summary_file, "w") as f:
-        header = ("System\tAvg Locking Ops\tJitter Total\tJitter %\t" +
-                  "Robust Locking Ops\tRobust Cycle Count\t" +
-                  "ICache Miss\tDCache Access\tDCache Miss\n")
-        f.write(header)
+    import csv
+
+    output_dir = "plot"  # Assuming output_dir is defined like this
+    os.makedirs(output_dir, exist_ok=True)
+    summary_file = os.path.join(output_dir, "benchmark_summary.csv")
+
+    with open(summary_file, "w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile)
+        header = [
+            "System",
+            "Avg Locking Ops",
+            "Jitter Total",
+            "Jitter %",
+            "Robust Locking Ops",
+            "Robust Cycle Count",
+            "ICache Miss",
+            "DCache Access",
+            "DCache Miss"
+        ]
+        csvwriter.writerow(header)
+        
         systems = sorted(set(list(tests.keys()) + list(calibrations.keys())))
         for system in systems:
             avg_ops = jitter_metrics[system]["avg"] if system in jitter_metrics else 0
@@ -277,10 +315,21 @@ def main():
             jitter_percent = jitter_metrics[system]["jitter_pct"] if system in jitter_metrics else 0
             r_lock = robust_locking[system] if system in robust_locking else 0
             r_cycle = robust_cycle[system] if system in robust_cycle else 0
-            cache = cache_stats[system] if system in cache_stats else {"ICache Miss":0, "DCache Access":0, "DCache Miss":0}
-            line = (f"{system}\t{avg_ops:.2f}\t{jitter_tot}\t{jitter_percent:.2f}\t" +
-                    f"{r_lock}\t{r_cycle}\t{cache['ICache Miss']:.2f}\t{cache['DCache Access']:.2f}\t{cache['DCache Miss']:.2f}\n")
-            f.write(line)
+            cache = cache_stats[system] if system in cache_stats else {"ICache Miss": 0, "DCache Access": 0, "DCache Miss": 0}
+            
+            row = [
+                system,
+                f"{avg_ops:.2f}",
+                jitter_tot,
+                f"{jitter_percent:.2f}",
+                r_lock,
+                r_cycle,
+                f"{cache['ICache Miss']:.2f}",
+                f"{cache['DCache Access']:.2f}",
+                f"{cache['DCache Miss']:.2f}"
+            ]
+            csvwriter.writerow(row)
+
     
 if __name__ == "__main__":
     main()
