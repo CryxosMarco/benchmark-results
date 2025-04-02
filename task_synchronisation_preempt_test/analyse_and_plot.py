@@ -1,3 +1,27 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
 import os
 import re
 import numpy as np
@@ -235,7 +259,57 @@ def main():
             f.write(f"Calculated robust time per iteration (us): {time_iteration_calc[rtos]}\n")
             f.write("\n\n")
     
-    
+    import csv
+
+    # Define the CSV output file name.
+    output_csv = "summary.csv"
+    os.makedirs(os.path.dirname(output_csv) or ".", exist_ok=True)
+
+    with open(output_csv, "w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile)
+        
+        # Write header for the summary statistics section.
+        header = ["RTOS", "Data Type", "Metric", "Min", "Max", "Jitter", "Robust/Corrected Avg"]
+        csvwriter.writerow(header)
+        
+        # Loop over each RTOS and output both RAW and CORRECTED statistics.
+        for rtos in rtoses:
+            # RAW Data section.
+            for key in metric_keys:
+                stat = raw_summary[rtos][key]
+                row = [
+                    rtos,
+                    "RAW",
+                    key,
+                    stat['min'],
+                    stat['max'],
+                    stat['jitter'],
+                    stat['robust_avg']
+                ]
+                csvwriter.writerow(row)
+            # CORRECTED Data section.
+            for key in metric_keys:
+                stat = corrected_summary[rtos][key]
+                row = [
+                    rtos,
+                    "CORRECTED",
+                    key,
+                    stat['min'],
+                    stat['max'],
+                    stat['jitter'],
+                    stat['robust_avg']
+                ]
+                csvwriter.writerow(row)
+        
+        # Add a blank row as a separator.
+        csvwriter.writerow([])
+        
+        # Write header for the calculated robust time per iteration.
+        csvwriter.writerow(["RTOS", "Calculated robust time per iteration (us)"])
+        for rtos in rtoses:
+            csvwriter.writerow([rtos, time_iteration_calc[rtos]])
+
+    print(f"Summary CSV written to {output_csv}")
     # Produce bar plots (one per metric) for both raw and corrected robust averages.
     plots_dir = "plots"
     if not os.path.exists(plots_dir):
@@ -246,7 +320,7 @@ def main():
         values = [summary_dict[rtos][metric]['robust_avg'] for rtos in rtoses]
         plt.figure()
         # plot bars in different colors
-        plt.bar(rtoses, values, color=['skyblue', 'lightgreen', 'darkorange'])
+        plt.bar(rtoses, values, color=['steelblue', 'forestgreen', 'darkorange'])
         plt.xlabel("RTOS")
         plt.ylabel(ylabel)
         plt.title(title)
