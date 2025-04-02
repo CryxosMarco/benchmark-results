@@ -51,7 +51,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
         # get the values, replace None with 0 (or np.nan) for display
         values = subset[metric].fillna(0)
         # plot bars
-        bars = ax.bar(x, values, color='skyblue', edgecolor='black')
+        bars = ax.bar(x, values, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
         ax.set_title(f"{test_type} - {metric}", fontsize=14)
         ax.set_xticks(x)
         ax.set_xticklabels(rtos_order, rotation=0)
@@ -72,7 +72,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
 
 if __name__ == "__main__":
     # Path to the input file (the previously generated CSV file)
-    base_dir = r"E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark"
+    base_dir = r"E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\tests_auf_default\thread_metric_benchmark"
     input_file = os.path.join(base_dir, "Test_Results.txt")
 
     # Folder for the output plots
