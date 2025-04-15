@@ -324,7 +324,7 @@ def main():
         plt.xlabel("RTOS")
         plt.ylabel(ylabel)
         plt.title(title)
-        plt.savefig(os.path.join(plots_dir, filename))
+        plt.savefig(os.path.join(plots_dir, filename), dpi = 300)
         plt.close()
     
     # Raw data plots.

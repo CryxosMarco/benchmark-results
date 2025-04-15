@@ -1,0 +1,36 @@
+RTOS,Data Type,Metric,Min,Max,Jitter,Robust/Corrected Avg
+freertos,RAW,time_period_total,11488197.0,11489946.0,1749.0,11489906.5
+freertos,RAW,cycle_count,3200.0,3200.0,0.0,3200.0
+freertos,RAW,icache_miss,12.0,12.0,0.0,12.0
+freertos,RAW,dcache_access,494.0,494.0,0.0,494.0
+freertos,RAW,dcache_miss,0.0,0.0,0.0,0.0
+freertos,CORRECTED,time_period_total,11488197.0,11489946.0,1749.0,11489906.5
+freertos,CORRECTED,cycle_count,3002.0,3002.0,0.0,3002.0
+freertos,CORRECTED,icache_miss,12.0,12.0,0.0,12.0
+freertos,CORRECTED,dcache_access,462.0,462.0,0.0,462.0
+freertos,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
+zephyr,RAW,time_period_total,53040402.0,53040441.0,39.0,53040440.5
+zephyr,RAW,cycle_count,848.0,848.0,0.0,848.0
+zephyr,RAW,icache_miss,6.0,6.0,0.0,6.0
+zephyr,RAW,dcache_access,128.0,128.0,0.0,128.0
+zephyr,RAW,dcache_miss,2.0,2.0,0.0,2.0
+zephyr,CORRECTED,time_period_total,53040402.0,53040441.0,39.0,53040440.5
+zephyr,CORRECTED,cycle_count,819.0,819.0,0.0,819.0
+zephyr,CORRECTED,icache_miss,6.0,6.0,0.0,6.0
+zephyr,CORRECTED,dcache_access,111.0,111.0,0.0,111.0
+zephyr,CORRECTED,dcache_miss,2.0,2.0,0.0,2.0
+threadx,RAW,time_period_total,36662954.0,36679215.0,16261.0,36678851.5
+threadx,RAW,cycle_count,1482.0,1482.0,0.0,1482.0
+threadx,RAW,icache_miss,11.0,11.0,0.0,11.0
+threadx,RAW,dcache_access,233.0,233.0,0.0,233.0
+threadx,RAW,dcache_miss,0.0,0.0,0.0,0.0
+threadx,CORRECTED,time_period_total,36662954.0,36679215.0,16261.0,36678851.5
+threadx,CORRECTED,cycle_count,1284.0,1284.0,0.0,1284.0
+threadx,CORRECTED,icache_miss,11.0,11.0,0.0,11.0
+threadx,CORRECTED,dcache_access,201.0,201.0,0.0,201.0
+threadx,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
+
+RTOS,Calculated robust time per iteration (us)
+freertos,2.6109873043788476
+zephyr,0.56560616233947
+threadx,0.817910015530339

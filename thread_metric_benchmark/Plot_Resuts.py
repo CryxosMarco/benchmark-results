@@ -20,7 +20,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-plt.style.use('ggplot')  
+# plt.style.use('ggplot')  
 
 import numpy as np
 
@@ -58,7 +58,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
         fig.tight_layout()
         # Save the plot as a separate PNG file
         output_file = os.path.join(output_dir, f"{test_type}_{metric}.png")
-        plt.savefig(output_file, dpi=300, dpi=300)
+        plt.savefig(output_file, dpi=300)
         plt.close(fig)
 
 

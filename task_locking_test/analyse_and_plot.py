@@ -217,7 +217,7 @@ def main():
         ax1.legend()
     plt.tight_layout()
     file1 = os.path.join(output_dir, "locking_operations_over_time.png")
-    fig1.savefig(file1)
+    fig1.savefig(file1, dpi = 300)
     plt.close(fig1)
     
     # --- Plot: Jitter Comparison (Separate Plot) ---
@@ -238,7 +238,7 @@ def main():
     plt.suptitle("Jitter Comparison")
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     file2 = os.path.join(output_dir, "jitter_comparison.png")
-    fig2.savefig(file2)
+    fig2.savefig(file2, dpi = 300)
     plt.close(fig2)
     
     # --- Plot: Robust Locking Operations ---
@@ -251,7 +251,7 @@ def main():
     ax3.set_ylabel("Average Locking Operations")
     plt.tight_layout()
     file3 = os.path.join(output_dir, "average_locking_ops.png")
-    fig3.savefig(file3)
+    fig3.savefig(file3, dpi = 300)
     plt.close(fig3)
     
     # --- Plot: Robust Cycle Count ---
@@ -264,7 +264,7 @@ def main():
     ax4.set_ylabel("Average Cycle Count")
     plt.tight_layout()
     file4 = os.path.join(output_dir, "average_cycle_count_comparison.png")
-    fig4.savefig(file4)
+    fig4.savefig(file4, dpi = 300)
     plt.close(fig4)
     
     # --- Plot: Cache Statistics Overview (Averages) ---
@@ -284,7 +284,7 @@ def main():
         ax5.legend()
     plt.tight_layout()
     file5 = os.path.join(output_dir, "cache_statistics_overview.png")
-    fig5.savefig(file5)
+    fig5.savefig(file5, dpi = 300)
     plt.close(fig5)
     
     import csv

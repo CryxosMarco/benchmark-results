@@ -1,7 +1,31 @@
+# Copyright (c) <2025> <Marco Milenkovic>
+#
+# This Code was generated with help of the ChatGPT and Github Copilot
+# The Code was carfeully reviewed and adjusted to work as intended
+# The Code is used to analyse and plot the critical section test results
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of 
+# this software and associated documentation files (the "Software"), 
+# to deal in the Software without restriction, including without limitation the 
+# rights to use, copy, modify, merge, publish, distribute, sublicense, 
+# and/or sell copies of the Software, and to permit persons to whom the Software 
+# is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import os
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import csv
 
 # --------------------------------
 # Utility functions
@@ -253,7 +277,7 @@ def plot_cycle_jitter(summary):
     # Plot Absolute Jitter
     plt.figure(figsize=(8,6))
     x = np.arange(len(rtoses))
-    plt.bar(x, jitter_abs, color='skyblue')
+    plt.bar(x, jitter_abs, color=['steelblue', 'forestgreen', 'darkorange'])
     plt.xticks(x, rtoses)
     plt.ylabel("Cycle Count Jitter (Absolute)")
     plt.title("Cycle Count Jitter (Absolute)")
@@ -264,7 +288,7 @@ def plot_cycle_jitter(summary):
     
     # Plot Percentage Jitter
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pct, color='lightgreen')
+    plt.bar(x, jitter_pct, color=['steelblue', 'forestgreen', 'darkorange'])
     plt.xticks(x, rtoses)
     plt.ylabel("Cycle Count Jitter (%)")
     plt.title("Cycle Count Jitter (%)")
@@ -359,6 +383,45 @@ def plot_comparison_all_rtoses(summary):
     plt.savefig(plot_filename, dpi=300)
     plt.close()
 
+def plot_cycle_count(summary):
+    """
+    Create and save a bar chart comparing the Cycle Count metrics (Min, Robust Avg, Max)
+    for each RTOS listed in the summary.
+    """
+    # Extract RTOS names and corresponding cycle count metrics from the summary.
+    rtoses = [item['rtos'] for item in summary]
+    x = np.arange(len(rtoses))
+    bar_width = 0.25
+
+    cycle_mins = [item['cycle_min'] for item in summary]
+    cycle_robusts = [item['cycle_robust'] for item in summary]
+    cycle_maxs = [item['cycle_max'] for item in summary]
+
+    # Create the figure for Cycle Count comparison.
+    plt.figure(figsize=(8, 6))
+    plt.bar(x - bar_width, cycle_mins, width=bar_width, label='Min', color='steelblue')
+    plt.bar(x, cycle_robusts, width=bar_width, label='Robust Avg', color='darkorange')
+    plt.bar(x + bar_width, cycle_maxs, width=bar_width, label='Max', color='forestgreen')
+
+    plt.title("Cycle Count Comparison")
+    plt.xlabel("RTOS")
+    plt.ylabel("Cycle Count (Adjusted)")
+    plt.xticks(x, rtoses)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+
+    # Ensure the 'plot' directory exists.
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+
+    # Save the figure.
+    plot_filename = os.path.join(plot_dir, "cycle_count_comparison.png")
+    plt.savefig(plot_filename, dpi=300)
+    plt.close()
+    print(f"Cycle count plot saved to {plot_filename}")
+
 # --------------------------------
 # Main Function
 # --------------------------------
@@ -406,24 +469,56 @@ def main():
             'dcache_miss_max': averages['dcache_miss_max'],
         })
 
-    # Write summary file.
-    with open("summary_inheritance.txt", "w") as f:
-        for item in summary:
-            f.write(f"RTOS: {item['rtos']}\n")
-            f.write(f"File: {item['file']}\n")
-            f.write(f"Total Inversion Cycles: {item['total_inversions']}\n")
-            f.write(f"Number of Measurements: {item['num_measurements']}\n")
-            f.write(f"Cycle Count - Min: {item['cycle_min']:.2f}, Robust Avg: {item['cycle_robust']:.2f}, Median: {item['cycle_median']:.2f}, Max: {item['cycle_max']:.2f}\n")
-            f.write(f"ICache Miss - Min: {item['icache_min']:.2f}, Robust Avg: {item['icache_robust']:.2f}, Median: {item['icache_median']:.2f}, Max: {item['icache_max']:.2f}\n")
-            f.write(f"DCache Access - Min: {item['dcache_access_min']:.2f}, Robust Avg: {item['dcache_access_robust']:.2f}, Median: {item['dcache_access_median']:.2f}, Max: {item['dcache_access_max']:.2f}\n")
-            f.write(f"DCache Miss - Min: {item['dcache_miss_min']:.2f}, Robust Avg: {item['dcache_miss_robust']:.2f}, Median: {item['dcache_miss_median']:.2f}, Max: {item['dcache_miss_max']:.2f}\n")
-            f.write("-" * 40 + "\n")
-    print("Inheritance analysis complete. Summary written to summary_inheritance.txt and all plots saved in the 'plot' directory.")
+    # Define the output CSV file path
+    summary_file = "summary_inheritance.csv"
 
+    # Open the CSV file for writing
+    with open(summary_file, mode='w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        
+        # Write the header row with all desired fields
+        header = [
+            "RTOS", "File", "Total Inversion Cycles", "Number of Measurements",
+            "Cycle Count Min", "Cycle Count Robust Avg", "Cycle Count Median", "Cycle Count Max",
+            "ICache Miss Min", "ICache Miss Robust Avg", "ICache Miss Median", "ICache Miss Max",
+            "DCache Access Min", "DCache Access Robust Avg", "DCache Access Median", "DCache Access Max",
+            "DCache Miss Min", "DCache Miss Robust Avg", "DCache Miss Median", "DCache Miss Max"
+        ]
+        csvwriter.writerow(header)
+        
+        # Write each summary item as a row in the CSV file
+        for item in summary:
+            row = [
+                item["rtos"],
+                item["file"],
+                item["total_inversions"],
+                item["num_measurements"],
+                f"{item['cycle_min']:.2f}",
+                f"{item['cycle_robust']:.2f}",
+                f"{item['cycle_median']:.2f}",
+                f"{item['cycle_max']:.2f}",
+                f"{item['icache_min']:.2f}",
+                f"{item['icache_robust']:.2f}",
+                f"{item['icache_median']:.2f}",
+                f"{item['icache_max']:.2f}",
+                f"{item['dcache_access_min']:.2f}",
+                f"{item['dcache_access_robust']:.2f}",
+                f"{item['dcache_access_median']:.2f}",
+                f"{item['dcache_access_max']:.2f}",
+                f"{item['dcache_miss_min']:.2f}",
+                f"{item['dcache_miss_robust']:.2f}",
+                f"{item['dcache_miss_median']:.2f}",
+                f"{item['dcache_miss_max']:.2f}"
+            ]
+            csvwriter.writerow(row)
+
+    print("Inheritance analysis complete. Summary written to summary_inheritance.csv and all plots saved in the 'plot' directory.")
     # Generate the comparison plot for all RTOSes.
     plot_comparison_all_rtoses(summary)
     # Generate the new Cycle Count jitter plots.
     plot_cycle_jitter(summary)
+
+    plot_cycle_count(summary)
 
 if __name__ == "__main__":
     main()
