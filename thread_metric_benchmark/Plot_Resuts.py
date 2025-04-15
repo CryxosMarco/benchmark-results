@@ -26,7 +26,7 @@ import numpy as np
 
 def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
     """
-    Generates a plot with multiple subplots, one for each of the specified metrics.
+    Generates individual plots for each specified metric.
     The x-axis shows the RTOSes, the y-axis shows the respective value.
     """
 
@@ -37,20 +37,12 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
     rtos_order = ["freeRTOS", "threadX", "zephyr"]
     subset = subset.set_index('rtos').reindex(rtos_order).reset_index()
 
-    # Number of metrics for the subplots
-    n_metrics = len(metrics)
-
-    fig, axes = plt.subplots(n_metrics, 1, figsize=(6, 4*n_metrics))
-    if n_metrics == 1:
-        axes = [axes]  # if only one metric is given, pack it in a list
-
     x = np.arange(len(rtos_order))
 
-    for i, metric in enumerate(metrics):
-        ax = axes[i]
-        # get the values, replace None with 0 (or np.nan) for display
+    for metric in metrics:
+        fig, ax = plt.subplots(figsize=(6, 4))
+
         values = subset[metric].fillna(0)
-        # plot bars
         bars = ax.bar(x, values, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
         ax.set_title(f"{test_type} - {metric}", fontsize=14)
         ax.set_xticks(x)
@@ -63,11 +55,12 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
             ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height(),
                     f"{value:.2f}", ha='center', va='bottom', fontsize=10, color='black')
 
-    fig.tight_layout()
-    # save the plot as png
-    output_file = os.path.join(output_dir, f"{test_type}.png")
-    plt.savefig(output_file)
-    plt.close(fig)
+        fig.tight_layout()
+        # Save the plot as a separate PNG file
+        output_file = os.path.join(output_dir, f"{test_type}_{metric}.png")
+        plt.savefig(output_file, dpi=300, dpi=300)
+        plt.close(fig)
+
 
 
 if __name__ == "__main__":

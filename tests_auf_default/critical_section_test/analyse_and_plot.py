@@ -198,7 +198,7 @@ def plot_overall_performance(rtos, rel_times, processing_times):
         os.makedirs(plot_dir)
     outfile = os.path.join(plot_dir, f"{rtos}_avg_period_total_over_time.png")
     plt.tight_layout()
-    plt.savefig(outfile)
+    plt.savefig(outfile, dpi=300)
     plt.close()
 
 def plot_pmu_metric(metric_label, values, rtos, base_filename):
@@ -219,7 +219,7 @@ def plot_pmu_metric(metric_label, values, rtos, base_filename):
         os.makedirs(plot_dir)
     outfile = os.path.join(plot_dir, f"{base_filename}_{metric_label.replace(' ', '_').lower()}.png")
     plt.tight_layout()
-    plt.savefig(outfile)
+    plt.savefig(outfile, dpi=300)
     plt.close()
 
 def plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss):
@@ -245,7 +245,7 @@ def plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss):
         os.makedirs(plot_dir)
     outfile = os.path.join(plot_dir, f"{base_filename}_cache_comparison.png")
     plt.tight_layout()
-    plt.savefig(outfile)
+    plt.savefig(outfile, dpi=300)
     plt.close()
 
 def plot_overall_comparison(summary):
@@ -268,7 +268,7 @@ def plot_overall_comparison(summary):
         os.makedirs(plot_dir)
     outfile = os.path.join(plot_dir, "avg_period_total_comparison.png")
     plt.tight_layout()
-    plt.savefig(outfile)
+    plt.savefig(outfile, dpi=300)
     plt.close()
 
 def plot_overall_jitter_comparison(summary):
@@ -294,7 +294,7 @@ def plot_overall_jitter_comparison(summary):
         os.makedirs(plot_dir)
     outfile1 = os.path.join(plot_dir, "jitter_total_comparison.png")
     plt.tight_layout()
-    plt.savefig(outfile1)
+    plt.savefig(outfile1, dpi=300)
     plt.close()
     
     # Jitter Percentage Plot
@@ -307,7 +307,7 @@ def plot_overall_jitter_comparison(summary):
     plt.grid(True, axis='y')
     outfile2 = os.path.join(plot_dir, "jitter_percentage_comparison.png")
     plt.tight_layout()
-    plt.savefig(outfile2)
+    plt.savefig(outfile2, dpi=300)
     plt.close()
 
 # -------------------------------

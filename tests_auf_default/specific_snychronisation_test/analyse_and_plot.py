@@ -114,7 +114,7 @@ def plot_sync_comparison(rtos, rel_times, opti_vals, ref_vals):
     if not os.path.exists(plot_dir):
         os.makedirs(plot_dir)
     filename = os.path.join(plot_dir, f"{rtos}_sync_comparison.png")
-    plt.savefig(filename)
+    plt.savefig(filename, dpi=300)
     plt.close()
 
 def plot_average_comparison(summary):

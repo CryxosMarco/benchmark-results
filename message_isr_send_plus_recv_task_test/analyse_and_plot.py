@@ -246,7 +246,7 @@ def plot_cycle_counts(filename, analysis, rtos, size):
         os.makedirs(plot_dir)
     base = os.path.basename(filename)
     plot_filename = os.path.join(plot_dir, base.replace("_isr_task_queue_test.txt", "_cycle.png"))
-    plt.savefig(plot_filename)
+    plt.savefig(plot_filename, dpi=300)
     plt.close()
 
 # -------------------------------
@@ -296,7 +296,7 @@ def plot_cache_comparison(summary):
             axs[i].set_ylabel("Adjusted Value")
             axs[i].grid(True, axis='y')
         plt.tight_layout()
-        plt.savefig(f"plot/cache_comparison_{size}.png")
+        plt.savefig(f"plot/cache_comparison_{size}.png", dpi=300)
         plt.close()
 
 # -------------------------------
@@ -358,7 +358,7 @@ def plot_robust_average_comparison(summary):
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("plot/robust_average_comparison.png")
+    plt.savefig("plot/robust_average_comparison.png", dpi=300)
     plt.close()
 
 

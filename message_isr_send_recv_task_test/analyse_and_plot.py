@@ -239,7 +239,7 @@ def plot_cycle_counts(filename, analysis, rtos, size):
         os.makedirs(plot_dir)
     base = os.path.basename(filename)
     plot_filename = os.path.join(plot_dir, base.replace("_isr_task_queue_test.txt", "_cycle.png"))
-    plt.savefig(plot_filename)
+    plt.savefig(plot_filename, dpi=300)
     plt.close()
 
 # -------------------------------
@@ -330,7 +330,7 @@ def plot_combined_average_cycle_counts(summary):
     if not os.path.exists(plot_dir):
         os.makedirs(plot_dir)
     plot_filename = os.path.join(plot_dir, "combined_average_cycle_counts.png")
-    plt.savefig(plot_filename)
+    plt.savefig(plot_filename, dpi=300)
     plt.close()
     print(f"Combined average cycle counts plot saved to {plot_filename}")
 
@@ -391,7 +391,7 @@ def plot_stacked_send_cycles_by_rtos(time_series_list):
         if not os.path.exists(plot_dir):
             os.makedirs(plot_dir)
         filename = os.path.join(plot_dir, f"stacked_send_cycles_{rtos.lower()}.png")
-        plt.savefig(filename)
+        plt.savefig(filename, dpi=300)
         plt.close()
         print(f"Stacked send cycles plot saved for {rtos} to {filename}")
 

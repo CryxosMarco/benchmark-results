@@ -168,7 +168,7 @@ def main():
         ax = plt.gca()
         set_custom_formatter(ax)
         plt.tight_layout()
-        plt.savefig(f"plot/{size}_{rtos}_throughput_over_time.png")
+        plt.savefig(f"plot/{size}_{rtos}_throughput_over_time.png", dpi=300)
         plt.close()
 
     # Plot 2: Comparison of Average Throughput Among RTOS for Each Message Size
@@ -184,7 +184,7 @@ def main():
     ax.set_title("Average Throughput Comparison per Message Size Category")
     ax.grid(axis='y')
     plt.tight_layout()
-    plt.savefig("plot/avg_throughput_comparison.png")
+    plt.savefig("plot/avg_throughput_comparison.png", dpi=300)
     plt.close()
 
     # Plot 3: Function Plot: Message Size vs. Throughput for Each RTOS
@@ -202,7 +202,7 @@ def main():
     ax = plt.gca()
     set_custom_formatter(ax)
     plt.tight_layout()
-    plt.savefig("plot/message_size_vs_throughput.png")
+    plt.savefig("plot/message_size_vs_throughput.png", dpi=300)
     plt.close()
 
     # Plot 4: Jitter vs. Message Size for Each RTOS
@@ -219,7 +219,7 @@ def main():
     ax = plt.gca()
     set_custom_formatter(ax)
     plt.tight_layout()
-    plt.savefig("plot/jitter_vs_message_size.png")
+    plt.savefig("plot/jitter_vs_message_size.png", dpi=300)
     plt.close()
 
     # Plot 5: Combined Difference (Sent - Received) vs. Time for Each Message Size (up to 300 sec)
@@ -239,7 +239,7 @@ def main():
         ax = plt.gca()
         set_custom_formatter(ax)
         plt.tight_layout()
-        plt.savefig(f"plot/{size}_diff_over_time_comparison.png")
+        plt.savefig(f"plot/{size}_diff_over_time_comparison.png", dpi=300)
         plt.close()
 
     output_summary(summary_df)

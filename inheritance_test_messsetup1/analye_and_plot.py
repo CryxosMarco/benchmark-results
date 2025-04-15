@@ -161,7 +161,7 @@ def plot_metric(metric_label, values, robust_val, median_val, ema_vals, rtos, ba
         os.makedirs(plot_dir)
     plot_filename = os.path.join(plot_dir, f"{base_filename}_{metric_label.replace(' ', '_').lower()}.png")
     plt.tight_layout()
-    plt.savefig(plot_filename)
+    plt.savefig(plot_filename, dpi=300)
     plt.close()
 
 def plot_inheritance_metrics(filename, measurements, rtos):
@@ -356,7 +356,7 @@ def plot_comparison_all_rtoses(summary):
     if not os.path.exists(plot_dir):
         os.makedirs(plot_dir)
     plot_filename = os.path.join(plot_dir, "comparison_all_rtoses.png")
-    plt.savefig(plot_filename)
+    plt.savefig(plot_filename, dpi=300)
     plt.close()
 
 # --------------------------------
