@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 # Copyright (c) 2024 Marco Milenkovic IBV - Echtzeit- und Embedded GmbH & Co. KG
 #
 # This file is part of the Performance Evaluation of 

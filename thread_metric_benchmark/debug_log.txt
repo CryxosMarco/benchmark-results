@@ -862,26 +862,26 @@ Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\threadX\optimized_30sec\AM243x_threadx_thread_metric_preemptive_scheduling_test.txt: 30623357.0
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\threadX\optimized_30sec\AM243x_threadx_thread_metric_preemptive_scheduling_test.txt: 30622555.0
 Collecting for test 'preemptive_scheduling_test' from zephyr folder: E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263942.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263873.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263943.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264207.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263973.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264107.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264073.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264047.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263972.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264137.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264065.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264176.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263876.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264024.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263896.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264199.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263970.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13264045.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263851.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 13263984.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472987.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
+Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_preemptive_scheduling_test .txt: 54472990.0
 Collecting for test 'synchronization_processing_test' from freeRTOS folder: E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\freeRTOS\optimized_for_latency_30sec
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\freeRTOS\optimized_for_latency_30sec\AM243x_freertos_thread_metric_synchronization_processing_test.txt: 35196995.0
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\freeRTOS\optimized_for_latency_30sec\AM243x_freertos_thread_metric_synchronization_processing_test.txt: 71762123.0
@@ -962,27 +962,6 @@ Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
 Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806877.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806885.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806883.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806883.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806886.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806885.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806885.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806883.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806885.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
-Matched in E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\zephyr\default_30sec\AM243x_zephyr_thread_metric_synchronization_processing_test.txt: 413806884.0
 ------------------------------------------------------------
 Comparison Results:
 ------------------------------------------------------------
@@ -1029,15 +1008,15 @@ Test Type: mutex_processing_test (RTOS: threadX)
 Test Type: mutex_processing_test (RTOS: zephyr)
   Count: 0, Average: 0, Min: 0, Max: 0, Jitter: 0%, Percentage: 0%
 Test Type: preemptive_scheduling_test (RTOS: freeRTOS)
-  Count: 85, Average: 22450987.59, Min: 22450603.0, Max: 22451351.0, Jitter: 0.003332%, Percentage: 73.31%
+  Count: 85, Average: 22450987.59, Min: 22450603.0, Max: 22451351.0, Jitter: 0.003332%, Percentage: 41.21%
 Test Type: preemptive_scheduling_test (RTOS: threadX)
-  Count: 20, Average: 30622919.0, Min: 30622431.0, Max: 30623405.0, Jitter: 0.003181%, Percentage: 100.0%
+  Count: 20, Average: 30622919.0, Min: 30622431.0, Max: 30623405.0, Jitter: 0.003181%, Percentage: 56.22%
 Test Type: preemptive_scheduling_test (RTOS: zephyr)
-  Count: 20, Average: 13264018.0, Min: 13263851.0, Max: 13264207.0, Jitter: 0.002684%, Percentage: 43.31%
+  Count: 20, Average: 54472989.85, Min: 54472987.0, Max: 54472990.0, Jitter: 6e-06%, Percentage: 100.0%
 Test Type: synchronization_processing_test (RTOS: freeRTOS)
   Count: 36, Average: 70747103.72, Min: 35196995.0, Max: 71763911.0, Jitter: 51.686803%, Percentage: 17.1%
 Test Type: synchronization_processing_test (RTOS: threadX)
   Count: 20, Average: 191204608.55, Min: 190418400.0, Max: 191580221.0, Jitter: 0.607632%, Percentage: 46.21%
 Test Type: synchronization_processing_test (RTOS: zephyr)
-  Count: 42, Average: 413806883.81, Min: 413806877.0, Max: 413806886.0, Jitter: 2e-06%, Percentage: 100.0%
+  Count: 21, Average: 413806883.81, Min: 413806877.0, Max: 413806886.0, Jitter: 2e-06%, Percentage: 100.0%
 All results have been written to E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark\Test_Results.txt

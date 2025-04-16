@@ -20,9 +20,9 @@ message_processing_test,zephyr,74,109094542.16,109094538.0,109094543.0,5e-06,100
 mutex_processing_test,freeRTOS,0,0,0,0,0,0
 mutex_processing_test,threadX,20,49227621.65,49226582.0,49228379.0,0.00365,100.0
 mutex_processing_test,zephyr,0,0,0,0,0,0
-preemptive_scheduling_test,freeRTOS,85,22450987.59,22450603.0,22451351.0,0.003332,73.31
-preemptive_scheduling_test,threadX,20,30622919.0,30622431.0,30623405.0,0.003181,100.0
-preemptive_scheduling_test,zephyr,20,13264018.0,13263851.0,13264207.0,0.002684,43.31
+preemptive_scheduling_test,freeRTOS,85,22450987.59,22450603.0,22451351.0,0.003332,41.21
+preemptive_scheduling_test,threadX,20,30622919.0,30622431.0,30623405.0,0.003181,56.22
+preemptive_scheduling_test,zephyr,20,54472989.85,54472987.0,54472990.0,6e-06,100.0
 synchronization_processing_test,freeRTOS,36,70747103.72,35196995.0,71763911.0,51.686803,17.1
 synchronization_processing_test,threadX,20,191204608.55,190418400.0,191580221.0,0.607632,46.21
-synchronization_processing_test,zephyr,42,413806883.81,413806877.0,413806886.0,2e-06,100.0
+synchronization_processing_test,zephyr,21,413806883.81,413806877.0,413806886.0,2e-06,100.0
