@@ -124,7 +124,7 @@ if __name__ == "__main__":
     # We expect exactly 3 command-line arguments, one for each RTOS folder.
     if len(sys.argv) != 4:
         print("Usage: python Data_Analyser.py <folder_for_freeRTOS> <folder_for_threadX> <folder_for_zephyr>")
-        print("Example: python Data_Analyser.py .\\freeRTOS\\optimized_for_latency_30sec .\\threadX\\optimized_30sec .\\zephyr\\default_30sec")
+        print("Example: python Data_Analyser.py .\\freeRTOS\\new_30sec .\\threadX\\new_30sec .\\zephyr\\default_30sec")
         input("Press Enter to exit...")
         sys.exit(1)
     
