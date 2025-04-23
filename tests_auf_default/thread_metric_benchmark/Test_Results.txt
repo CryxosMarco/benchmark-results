@@ -16,7 +16,7 @@ memory_allocation_test,threadX,20,116947658.4,116945733.0,116949252.0,0.003009,3
 memory_allocation_test,zephyr,5,300009990.4,300009986.0,300009992.0,2e-06,100.0
 message_processing_test,freeRTOS,21,24372841.43,24372413.0,24373197.0,0.003217,35.73
 message_processing_test,threadX,22,68222120.32,68220959.0,68222934.0,0.002895,100.0
-message_processing_test,zephyr,0,0,0,0,0,0
+message_processing_test,zephyr,20,60515763.4,60453600.0,61696859.0,2.054438,88.7
 mutex_processing_test,freeRTOS,0,0,0,0,0,0
 mutex_processing_test,threadX,20,49227621.65,49226582.0,49228379.0,0.00365,100.0
 mutex_processing_test,zephyr,0,0,0,0,0,0
