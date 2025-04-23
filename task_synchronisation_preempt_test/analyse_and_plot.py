@@ -182,7 +182,7 @@ def compute_corrected_summary(raw_summary, calib_avgs):
 # ---------- Main Workflow ----------
 
 def main():
-    rtoses = ['freertos', 'zephyr', 'threadx']
+    rtoses = ['freertos', 'threadx', 'zephyr']
     metric_keys = ['time_period_total', 'cycle_count', 'icache_miss', 'dcache_access', 'dcache_miss']
 
     # 1. Parse all Calibration Data.

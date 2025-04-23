@@ -9,16 +9,6 @@ freertos,CORRECTED,cycle_count,842.0,1662.0,820.0,842.0
 freertos,CORRECTED,icache_miss,0.0,13.0,13.0,0.0
 freertos,CORRECTED,dcache_access,196.0,198.0,2.0,196.0
 freertos,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
-zephyr,RAW,time_period_total,62911638.0,62911638.0,0.0,62911638.0
-zephyr,RAW,cycle_count,389.0,653.0,264.0,389.0
-zephyr,RAW,icache_miss,0.0,6.0,6.0,0.0
-zephyr,RAW,dcache_access,100.0,101.0,1.0,100.0
-zephyr,RAW,dcache_miss,0.0,0.0,0.0,0.0
-zephyr,CORRECTED,time_period_total,62911638.0,62911638.0,0.0,62911638.0
-zephyr,CORRECTED,cycle_count,360.0,624.0,264.0,360.0
-zephyr,CORRECTED,icache_miss,0.0,6.0,6.0,0.0
-zephyr,CORRECTED,dcache_access,83.0,84.0,1.0,83.0
-zephyr,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
 threadx,RAW,time_period_total,43553460.0,43586423.0,32963.0,43580478.0
 threadx,RAW,cycle_count,1389.0,1389.0,0.0,1389.0
 threadx,RAW,icache_miss,12.0,12.0,0.0,12.0
@@ -29,8 +19,18 @@ threadx,CORRECTED,cycle_count,1389.0,1389.0,0.0,1389.0
 threadx,CORRECTED,icache_miss,12.0,12.0,0.0,12.0
 threadx,CORRECTED,dcache_access,168.0,168.0,0.0,168.0
 threadx,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
+zephyr,RAW,time_period_total,62911638.0,62911638.0,0.0,62911638.0
+zephyr,RAW,cycle_count,389.0,653.0,264.0,389.0
+zephyr,RAW,icache_miss,0.0,6.0,6.0,0.0
+zephyr,RAW,dcache_access,100.0,101.0,1.0,100.0
+zephyr,RAW,dcache_miss,0.0,0.0,0.0,0.0
+zephyr,CORRECTED,time_period_total,62911638.0,62911638.0,0.0,62911638.0
+zephyr,CORRECTED,cycle_count,360.0,624.0,264.0,360.0
+zephyr,CORRECTED,icache_miss,0.0,6.0,6.0,0.0
+zephyr,CORRECTED,dcache_access,83.0,84.0,1.0,83.0
+zephyr,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
 
 RTOS,Calculated robust time per iteration (us)
 freertos,1.6837747535935963
-zephyr,0.47685930542771754
 threadx,0.6883816189441521
+zephyr,0.47685930542771754
