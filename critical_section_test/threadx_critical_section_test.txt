@@ -1,236 +1,256 @@
 Initializing ThreadX system...
 Starting Main Thread...
 **** Critical Section Benchmark **** Relative Time: 30
-Time Period Total:  413374407
+Time Period Total:  4736406
 
 Profile Point: S00                             
-Cycle Count: 792
-ICache Miss Count: 8
+Cycle Count: 5856
+ICache Miss Count: 6
 DCache Access Count: 38
 DCache Miss Count: 1
 
 Profile Point: S01                             
-Cycle Count: 298
+Cycle Count: 5340
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S02                             
-Cycle Count: 269
-ICache Miss Count: 0
+Cycle Count: 5325
+ICache Miss Count: 1
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S03                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S04                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S05                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S06                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S07                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S08                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S09                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S10                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S11                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S12                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S13                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S14                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S15                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S16                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S17                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S18                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S19                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S20                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S21                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S22                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S23                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S24                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S25                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S26                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S27                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S28                             
-Cycle Count: 261
+Cycle Count: 5320
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S29                             
-Cycle Count: 261
+Cycle Count: 5317
 ICache Miss Count: 0
 DCache Access Count: 38
-DCache Miss Count: 0
+DCache Miss Count: 1
 
 Profile Point: S30                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 Profile Point: S31                             
-Cycle Count: 261
+Cycle Count: 5260
 ICache Miss Count: 0
 DCache Access Count: 38
 DCache Miss Count: 0
 
 **** Critical Section Benchmark **** Relative Time: 60
-Time Period Total:  413378671
+Time Period Total:  4736438
 
 **** Critical Section Benchmark **** Relative Time: 90
-Time Period Total:  413377876
+Time Period Total:  4736451
 
 **** Critical Section Benchmark **** Relative Time: 120
-Time Period Total:  413370760
+Time Period Total:  4736451
 
 **** Critical Section Benchmark **** Relative Time: 150
-Time Period Total:  413371338
+Time Period Total:  4736437
 
 **** Critical Section Benchmark **** Relative Time: 180
-Time Period Total:  413379638
+Time Period Total:  4736436
 
 **** Critical Section Benchmark **** Relative Time: 210
-Time Period Total:  413366921
+Time Period Total:  4736437
 
 **** Critical Section Benchmark **** Relative Time: 240
-Time Period Total:  413372671
+Time Period Total:  4736437
 
 **** Critical Section Benchmark **** Relative Time: 270
-Time Period Total:  413378114
+Time Period Total:  4736436
 
 **** Critical Section Benchmark **** Relative Time: 300
-Time Period Total:  413369575
+Time Period Total:  4736438
 
 **** Critical Section Benchmark **** Relative Time: 330
-Time Period Total:  413371673
+Time Period Total:  4736437
 
 **** Critical Section Benchmark **** Relative Time: 360
-Time Period Total:  413367039
+Time Period Total:  4736437
 
 **** Critical Section Benchmark **** Relative Time: 390
-Time Period Total:  413379137
+Time Period Total:  4736436
 
 **** Critical Section Benchmark **** Relative Time: 420
-Time Period Total:  413375332
+Time Period Total:  4736437
 
+**** Critical Section Benchmark **** Relative Time: 450
+Time Period Total:  4736437
+
+**** Critical Section Benchmark **** Relative Time: 480
+Time Period Total:  4736437
+
+**** Critical Section Benchmark **** Relative Time: 510
+Time Period Total:  4736437
+
+**** Critical Section Benchmark **** Relative Time: 540
+Time Period Total:  4736436
+
+**** Critical Section Benchmark **** Relative Time: 570
+Time Period Total:  4736438
+
+**** Critical Section Benchmark **** Relative Time: 600
+Time Period Total:  4736436
+
+**** Critical Section Benchmark **** Relative Time: 630
+Time Period Total:  4736436
