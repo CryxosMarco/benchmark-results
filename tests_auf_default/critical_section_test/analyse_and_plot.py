@@ -310,6 +310,32 @@ def plot_overall_jitter_comparison(summary):
     plt.savefig(outfile2, dpi=300)
     plt.close()
 
+def plot_avg_cycle_comparison(summary):
+    """
+    Plot average cycle count comparison between RTOSes using PMU data.
+    Saves the plot as 'plot/avg_cycle_count_comparison.png'.
+    """
+    rtoses = [item['rtos'] for item in summary]
+    avg_cycles = [item.get('avg_cycles', 0.0) for item in summary]
+
+    x = np.arange(len(rtoses))
+    plt.figure(figsize=(8, 6))
+    plt.bar(x, avg_cycles, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.xticks(x, rtoses)
+    plt.xlabel("RTOS")
+    plt.ylabel("Average Cycle Count (PMU-adjusted)")
+    plt.title("Average Cycle Count Comparison Between RTOSes")
+    plt.grid(True, axis='y')
+    
+    plot_dir = "plot"
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
+    outfile = os.path.join(plot_dir, "avg_cycle_count_comparison.png")
+    plt.tight_layout()
+    plt.savefig(outfile, dpi=300)
+    plt.close()
+
+
 # -------------------------------
 # Main function
 # -------------------------------
@@ -359,6 +385,8 @@ def main():
         base_filename = os.path.splitext(os.path.basename(test_file))[0]
         if pmu_measurements:
             cycles = [m.get('cycle', 0) for m in pmu_measurements]
+            avg_cycles = round(np.mean(cycles), 2) if cycles else 0.0
+            summary[-1]['avg_cycles'] = avg_cycles
             icache = [m.get('icache', 0) for m in pmu_measurements]
             dcache_access = [m.get('dcache_access', 0) for m in pmu_measurements]
             dcache_miss = [m.get('dcache_miss', 0) for m in pmu_measurements]
@@ -372,6 +400,7 @@ def main():
     if summary:
         plot_overall_comparison(summary)
         plot_overall_jitter_comparison(summary)
+        plot_avg_cycle_comparison(summary)
     
         # Define the output CSV file path
     summary_file = os.path.join("plot", "summary_critical_section.csv")
