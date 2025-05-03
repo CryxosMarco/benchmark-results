@@ -1,0 +1,245 @@
+**** Thread Locking Benchmark **** Relative Time: 30
+Locking Operations in Period: 5971574
+Profile Point: L00                             
+Cycle Count: 4588
+ICache Miss Count: 3
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L01                             
+Cycle Count: 4288
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L02                             
+Cycle Count: 4226
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L03                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L04                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L05                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L06                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L07                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L08                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L09                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L10                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L11                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L12                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L13                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L14                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L15                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L16                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L17                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L18                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L19                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L20                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L21                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L22                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L23                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L24                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L25                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L26                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L27                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L28                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L29                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L30                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+Profile Point: L31                             
+Cycle Count: 4210
+ICache Miss Count: 0
+DCache Access Count: 36
+DCache Miss Count: 0
+
+**** Thread Locking Benchmark **** Relative Time: 60
+Locking Operations in Period: 5971482
+**** Thread Locking Benchmark **** Relative Time: 90
+Locking Operations in Period: 5971524
+**** Thread Locking Benchmark **** Relative Time: 120
+Locking Operations in Period: 5971523
+**** Thread Locking Benchmark **** Relative Time: 150
+Locking Operations in Period: 5971507
+**** Thread Locking Benchmark **** Relative Time: 180
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 210
+Locking Operations in Period: 5971504
+**** Thread Locking Benchmark **** Relative Time: 240
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 270
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 300
+Locking Operations in Period: 5971504
+**** Thread Locking Benchmark **** Relative Time: 330
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 360
+Locking Operations in Period: 5971504
+**** Thread Locking Benchmark **** Relative Time: 390
+Locking Operations in Period: 5971507
+**** Thread Locking Benchmark **** Relative Time: 420
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 450
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 480
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 510
+Locking Operations in Period: 5971508
+**** Thread Locking Benchmark **** Relative Time: 540
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 570
+Locking Operations in Period: 5971504
+**** Thread Locking Benchmark **** Relative Time: 600
+Locking Operations in Period: 5971504
+**** Thread Locking Benchmark **** Relative Time: 630
+Locking Operations in Period: 5971507
+**** Thread Locking Benchmark **** Relative Time: 660
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 690
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 720
+Locking Operations in Period: 5971505
+**** Thread Locking Benchmark **** Relative Time: 750
+Locking Operations in Period: 5971506
+**** Thread Locking Benchmark **** Relative Time: 780
+Locking Operations in Period: 5971505
+
