@@ -5,8 +5,8 @@ freertos,RAW,icache_miss,0.0,16.0,16.0,0.0
 freertos,RAW,dcache_access,361.0,363.0,2.0,362.0
 freertos,RAW,dcache_miss,0.0,2.0,2.0,0.0
 freertos,CORRECTED,time_period_total,11038242.0,11038242.0,0.0,11038242.0
-freertos,CORRECTED,cycle_count,1417.0,2434.0,1017.0,1424.0
-freertos,CORRECTED,icache_miss,0.0,16.0,16.0,0.0
+freertos,CORRECTED,cycle_count,1408.375,2425.375,1017.0,1415.375
+freertos,CORRECTED,icache_miss,-0.16666666666666666,15.833333333333334,16.0,-0.16666666666666666
 freertos,CORRECTED,dcache_access,329.0,331.0,2.0,330.0
 freertos,CORRECTED,dcache_miss,0.0,2.0,2.0,0.0
 threadx,RAW,time_period_total,47249850.0,47249850.0,0.0,47249850.0

@@ -227,7 +227,7 @@ def main():
         ax1.legend()
     plt.tight_layout()
     file1 = os.path.join(output_dir, "locking_operations_over_time.png")
-    fig1.savefig(file1)
+    fig1.savefig(file1, dpi = 300)
     plt.close(fig1)
     
     # --- Plot: Jitter Comparison (Separate Plot) ---
@@ -248,33 +248,41 @@ def main():
     plt.suptitle("Jitter Comparison")
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     file2 = os.path.join(output_dir, "jitter_comparison.png")
-    fig2.savefig(file2)
+    fig2.savefig(file2, dpi = 300)
     plt.close(fig2)
     
     # --- Plot: Robust Locking Operations ---
     fig3, ax3 = plt.subplots(figsize=(8, 6))
     systems_list = list(robust_locking.keys())
     locking_vals = [robust_locking[s] for s in systems_list]
-    ax3.bar(systems_list, locking_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = ax3.bar(systems_list, locking_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    for bar in bars:
+        height = bar.get_height()
+        ax3.text(bar.get_x() + bar.get_width() / 2, height,
+                      f'{height:.1f}', ha='center', va='bottom', fontsize=8)
     ax3.set_title("Robust Locking Operations Over Time Period")
     ax3.set_xlabel("RTOS")
     ax3.set_ylabel("Average Locking Operations")
     plt.tight_layout()
     file3 = os.path.join(output_dir, "average_locking_ops.png")
-    fig3.savefig(file3)
+    fig3.savefig(file3, dpi = 300)
     plt.close(fig3)
     
     # --- Plot: Robust Cycle Count ---
     fig4, ax4 = plt.subplots(figsize=(8, 6))
     systems_list = list(robust_cycle.keys())
     cycle_vals = [robust_cycle[s] for s in systems_list]
-    ax4.bar(systems_list, cycle_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = ax4.bar(systems_list, cycle_vals, color=['steelblue', 'forestgreen', 'darkorange'])
+    for bar in bars:
+        height = bar.get_height()
+        ax4.text(bar.get_x() + bar.get_width() / 2, height,
+                      f'{height:.1f}', ha='center', va='bottom', fontsize=8)
     ax4.set_title("Average Cycle Count for Locking a Thread")
     ax4.set_xlabel("RTOS")
     ax4.set_ylabel("Average Cycle Count")
     plt.tight_layout()
     file4 = os.path.join(output_dir, "average_cycle_count_comparison.png")
-    fig4.savefig(file4)
+    fig4.savefig(file4, dpi = 300)
     plt.close(fig4)
     
     # --- Plot: Cache Statistics Overview (Averages) ---
@@ -285,7 +293,11 @@ def main():
     systems_cache = list(cache_stats.keys())
     for idx, system in enumerate(systems_cache):
         values = [cache_stats[system][cat] for cat in categories]
-        ax5.bar(x + idx * width, values, width, label=system)
+        bars = ax5.bar(x + idx * width, values, width, label=system)
+        for bar in bars:
+            height = bar.get_height()
+            ax5.text(bar.get_x() + bar.get_width() / 2, height,
+                        f'{height:.1f}', ha='center', va='bottom', fontsize=8)
     ax5.set_title("Cache Statistics Overview (Averages)")
     ax5.set_xticks(x + width)
     ax5.set_xticklabels(categories)
@@ -294,7 +306,7 @@ def main():
         ax5.legend()
     plt.tight_layout()
     file5 = os.path.join(output_dir, "cache_statistics_overview.png")
-    fig5.savefig(file5)
+    fig5.savefig(file5, dpi = 300)
     plt.close(fig5)
     
     import csv

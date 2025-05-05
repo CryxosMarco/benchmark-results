@@ -277,7 +277,11 @@ def plot_cycle_jitter(summary):
     # Plot Absolute Jitter
     plt.figure(figsize=(8,6))
     x = np.arange(len(rtoses))
-    plt.bar(x, jitter_abs, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = plt.bar(x, jitter_abs, color=['steelblue', 'forestgreen', 'darkorange'])
+    # Add text annotations above the bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
     plt.xticks(x, rtoses)
     plt.ylabel("Cycle Count Jitter (Absolute)")
     plt.title("Cycle Count Jitter (Absolute)")
@@ -332,9 +336,9 @@ def plot_comparison_all_rtoses(summary):
     fig, axs = plt.subplots(2, 2, figsize=(14, 10))
 
     # Cycle Count Comparison
-    axs[0, 0].bar(x - bar_width, cycle_mins, width=bar_width, label='Min')
-    axs[0, 0].bar(x, cycle_robusts, width=bar_width, label='Robust Avg')
-    axs[0, 0].bar(x + bar_width, cycle_maxs, width=bar_width, label='Max')
+    bars1 = axs[0, 0].bar(x - bar_width, cycle_mins, width=bar_width, label='Min')
+    bars2 = axs[0, 0].bar(x, cycle_robusts, width=bar_width, label='Robust Avg')
+    bars3 = axs[0, 0].bar(x + bar_width, cycle_maxs, width=bar_width, label='Max')
     axs[0, 0].set_title("Cycle Count Comparison")
     axs[0, 0].set_xticks(x)
     axs[0, 0].set_xticklabels(rtoses)
@@ -374,6 +378,13 @@ def plot_comparison_all_rtoses(summary):
     axs[1, 1].set_ylabel("DCache Miss (Adjusted)")
     axs[1, 1].legend()
     axs[1, 1].grid(True)
+
+    # Add annotations
+    for bars in [bars1, bars2, bars3]:
+        for bar in bars:
+            height = bar.get_height()
+            axs[0, 0].text(bar.get_x() + bar.get_width() / 2, height,
+                        f'{height:.1f}', ha='center', va='bottom', fontsize=8)
     
     plt.tight_layout()
     plot_dir = "plot"
@@ -399,9 +410,21 @@ def plot_cycle_count(summary):
 
     # Create the figure for Cycle Count comparison.
     plt.figure(figsize=(8, 6))
-    plt.bar(x - bar_width, cycle_mins, width=bar_width, label='Min', color='steelblue')
-    plt.bar(x, cycle_robusts, width=bar_width, label='Robust Avg', color='darkorange')
-    plt.bar(x + bar_width, cycle_maxs, width=bar_width, label='Max', color='forestgreen')
+    bars = plt.bar(x - bar_width, cycle_mins, width=bar_width, label='Min', color='steelblue')
+     # Add text annotations above the bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
+    bars = plt.bar(x, cycle_robusts, width=bar_width, label='Robust Avg', color='darkorange')
+     # Add text annotations above the bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
+    bars = plt.bar(x + bar_width, cycle_maxs, width=bar_width, label='Max', color='forestgreen')
+     # Add text annotations above the bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
 
     plt.title("Cycle Count Comparison")
     plt.xlabel("RTOS")

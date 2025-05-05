@@ -132,10 +132,15 @@ def plot_average_comparison(summary):
     bar_width = 0.35
     
     plt.figure(figsize=(8, 6))
-    plt.bar(x - bar_width/2, avg_opti, width=bar_width, color='indianred',
+    bars1 = plt.bar(x - bar_width/2, avg_opti, width=bar_width, color='indianred',
             label="Specific Sync. Mechanisms")
-    plt.bar(x + bar_width/2, avg_ref, width=bar_width, color='yellowgreen',
+    bars2 = plt.bar(x + bar_width/2, avg_ref, width=bar_width, color='yellowgreen',
             label="Reference (via Semaphores)")
+    for bars in [bars1, bars2]:
+        for bar in bars:
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2, height,
+                        f'{height:.1f}', ha='center', va='bottom', fontsize=8)
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Average Time Period Total")

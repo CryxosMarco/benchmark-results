@@ -174,6 +174,19 @@ def main():
     # Plot 2: Comparison of Average Throughput Among RTOS for Each Message Size
     pivot_avg = summary_df.pivot(index='message_size', columns='rtos', values='avg_sent').sort_index()
     ax = pivot_avg.plot(kind='bar', figsize=(10, 6))
+    # Add value labels on top of each bar
+    for container in ax.containers:
+        for bar in container:
+            height = bar.get_height()
+            if not np.isnan(height):  # Avoid labeling missing data (NaN)
+                ax.text(
+                    bar.get_x() + bar.get_width() / 2,
+                    height,
+                    f'{height:.0f}',
+                    ha='center',
+                    va='bottom',
+                    fontsize=8
+            )
     # Check the pivot index to ensure it matches expectations
     print("Pivot index:", pivot_avg.index)
     # Set custom x-axis tick labels to 2, 4, 8, 16, 32
