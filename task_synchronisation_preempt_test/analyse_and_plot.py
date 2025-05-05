@@ -126,10 +126,19 @@ def parse_calibration_file(filename):
 
 # ---------- Statistical Functions ----------
 
-def robust_average(values):
-    """Compute the robust (median) average of a list of numbers, ignoring NaNs."""
-    arr = np.array(values, dtype=float)
-    return np.nanmedian(arr)
+def robust_average(values, trim_fraction=0.1):
+    """
+    Compute a trimmed mean by removing the top and bottom trim_fraction of values.
+    """
+    arr = np.array(values)
+    n = len(arr)
+    if n == 0:
+        return 0.0
+    trim_count = int(n * trim_fraction)
+    if n - 2 * trim_count <= 0:
+        return np.mean(arr)
+    trimmed = np.sort(arr)[trim_count:n - trim_count]
+    return np.mean(trimmed)
 
 def summary_stats(values):
     """

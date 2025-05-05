@@ -117,9 +117,19 @@ def adjust_profiles(profiles, calibration):
         adjusted.append(adj)
     return adjusted
 
-def robust_average(values):
-    """Compute a robust average (median) for a list of numeric values."""
-    return statistics.median(values) if values else 0
+def robust_average(values, trim_fraction=0.1):
+    """
+    Compute a trimmed mean by removing the top and bottom trim_fraction of values.
+    """
+    arr = np.array(values)
+    n = len(arr)
+    if n == 0:
+        return 0.0
+    trim_count = int(n * trim_fraction)
+    if n - 2 * trim_count <= 0:
+        return np.mean(arr)
+    trimmed = np.sort(arr)[trim_count:n - trim_count]
+    return np.mean(trimmed)
 
 def main():
     # Use the script's directory as the default folder
