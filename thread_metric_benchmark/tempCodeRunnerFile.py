@@ -1,0 +1,1 @@
+Data_Analyser.py .\\freeRTOS\\new_30sec .\\threadX\\new_30sec .\\zephyr\\default_30sec

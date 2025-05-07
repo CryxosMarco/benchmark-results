@@ -1,45 +1,49 @@
 Initializing ThreadX system...
 Starting Main Thread...
 **** Thread-Metric Message Processing Test **** Relative Time: 30
-Time Period Total:  65148650
+Time Period Total:  68691063
 **** Thread-Metric Message Processing Test **** Relative Time: 60
-Time Period Total:  64970534
+Time Period Total:  68687468
 **** Thread-Metric Message Processing Test **** Relative Time: 90
-Time Period Total:  64970407
+Time Period Total:  68687329
 **** Thread-Metric Message Processing Test **** Relative Time: 120
-Time Period Total:  64970497
+Time Period Total:  68687467
 **** Thread-Metric Message Processing Test **** Relative Time: 150
-Time Period Total:  64972460
+Time Period Total:  68690773
 **** Thread-Metric Message Processing Test **** Relative Time: 180
-Time Period Total:  64972774
+Time Period Total:  68689259
 **** Thread-Metric Message Processing Test **** Relative Time: 210
-Time Period Total:  64972477
+Time Period Total:  68689517
 **** Thread-Metric Message Processing Test **** Relative Time: 240
-Time Period Total:  64972489
+Time Period Total:  68689554
 **** Thread-Metric Message Processing Test **** Relative Time: 270
-Time Period Total:  64972447
+Time Period Total:  68689540
 **** Thread-Metric Message Processing Test **** Relative Time: 300
-Time Period Total:  64972468
+Time Period Total:  68691220
 **** Thread-Metric Message Processing Test **** Relative Time: 330
-Time Period Total:  64972514
+Time Period Total:  68689900
 **** Thread-Metric Message Processing Test **** Relative Time: 360
-Time Period Total:  64972458
+Time Period Total:  68689348
 **** Thread-Metric Message Processing Test **** Relative Time: 390
-Time Period Total:  64972480
+Time Period Total:  68689975
 **** Thread-Metric Message Processing Test **** Relative Time: 420
-Time Period Total:  64972479
+Time Period Total:  68690560
 **** Thread-Metric Message Processing Test **** Relative Time: 450
-Time Period Total:  64972557
+Time Period Total:  68698811
 **** Thread-Metric Message Processing Test **** Relative Time: 480
-Time Period Total:  64972618
+Time Period Total:  68689417
 **** Thread-Metric Message Processing Test **** Relative Time: 510
-Time Period Total:  64972469
+Time Period Total:  68690041
 **** Thread-Metric Message Processing Test **** Relative Time: 540
-Time Period Total:  64972450
+Time Period Total:  68689492
 **** Thread-Metric Message Processing Test **** Relative Time: 570
-Time Period Total:  64972478
+Time Period Total:  68691456
 **** Thread-Metric Message Processing Test **** Relative Time: 600
-Time Period Total:  64972517
+Time Period Total:  68689565
 **** Thread-Metric Message Processing Test **** Relative Time: 630
-Time Period Total:  64972471
+Time Period Total:  68689876
+**** Thread-Metric Message Processing Test **** Relative Time: 660
+Time Period Total:  68689506
+**** Thread-Metric Message Processing Test **** Relative Time: 690
+Time Period Total:  68690207
 
