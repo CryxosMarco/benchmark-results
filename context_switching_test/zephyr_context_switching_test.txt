@@ -1,0 +1,255 @@
+*** Booting Zephyr OS build v4.0.0-2438-g58565f9f7d9b ***
+Initializing Zephyr system...
+Main task created and running...
+Starting Thread-Metric tests...
+[Main] Starting Continuous Context Switch Test...
+Initializing PMU...
+PMU Initialized.
+**** Context Switch Benchmark **** Relative Time: 30
+Time Period Total:  99588344
+
+No profile entry found for name: CSW00
+Profile Entry: CSW01
+Cycle Count: 562
+ICache Miss Count: 9
+DCache Access Count: 77
+DCache Miss Count: 1
+
+Profile Entry: CSW02
+Cycle Count: 286
+ICache Miss Count: 1
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW03
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW04
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW05
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW06
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW07
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW08
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW09
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW10
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW11
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW12
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW13
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW14
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW15
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW16
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW17
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW18
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW19
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW20
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW21
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW22
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW23
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW24
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW25
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW26
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW27
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW28
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW29
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW30
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+Profile Entry: CSW31
+Cycle Count: 274
+ICache Miss Count: 0
+DCache Access Count: 76
+DCache Miss Count: 0
+
+**** Context Switch Benchmark **** Relative Time: 60
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 90
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 120
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 150
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 180
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 210
+Time Period Total:  99588380
+
+**** Context Switch Benchmark **** Relative Time: 240
+Time Period Total:  99588378
+
+**** Context Switch Benchmark **** Relative Time: 270
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 300
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 330
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 360
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 390
+Time Period Total:  99588380
+
+**** Context Switch Benchmark **** Relative Time: 420
+Time Period Total:  99588380
+
+**** Context Switch Benchmark **** Relative Time: 450
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 480
+Time Period Total:  99588380
+
+**** Context Switch Benchmark **** Relative Time: 510
+Time Period Total:  99588380
+
+**** Context Switch Benchmark **** Relative Time: 540
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 570
+Time Period Total:  99588379
+
+**** Context Switch Benchmark **** Relative Time: 600
+Time Period Total:  99588380
+
+

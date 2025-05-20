@@ -1,15 +1,15 @@
-Initializing FreeRTOS system...
-Starting Thread-Metric tests...
+Initializing ThreadX system...
+Starting Main Thread...
 [Main] Starting PMU calibration Test.
 [Main] PMU Test: Profile Point: Run 00                          
-Cycle Count: 543
-ICache Miss Count: 4
+Cycle Count: 563
+ICache Miss Count: 5
 DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 01                          
-Cycle Count: 300
-ICache Miss Count: 1
+Cycle Count: 241
+ICache Miss Count: 0
 DCache Access Count: 32
 DCache Miss Count: 0
 
@@ -36,7 +36,7 @@ Cycle Count: 198
 ICache Miss Count: 0
 DCache Access Count: 32
 DCache Miss Count: 0
- 
+
 [Main] PMU Test: Profile Point: Run 06                          
 Cycle Count: 198
 ICache Miss Count: 0
@@ -44,20 +44,20 @@ DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 07                          
-Cycle Count: 198
-ICache Miss Count: 0
-DCache Access Count: 32
-DCache Miss Count: 0
-
-[Main] PMU Test: Profile Point: Run 08                          
-Cycle Count: 244
+Cycle Count: 247
 ICache Miss Count: 1
 DCache Access Count: 32
 DCache Miss Count: 0
 
-[Main] PMU Test: Profile Point: Run 09                          
+[Main] PMU Test: Profile Point: Run 08                          
 Cycle Count: 198
 ICache Miss Count: 0
+DCache Access Count: 32
+DCache Miss Count: 0
+
+[Main] PMU Test: Profile Point: Run 09                          
+Cycle Count: 244
+ICache Miss Count: 1
 DCache Access Count: 32
 DCache Miss Count: 0
 
@@ -92,20 +92,20 @@ DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 15                          
-Cycle Count: 248
-ICache Miss Count: 1
-DCache Access Count: 32
-DCache Miss Count: 0
-
-[Main] PMU Test: Profile Point: Run 16                          
 Cycle Count: 198
 ICache Miss Count: 0
 DCache Access Count: 32
 DCache Miss Count: 0
 
-[Main] PMU Test: Profile Point: Run 17                          
-Cycle Count: 244
+[Main] PMU Test: Profile Point: Run 16                          
+Cycle Count: 243
 ICache Miss Count: 1
+DCache Access Count: 32
+DCache Miss Count: 0
+
+[Main] PMU Test: Profile Point: Run 17                          
+Cycle Count: 198
+ICache Miss Count: 0
 DCache Access Count: 32
 DCache Miss Count: 0
 
@@ -140,20 +140,20 @@ DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 23                          
-Cycle Count: 198
-ICache Miss Count: 0
-DCache Access Count: 32
-DCache Miss Count: 0
-
-[Main] PMU Test: Profile Point: Run 24                          
-Cycle Count: 243
+Cycle Count: 247
 ICache Miss Count: 1
 DCache Access Count: 32
 DCache Miss Count: 0
 
-[Main] PMU Test: Profile Point: Run 25                          
+[Main] PMU Test: Profile Point: Run 24                          
 Cycle Count: 198
 ICache Miss Count: 0
+DCache Access Count: 32
+DCache Miss Count: 0
+
+[Main] PMU Test: Profile Point: Run 25                          
+Cycle Count: 244
+ICache Miss Count: 1
 DCache Access Count: 32
 DCache Miss Count: 0
 
@@ -170,14 +170,14 @@ DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 28                          
-Cycle Count: 198
-ICache Miss Count: 0
+Cycle Count: 247
+ICache Miss Count: 1
 DCache Access Count: 32
 DCache Miss Count: 0
 
 [Main] PMU Test: Profile Point: Run 29                          
-Cycle Count: 244
-ICache Miss Count: 1
+Cycle Count: 198
+ICache Miss Count: 0
 DCache Access Count: 32
 DCache Miss Count: 0
 

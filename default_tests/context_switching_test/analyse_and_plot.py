@@ -2,7 +2,7 @@
 #
 # This Code was generated with help of the ChatGPT and Github Copilot
 # The Code was carfeully reviewed and adjusted to work as intended
-# The Code is used to analyse and plot the critical section test results
+# The Code is used to analyse and plot the test results
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of 
 # this software and associated documentation files (the "Software"), 
@@ -103,7 +103,7 @@ def parse_calibration_file(filename):
 
 def parse_overall_performance(filename):
     """
-    Parse the file to extract critical section Time Period Total data.
+    Parse the file to extract context switching Time Period Total data.
     It looks for lines containing "Relative Time:" and "Time Period Total:".
     Returns two lists:
       - relative_times: list of relative time markers
@@ -180,7 +180,7 @@ def parse_pmu_metrics(filename, calibration):
 
 def plot_overall_performance(rtos, rel_times, processing_times):
     """
-    Plot critical section Time Period Total data (Time Period Total vs Relative Time) for one RTOS.
+    Plot context switching Time Period Total data (Time Period Total vs Relative Time) for one RTOS.
     Saves the plot as "plot/<rtos>_avg_period_total.png".
     """
     plt.figure(figsize=(8, 6))
@@ -250,7 +250,7 @@ def plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss):
 
 def plot_overall_comparison(summary):
     """
-    Generate a bar chart comparing the average critical section Time Period Total for all RTOSes.
+    Generate a bar chart comparing the average context switching Time Period Total for all RTOSes.
     Saves the plot as "plot/avg_period_total_comparison.png".
     """
     rtoses = [item['rtos'] for item in summary]
@@ -264,8 +264,8 @@ def plot_overall_comparison(summary):
         plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
-    plt.ylabel("Average Counter Value for Time Period")
-    plt.title("Comparison of Critical Section Time Period Total ")
+    plt.ylabel("Average Counter Value")
+    plt.title("Comparison of Context Switching Counter Averages over Time Period Total ")
     plt.grid(True, axis='y')
     plot_dir = "plot"
     if not os.path.exists(plot_dir):
@@ -343,6 +343,39 @@ def plot_avg_cycle_comparison(summary):
     plt.savefig(outfile, dpi=300)
     plt.close()
 
+def plot_cycle_counts_over_time(summary_all_cycles):
+    """
+    Create one plot per RTOS showing cycle counts over time using consistent color coding.
+    Saves plots to 'plot/<rtos>_cycle_counts_over_time.png'
+    """
+    color_map = {
+        'freertos': 'steelblue',
+        'threadx': 'forestgreen',
+        'zephyr': 'darkorange'
+    }
+
+    plot_dir = "plot"
+    os.makedirs(plot_dir, exist_ok=True)
+
+    for rtos, cycles in summary_all_cycles.items():
+        if not cycles:
+            continue
+
+        indices = np.arange(1, len(cycles) + 1)
+        plt.figure(figsize=(8, 6))
+        plt.plot(indices, cycles, marker='o', color=color_map.get(rtos, 'gray'), label=rtos.capitalize())
+        plt.xlabel("Profile Index")
+        plt.ylabel("Cycle Count (adjusted)")
+        plt.title(f"{rtos.capitalize()} - Cycle Count over Time")
+        plt.grid(True)
+        plt.legend()
+
+        outfile = os.path.join(plot_dir, f"{rtos}_cycle_counts_over_time.png")
+        plt.tight_layout()
+        plt.savefig(outfile, dpi=300)
+        plt.close()
+
+
 
 # -------------------------------
 # Main function
@@ -352,9 +385,11 @@ def main():
     # List of RTOS names (as in the file names)
     rtoses = ['freertos', 'threadx', 'zephyr']
     summary = []  # to collect overall performance stats for each RTOS
+    summary_all_cycles = {}
+
     
     for rtos in rtoses:
-        test_file = f"{rtos}_critical_section_test.txt"
+        test_file = f"{rtos}_context_switching_test.txt"
         cal_file = f"{rtos}_pmu_calibaration.txt"
         
         if not os.path.exists(test_file):
@@ -393,7 +428,8 @@ def main():
         base_filename = os.path.splitext(os.path.basename(test_file))[0]
         if pmu_measurements:
             cycles = [m.get('cycle', 0) for m in pmu_measurements]
-            avg_cycles = round(np.mean(cycles), 2) if cycles else 0.0
+            summary_all_cycles[rtos] = cycles
+            avg_cycles = round(robust_average(cycles), 2) if cycles else 0.0
             summary[-1]['avg_cycles'] = avg_cycles
             icache = [m.get('icache', 0) for m in pmu_measurements]
             dcache_access = [m.get('dcache_access', 0) for m in pmu_measurements]
@@ -401,6 +437,7 @@ def main():
             
             if cycles:
                 plot_pmu_metric("Cycle Count", cycles, rtos, base_filename)
+                
             if icache or dcache_access or dcache_miss:
                 plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss)
     
@@ -409,20 +446,24 @@ def main():
         plot_overall_comparison(summary)
         plot_overall_jitter_comparison(summary)
         plot_avg_cycle_comparison(summary)
-    
-        # Define the output CSV file path
-    summary_file = os.path.join("plot", "summary_critical_section.csv")
+        plot_cycle_counts_over_time(summary_all_cycles)
 
-    # Open the CSV file for writing
+    
+    # Define the output CSV file path
+    summary_file = os.path.join("plot", "summary_context_switching.csv")
+
     with open(summary_file, mode='w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
         
-        # Write the header row
-        header = ["RTOS", "Avg Total", "Min Total", "Max Total", "Jitter Total", "Jitter (%)", "Data Points"]
+        # Write the header row with PMU values and calibration
+        header = [
+            "RTOS", "Avg Total", "Min Total", "Max Total", "Jitter Total", "Jitter (%)", "Data Points",
+            "Avg Cycle Count"
+        ]
         csvwriter.writerow(header)
         
-        # Write each summary item as a row in the CSV file
         for item in summary:
+            calib = item.get('calibration', {'cycle': 0, 'icache': 0, 'dcache_access': 0, 'dcache_miss': 0})
             row = [
                 item['rtos'],
                 f"{item['avg_overall']:.2f}",
@@ -430,9 +471,11 @@ def main():
                 item['max_overall'],
                 item['jitter_total'],
                 f"{item['jitter_pct']:.2f}",
-                item['num_overall']
+                item['num_overall'],
+                f"{item.get('avg_cycles', 0):.2f}"
             ]
             csvwriter.writerow(row)
+
 
 if __name__ == "__main__":
     main()

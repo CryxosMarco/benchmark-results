@@ -1,0 +1,248 @@
+Initializing FreeRTOS system...
+Starting Thread-Metric tests...
+[Main] Starting Continuous Context Switch Test...
+**** Context Switch Benchmark **** Relative Time: 30
+Time Period Total:  38098808
+
+Profile Point: CSW01                           
+Cycle Count: 1197
+ICache Miss Count: 5
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW02                           
+Cycle Count: 850
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW03                           
+Cycle Count: 834
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW04                           
+Cycle Count: 837
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW05                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW06                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW07                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW08                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW09                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW10                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW11                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW12                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW13                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW14                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW15                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW16                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW17                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW18                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW19                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW20                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW21                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW22                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW23                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW24                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW25                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW26                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW27                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW28                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW29                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW30                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+Profile Point: CSW31                           
+Cycle Count: 831
+ICache Miss Count: 0
+DCache Access Count: 145
+DCache Miss Count: 0
+
+**** Context Switch Benchmark **** Relative Time: 60
+Time Period Total:  38099579
+
+**** Context Switch Benchmark **** Relative Time: 90
+Time Period Total:  38098749
+
+**** Context Switch Benchmark **** Relative Time: 120
+Time Period Total:  38098747
+
+**** Context Switch Benchmark **** Relative Time: 150
+Time Period Total:  38099898
+
+**** Context Switch Benchmark **** Relative Time: 180
+Time Period Total:  38099902
+
+**** Context Switch Benchmark **** Relative Time: 210
+Time Period Total:  38099899
+
+**** Context Switch Benchmark **** Relative Time: 240
+Time Period Total:  38099901
+
+**** Context Switch Benchmark **** Relative Time: 270
+Time Period Total:  38099899
+
+**** Context Switch Benchmark **** Relative Time: 300
+Time Period Total:  38099899
+
+**** Context Switch Benchmark **** Relative Time: 330
+Time Period Total:  38099900
+
+**** Context Switch Benchmark **** Relative Time: 360
+Time Period Total:  38099902
+
+**** Context Switch Benchmark **** Relative Time: 390
+Time Period Total:  38099900
+
+**** Context Switch Benchmark **** Relative Time: 420
+Time Period Total:  38099900
+
+**** Context Switch Benchmark **** Relative Time: 450
+Time Period Total:  38099903
+
+**** Context Switch Benchmark **** Relative Time: 480
+Time Period Total:  38099899
+
+**** Context Switch Benchmark **** Relative Time: 510
+Time Period Total:  38099899
+
+**** Context Switch Benchmark **** Relative Time: 540
+Time Period Total:  38099901
+
+**** Context Switch Benchmark **** Relative Time: 570
+Time Period Total:  38099903
+
+**** Context Switch Benchmark **** Relative Time: 600
+Time Period Total:  38099899

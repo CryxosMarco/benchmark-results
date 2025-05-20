@@ -190,7 +190,7 @@ def plot_overall_performance(rtos, rel_times, processing_times):
         plt.plot(rel_times, processing_times, 'bo', markersize=10, label="Time Period Total")
     plt.xlabel("Relative Time")
     plt.ylabel("Counter Value in Time Period")
-    plt.title(f"{rtos.capitalize()} - Time Perios Counter Values over Time")
+    plt.title(f"{rtos.capitalize()} - Time Period Counter Values over Time")
     plt.legend()
     plt.grid(True)
     plot_dir = "plot"
