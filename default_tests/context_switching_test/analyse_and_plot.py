@@ -1,26 +1,26 @@
-# Copyright (c) <2025> <Marco Milenkovic>
-#
-# This Code was generated with help of the ChatGPT and Github Copilot
-# The Code was carfeully reviewed and adjusted to work as intended
-# The Code is used to analyse and plot the test results
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy of 
-# this software and associated documentation files (the "Software"), 
-# to deal in the Software without restriction, including without limitation the 
-# rights to use, copy, modify, merge, publish, distribute, sublicense, 
-# and/or sell copies of the Software, and to permit persons to whom the Software 
-# is furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all 
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
-# A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
-# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
-# AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
-# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+"""
+MIT License
 
+Copyright (c) 2025 Marco Milenkovic
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
 
 import os
 import re
@@ -64,38 +64,21 @@ def compute_stats(values):
 # Calibration parsing
 # -------------------------------
 
-def parse_calibration_file(filename):
+def read_calibration_stats(filename):
     """
-    Parse a calibration file and compute a reference overhead for each metric.
-    Accepts both "Metric:" and "Metric Count:" formats.
+    Reads calibration_stats.csv and returns a dict mapping lowercase RTOS names
+    to their mean cycle‐overheads.
     """
-    metrics = {'cycle': [], 'icache': [], 'dcache_access': [], 'dcache_miss': []}
-    with open(filename, 'r') as f:
-        for line in f:
-            line = line.strip()
-            m = re.match(r'Cycle Count(?: Count)?:\s+(\d+)', line)
-            if m:
-                metrics['cycle'].append(float(m.group(1)))
-                continue
-            m = re.match(r'ICache Miss(?: Count)?:\s+(\d+)', line)
-            if m:
-                metrics['icache'].append(float(m.group(1)))
-                continue
-            m = re.match(r'DCache Access(?: Count)?:\s+(\d+)', line)
-            if m:
-                metrics['dcache_access'].append(float(m.group(1)))
-                continue
-            m = re.match(r'DCache Miss(?: Count)?:\s+(\d+)', line)
-            if m:
-                metrics['dcache_miss'].append(float(m.group(1)))
-                continue
-    cal = {}
-    for key in metrics:
-        if metrics[key]:
-            cal[key] = round(robust_average(metrics[key]), 2)
-        else:
-            cal[key] = 0.0
-    return cal
+    stats = {}
+    with open(filename, newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            rtos = row['RTOS'].lower()
+            stats[rtos] = { 'cycle': float(row['Mean_Overhead_Cycles']),
+                            'icache': 0.0,
+                            'dcache_access': 0.0,
+                            'dcache_miss': 0.0 }
+    return stats
 
 # -------------------------------
 # Parsing overall Time Period Total from the test file
@@ -134,44 +117,42 @@ def parse_overall_performance(filename):
 def parse_pmu_metrics(filename, calibration):
     """
     Parse the file to extract PMU metrics from each profile block.
-    Looks for lines starting with either "Profile Point:" or "Profile Entry:" then,
-    in subsequent lines, matches "Cycle Count", "ICache Miss", "DCache Access", and "DCache Miss"
-    (with or without "Count"). Calibration overhead is subtracted.
-    Returns a list of dictionaries (one per profile block).
+    Calibration overhead for cycles is subtracted based on calibration dict.
+    Returns a list of dicts per profile block.
     """
     measurements = []
-    current_measurement = None
+    current = None
     with open(filename, 'r') as f:
         for line in f:
             line = line.strip()
             if line.startswith("Profile Point:") or line.startswith("Profile Entry:"):
-                if current_measurement is not None:
-                    measurements.append(current_measurement)
-                current_measurement = {}
+                if current is not None:
+                    measurements.append(current)
+                current = {}
                 continue
-            if current_measurement is not None:
+            if current is not None:
                 m = re.match(r'Cycle Count(?: Count)?:\s+(\d+)', line)
                 if m:
                     val = float(m.group(1)) - calibration['cycle']
-                    current_measurement['cycle'] = max(val, 0)
+                    current['cycle'] = max(val, 0)
                     continue
                 m = re.match(r'ICache Miss(?: Count)?:\s+(\d+)', line)
                 if m:
                     val = float(m.group(1)) - calibration['icache']
-                    current_measurement['icache'] = max(val, 0)
+                    current['icache'] = max(val, 0)
                     continue
                 m = re.match(r'DCache Access(?: Count)?:\s+(\d+)', line)
                 if m:
                     val = float(m.group(1)) - calibration['dcache_access']
-                    current_measurement['dcache_access'] = max(val, 0)
+                    current['dcache_access'] = max(val, 0)
                     continue
                 m = re.match(r'DCache Miss(?: Count)?:\s+(\d+)', line)
                 if m:
                     val = float(m.group(1)) - calibration['dcache_miss']
-                    current_measurement['dcache_miss'] = max(val, 0)
+                    current['dcache_miss'] = max(val, 0)
                     continue
-    if current_measurement is not None and current_measurement:
-        measurements.append(current_measurement)
+    if current:
+        measurements.append(current)
     return measurements
 
 # -------------------------------
@@ -386,19 +367,16 @@ def main():
     rtoses = ['freertos', 'threadx', 'zephyr']
     summary = []  # to collect overall performance stats for each RTOS
     summary_all_cycles = {}
-
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # build the path to the CSV in pmu_calibration folder:
+    csv_path = os.path.join(script_dir, '..', '..', 'pmu_calibration', 'calibration_stats.csv')
+    csv_path = os.path.normpath(csv_path) 
+    calibration_stats = read_calibration_stats(csv_path)
     
     for rtos in rtoses:
         test_file = f"{rtos}_context_switching_test.txt"
-        cal_file = f"{rtos}_pmu_calibaration.txt"
-        
-        if not os.path.exists(test_file):
-            continue
-        
-        if not os.path.exists(cal_file):
-            calibration = {'cycle': 0.0, 'icache': 0.0, 'dcache_access': 0.0, 'dcache_miss': 0.0}
-        else:
-            calibration = parse_calibration_file(cal_file)
+        calibration = calibration_stats.get(rtos, 
+                  {'cycle':0.0,'icache':0.0,'dcache_access':0.0,'dcache_miss':0.0})
         
         # Parse overall Time Period Total data.
         rel_times, processing_times = parse_overall_performance(test_file)

@@ -1,4 +1,4 @@
-RTOS,File,Total Inversion Cycles,Number of Measurements,Cycle Count Min,Cycle Count Robust Avg,Cycle Count Median,Cycle Count Max,ICache Miss Min,ICache Miss Robust Avg,ICache Miss Median,ICache Miss Max,DCache Access Min,DCache Access Robust Avg,DCache Access Median,DCache Access Max,DCache Miss Min,DCache Miss Robust Avg,DCache Miss Median,DCache Miss Max
-Freertos,freertos_inheritance_test.txt,32,32,4550.38,4603.57,4595.88,7381.38,0.00,0.10,0.00,47.83,1003.00,1007.69,1008.00,1009.00,0.00,0.00,0.00,3.00
-Threadx,threadx_inheritance_test.txt,32,32,2031.46,2070.92,2067.96,4352.46,0.00,0.10,0.00,44.83,580.00,580.23,580.00,587.00,0.00,0.00,0.00,1.00
-Zephyr,zephyr_inheritance_test.txt,32,32,1100.00,1150.12,1116.00,1966.00,0.00,0.00,0.00,17.00,240.00,244.23,241.00,253.00,0.00,0.00,0.00,1.00
+rtos,file,total_inversions,num_measurements,cycle_min,cycle_robust,cycle_median,cycle_max,icache_min,icache_robust,icache_median,icache_max,dcache_access_min,dcache_access_robust,dcache_access_median,dcache_access_max,dcache_miss_min,dcache_miss_robust,dcache_miss_median,dcache_miss_max
+Freertos,freertos_inheritance_test.txt,32,,4535.53,4588.722307692307,4581.03,7366.53,0.0,0.11538461538461539,0.0,48.0,1035.0,1039.6923076923076,1040.0,1041.0,0.0,0.0,0.0,3.0
+Threadx,threadx_inheritance_test.txt,32,,2018.13,2057.591538461538,2054.63,4339.13,0.0,0.11538461538461539,0.0,45.0,612.0,612.2307692307693,612.0,619.0,0.0,0.0,0.0,1.0
+Zephyr,zephyr_inheritance_test.txt,32,,1096.17,1146.2853846153846,1112.17,1962.17,0.0,0.0,0.0,17.0,257.0,261.2307692307692,258.0,270.0,0.0,0.0,0.0,1.0

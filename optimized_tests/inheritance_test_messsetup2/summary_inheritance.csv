@@ -1,0 +1,4 @@
+rtos,file,total_inversions,num_measurements,cycle_min,cycle_robust,cycle_median,cycle_max,icache_min,icache_robust,icache_median,icache_max,dcache_access_min,dcache_access_robust,dcache_access_median,dcache_access_max,dcache_miss_min,dcache_miss_robust,dcache_miss_median,dcache_miss_max
+Freertos,freertos_inheritance_test.txt,32,,3068.53,3115.1453846153845,3098.03,5270.53,0.0,0.19230769230769232,0.0,40.0,717.0,721.0,721.0,721.0,0.0,0.0,0.0,1.0
+Threadx,threadx_inheritance_test.txt,32,,2013.13,2058.3992307692306,2050.13,3978.13,0.0,0.11538461538461539,0.0,36.0,612.0,612.5,612.0,619.0,0.0,0.0,0.0,1.0
+Zephyr,zephyr_inheritance_test.txt,32,,931.17,964.400769230769,956.17,1872.17,0.0,0.0,0.0,18.0,223.0,223.8846153846154,223.0,226.0,0.0,0.0,0.0,1.0

@@ -1,4 +1,4 @@
-System,Avg Locking Ops,Jitter Total,Jitter %,Robust Locking Ops,Robust Cycle Count,ICache Miss,DCache Access,DCache Miss
-freertos,4601894.71,88,0.00,4601890.764705882,5205.0,0.22,78.00,0.00
-threadx,3925213.52,50,0.00,3925213.0,6141.346153846154,0.75,369.06,0.06
-zephyr,5853853.60,2,0.00,5853853.6,4102.0,0.16,37.00,0.00
+System,Avg Ops,Jitter Tot,Jitter %,Rob Lock,Rob Cycle,ICache Avg,DCache Access Avg,DCache Miss Avg
+Freertos,4601894.71,88,0.00,4601890.76,5181.53,0.22,78.00,0.00
+Threadx,3925213.52,50,0.00,3925213.00,6117.48,0.75,369.06,0.06
+Zephyr,5853853.60,2,0.00,5853853.60,4098.17,0.16,37.00,0.00

@@ -1,4 +1,0 @@
-RTOS,File,Total Inversion Cycles,Number of Measurements,Cycle Count Min,Cycle Count Robust Avg,Cycle Count Median,Cycle Count Max,ICache Miss Min,ICache Miss Robust Avg,ICache Miss Median,ICache Miss Max,DCache Access Min,DCache Access Robust Avg,DCache Access Median,DCache Access Max,DCache Miss Min,DCache Miss Robust Avg,DCache Miss Median,DCache Miss Max
-Freertos,freertos_inheritance_test.txt,32,32,3083.38,3130.00,3112.88,5285.38,0.00,0.17,0.00,39.83,685.00,689.00,689.00,689.00,0.00,0.00,0.00,1.00
-Threadx,threadx_inheritance_test.txt,32,32,2026.46,2071.73,2063.46,3991.46,0.00,0.10,0.00,35.83,580.00,580.50,580.00,587.00,0.00,0.00,0.00,1.00
-Zephyr,zephyr_inheritance_test.txt,32,32,935.00,968.23,960.00,1876.00,0.00,0.00,0.00,18.00,206.00,206.88,206.00,209.00,0.00,0.00,0.00,1.00
