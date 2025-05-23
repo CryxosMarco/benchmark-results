@@ -47,7 +47,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
         ax.set_title(f"{test_type} - {metric}", fontsize=14)
         ax.set_xticks(x)
         ax.set_xticklabels(rtos_order, rotation=0)
-        ax.set_ylabel(metric)
+        ax.set_ylabel("Time Period Total")
         ax.grid(True, axis='y', linestyle='--', alpha=0.7)
 
         # Add text annotations above the bars
@@ -65,7 +65,7 @@ def plot_metrics_for_test_type(df, test_type, metrics, output_dir):
 
 if __name__ == "__main__":
     # Path to the input file (the previously generated CSV file)
-    base_dir = r"E:\IBV\PROJEKTE\MASTER_ARBEIT\WORKSPACE\Testergebnisse\thread_metric_benchmark"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     input_file = os.path.join(base_dir, "Test_Results.txt")
 
     # Folder for the output plots
