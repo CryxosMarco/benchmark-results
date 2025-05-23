@@ -120,7 +120,7 @@ def main():
     args = parser.parse_args()
 
     # Load overheads
-    cal_csv = os.path.normpath(os.path.join(args.folder, '..', 'pmu_calibration', 'calibration_stats.csv'))
+    cal_csv = os.path.normpath(os.path.join(args.folder, '..', '..', 'pmu_calibration', 'calibration_stats.csv'))
     cycle_overheads = read_calibration_stats(cal_csv)
 
     # Collect tests

@@ -26,6 +26,7 @@ import os
 import re
 import numpy as np
 import matplotlib.pyplot as plt
+import csv
 
 # ---------- Parsing Functions ----------
 
@@ -89,41 +90,23 @@ def parse_sync_file(filename):
             measurements.append(measurement)
     return measurements
 
-def parse_calibration_file(filename):
+def read_calibration_stats(filename):
     """
-    Parse a calibration log file.
-    Each calibration block (starting with a marker like "[Main] Starting PMU calibration Test.")
-    is split into profile sections (Profile Point: or Profile Entry:) and each section produces a measurement.
+    Reads calibration_stats.csv and returns a dict mapping lowercase RTOS names
+    to their mean overheads for cycle, icache, dcache_access, and dcache_miss.
     """
-    with open(filename, 'r') as f:
-        content = f.read()
-
-    blocks = re.split(r"\[Main\]\s+Starting PMU calibration Test\.", content)
-    calibrations = []
-    for block in blocks[1:]:
-        sections = re.split(r"Profile (?:Point|Entry):", block)
-        for section in sections[1:]:
-            cycle_match = re.search(r"Cycle Count:\s*(\d+)", section)
-            cycle_val = int(cycle_match.group(1)) if cycle_match else np.nan
-
-            icache_match = re.search(r"ICache Miss(?: Count)?:\s*(\d+)", section)
-            icache_val = int(icache_match.group(1)) if icache_match else np.nan
-
-            dcache_access_match = re.search(r"DCache Access(?: Count)?:\s*(\d+)", section)
-            dcache_access_val = int(dcache_access_match.group(1)) if dcache_access_match else np.nan
-
-            dcache_miss_match = re.search(r"DCache Miss(?: Count)?:\s*(\d+)", section)
-            dcache_miss_val = int(dcache_miss_match.group(1)) if dcache_miss_match else np.nan
-
-            calibration = {
-                'cycle_count': cycle_val,
-                'icache_miss': icache_val,
-                'dcache_access': dcache_access_val,
-                'dcache_miss': dcache_miss_val,
+    stats = {}
+    with open(filename, newline='') as cf:
+        reader = csv.DictReader(cf)
+        for row in reader:
+            rtos = row['RTOS'].lower()
+            stats[rtos] = {
+                'cycle': float(row['Mean_Overhead_Cycles']),
+                'icache': float(row.get('Mean_Overhead_ICache', 0.0)),
+                'dcache_access': float(row.get('Mean_Overhead_DCache_Access', 0.0)),
+                'dcache_miss': float(row.get('Mean_Overhead_DCache_Miss', 0.0))
             }
-            calibrations.append(calibration)
-    return calibrations
-
+    return stats
 # ---------- Statistical Functions ----------
 
 def robust_average(values, trim_fraction=0.1):
@@ -188,181 +171,108 @@ def compute_corrected_summary(raw_summary, calib_avgs):
             corrected[key] = raw_stat
     return corrected
 
+def bar_plot(metric, ylabel, title, filename, summary_dict):
+    """
+    Draws a bar chart of the robust averages for a given metric,
+    with RTOS-specific colors: Freertos=steelblue, ThreadX=forestgreen, Zephyr=darkorange.
+    """
+    rtoses = list(summary_dict.keys())
+    # map each RTOS to its specified color
+    color_map = {
+        'freertos': 'steelblue',
+        'threadx': 'forestgreen',
+        'zephyr':   'darkorange'
+    }
+    # collect values and corresponding colors
+    values = [summary_dict[r][metric]['robust_avg'] for r in rtoses]
+    colors = [color_map.get(r.lower(), 'gray') for r in rtoses]
+
+    plt.figure(figsize=(6, 4))
+    bars = plt.bar(rtoses, values, color=colors)
+    # annotate each bar with its height
+    for bar in bars:
+        h = bar.get_height()
+        plt.text(
+            bar.get_x() + bar.get_width() / 2, 
+            h, 
+            f"{h:.1f}", 
+            ha='center', 
+            va='bottom', 
+            fontsize=8
+        )
+
+    plt.xlabel("RTOS")
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.tight_layout()
+
+    os.makedirs("plots", exist_ok=True)
+    plt.savefig(os.path.join("plots", filename), dpi=300)
+    plt.close()
+
+
 # ---------- Main Workflow ----------
 
 def main():
     rtoses = ['freertos', 'threadx', 'zephyr']
-    metric_keys = ['time_period_total', 'cycle_count', 'icache_miss', 'dcache_access', 'dcache_miss']
+    metric_keys = ['time_period_total','cycle_count','icache_miss','dcache_access','dcache_miss']
 
-    # 1. Parse all Calibration Data.
-    calib_data = {}
-    for rtos in rtoses:
-        calib_file = f"{rtos}_pmu_calibaration.txt"
-        calib_data[rtos] = parse_calibration_file(calib_file) if os.path.exists(calib_file) else []
-    
-    # 2. Parse all Raw Test Data.
-    raw_data = {}
-    for rtos in rtoses:
-        raw_file = f"{rtos}_task_sync.txt"
-        raw_data[rtos] = parse_sync_file(raw_file) if os.path.exists(raw_file) else []
+    # 1. Read calibration overheads from CSV
+    calib_csv = os.path.join('..','..','pmu_calibration','calibration_stats.csv')
+    calibration_stats = read_calibration_stats(calib_csv)
 
-    # 3. Compute Robust Calibration Averages for Each RTOS.
-    calib_averages = {}
-    for rtos in rtoses:
-        calibs = calib_data[rtos]
-        if calibs:
-            calib_averages[rtos] = {}
-            for key in ['cycle_count', 'icache_miss', 'dcache_access', 'dcache_miss']:
-                values = [m[key] for m in calibs if not np.isnan(m[key])]
-                calib_averages[rtos][key] = robust_average(values) if values else np.nan
-        else:
-            calib_averages[rtos] = {key: np.nan for key in ['cycle_count', 'icache_miss', 'dcache_access', 'dcache_miss']}
+    # 2. Parse and correct raw measurements
+    raw_measurements = {}
+    for r in rtoses:
+        fname = f"{r}_task_sync.txt"
+        if not os.path.exists(fname):
+            raw_measurements[r] = []
+            continue
+        meas = parse_sync_file(fname)
+        # subtract calibration overheads
+        ov = calibration_stats.get(r, {})
+        for m in meas:
+            if 'cycle_count' in m and not np.isnan(m['cycle_count']):
+                m['cycle_count'] = max(m['cycle_count'] - ov.get('cycle',0.0), 0)
+            for key in ('icache_miss','dcache_access','dcache_miss'):
+                if key in m and not np.isnan(m[key]):
+                    m[key] = max(m[key] - ov.get(key.replace('_miss','').replace('_access',''),0.0), 0)
+        raw_measurements[r] = meas
 
-    # 4. Compute Raw Summary Statistics for Each RTOS.
+    # 3. Summaries
     raw_summary = {}
-    time_iteration_calc = {}
-    for rtos in rtoses:
-        if raw_data[rtos]:
-            raw_summary[rtos] = compute_summary(raw_data[rtos], metric_keys)
-        else:
-            raw_summary[rtos] = {key: {'min': np.nan, 'max': np.nan, 'jitter': np.nan, 'robust_avg': np.nan} for key in metric_keys}
-        # Calculate robust average of time_period_total and derive time per iteration.
-        # (Assuming the test runs for 30 seconds which equals 30,000,000 microseconds)
-        
-        time_per_iter_us = 30000000.0 / raw_summary[rtos]['time_period_total']['robust_avg'] if not np.isnan(raw_summary[rtos]['time_period_total']['robust_avg']) else np.nan
-        time_iteration_calc[rtos] = time_per_iter_us
+    for r in rtoses:
+        raw_summary[r] = compute_summary(raw_measurements[r], metric_keys)
 
-    # 5. Compute Corrected Summary Statistics.
-    # For each metric, subtract the calibration robust average from the raw robust average (and min/max).
     corrected_summary = {}
-    for rtos in rtoses:
-        # Create a dictionary of calibration averages for the relevant metrics.
-        calib_avgs = {}
-        for key in ['cycle_count', 'icache_miss', 'dcache_access', 'dcache_miss']:
-            calib_avgs[key] = calib_averages[rtos].get(key, np.nan)
-        # For time_period_total we do not subtract anything (or could be left raw).
-        calib_avgs['time_period_total'] = 0  
-        corrected_summary[rtos] = compute_corrected_summary(raw_summary[rtos], calib_avgs)
+    for r in rtoses:
+        calib = {
+            'cycle_count': calibration_stats.get(r,{}).get('cycle',0.0),
+            'icache_miss': calibration_stats.get(r,{}).get('icache',0.0),
+            'dcache_access': calibration_stats.get(r,{}).get('dcache_access',0.0),
+            'dcache_miss': calibration_stats.get(r,{}).get('dcache_miss',0.0),
+            'time_period_total': 0.0
+        }
+        corrected_summary[r] = compute_corrected_summary(raw_summary[r], calib)
 
-    # 6. Output Summary and Create Plots.
-    # Write summary.txt including both raw and corrected statistics.
-    with open("summary.txt", "w") as f:
-        for rtos in rtoses:
-            f.write(f"Summary for {rtos} (RAW Data):\n")
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n")
-            f.write("| Metric                    | Min           | Max           | Jitter        | Robust Avg     |\n")
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n")
-            for key in metric_keys:
-                stat = raw_summary[rtos][key]
-                f.write("| {:25} | {:13} | {:13} | {:13} | {:14} |\n".format(key, stat['min'], stat['max'], stat['jitter'], stat['robust_avg']))
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n\n")
-            
-            f.write(f"Summary for {rtos} (CORRECTED Data):\n")
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n")
-            f.write("| Metric                    | Min           | Max           | Jitter        | Corrected Avg  |\n")
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n")
-            for key in metric_keys:
-                stat = corrected_summary[rtos][key]
-                f.write("| {:25} | {:13} | {:13} | {:13} | {:14} |\n".format(key, stat['min'], stat['max'], stat['jitter'], stat['robust_avg']))
-            f.write("+---------------------------+---------------+---------------+---------------+----------------+\n\n")
-            f.write(f"Calculated robust time per iteration (us): {time_iteration_calc[rtos]}\n")
-            f.write("\n\n")
-    
-    import csv
+    # 4. Write summary.csv
+    with open("summary.csv","w", newline="") as cf:
+        w = csv.writer(cf)
+        w.writerow(["RTOS","Type","Metric","Min","Max","Jitter","Robust Avg"])
+        for r in rtoses:
+            for k in metric_keys:
+                s = raw_summary[r][k]
+                w.writerow([r,"RAW",k,s['min'],s['max'],s['jitter'],s['robust_avg']])
+            for k in metric_keys:
+                s = corrected_summary[r][k]
+                w.writerow([r,"CORRECTED",k,s['min'],s['max'],s['jitter'],s['robust_avg']])
 
-    # Define the CSV output file name.
-    output_csv = "summary.csv"
-    os.makedirs(os.path.dirname(output_csv) or ".", exist_ok=True)
-
-    with open(output_csv, "w", newline="") as csvfile:
-        csvwriter = csv.writer(csvfile)
-        
-        # Write header for the summary statistics section.
-        header = ["RTOS", "Data Type", "Metric", "Min", "Max", "Jitter", "Robust/Corrected Avg"]
-        csvwriter.writerow(header)
-        
-        # Loop over each RTOS and output both RAW and CORRECTED statistics.
-        for rtos in rtoses:
-            # RAW Data section.
-            for key in metric_keys:
-                stat = raw_summary[rtos][key]
-                row = [
-                    rtos,
-                    "RAW",
-                    key,
-                    stat['min'],
-                    stat['max'],
-                    stat['jitter'],
-                    stat['robust_avg']
-                ]
-                csvwriter.writerow(row)
-            # CORRECTED Data section.
-            for key in metric_keys:
-                stat = corrected_summary[rtos][key]
-                row = [
-                    rtos,
-                    "CORRECTED",
-                    key,
-                    stat['min'],
-                    stat['max'],
-                    stat['jitter'],
-                    stat['robust_avg']
-                ]
-                csvwriter.writerow(row)
-        
-        # Add a blank row as a separator.
-        csvwriter.writerow([])
-        
-        # Write header for the calculated robust time per iteration.
-        csvwriter.writerow(["RTOS", "Calculated robust time per iteration (us)"])
-        for rtos in rtoses:
-            csvwriter.writerow([rtos, time_iteration_calc[rtos]])
-
-    print(f"Summary CSV written to {output_csv}")
-    # Produce bar plots (one per metric) for both raw and corrected robust averages.
-    plots_dir = "plots"
-    if not os.path.exists(plots_dir):
-        os.makedirs(plots_dir)
-    
-    def bar_plot(metric, ylabel, title, filename, summary_dict, corrected=False):
-        # Build list of robust averages for each RTOS.
-        values = [summary_dict[rtos][metric]['robust_avg'] for rtos in rtoses]
-        plt.figure()
-        # plot bars in different colors
-        bars = plt.bar(rtoses, values, color=['steelblue', 'forestgreen', 'darkorange'])
-        for bar in bars:
-            height = bar.get_height()
-            plt.text(bar.get_x() + bar.get_width() / 2, height,
-                        f'{height:.1f}', ha='center', va='bottom', fontsize=8)
-        plt.xlabel("RTOS")
-        plt.ylabel(ylabel)
-        plt.title(title)
-        plt.savefig(os.path.join(plots_dir, filename), dpi = 300)
-        plt.close()
-    
-    # Raw data plots.
-    bar_plot('cycle_count', "Robust Average Cycle Count", 
-             "Raw Robust Average Cycle Count Comparison", "raw_robust_avg_cycle_count.png", raw_summary)
-    bar_plot('time_period_total', "Robust Average Time Period Total", 
-             "Raw Robust Average Time Period Total Comparison", "raw_robust_avg_time_period_total.png", raw_summary)
-    bar_plot('icache_miss', "Robust Average ICache Miss", 
-             "Raw Robust Average ICache Miss Comparison", "raw_robust_avg_icache_miss.png", raw_summary)
-    bar_plot('dcache_access', "Robust Average DCache Access", 
-             "Raw Robust Average DCache Access Comparison", "raw_robust_avg_dcache_access.png", raw_summary)
-    bar_plot('dcache_miss', "Robust Average DCache Miss", 
-             "Raw Robust Average DCache Miss Comparison", "raw_robust_avg_dcache_miss.png", raw_summary)
-    
-    # Corrected data plots.
-    bar_plot('cycle_count', "Corrected Cycle Count", 
-             "Corrected Robust Average Cycle Count Comparison", "corrected_robust_avg_cycle_count.png", corrected_summary)
-    bar_plot('time_period_total', "Corrected Time Period Total", 
-             "Corrected Robust Average Time Period Total Comparison", "corrected_robust_avg_time_period_total.png", corrected_summary)
-    bar_plot('icache_miss', "Corrected ICache Miss", 
-             "Corrected Robust Average ICache Miss Comparison", "corrected_robust_avg_icache_miss.png", corrected_summary)
-    bar_plot('dcache_access', "Corrected DCache Access", 
-             "Corrected Robust Average DCache Access Comparison", "corrected_robust_avg_dcache_access.png", corrected_summary)
-    bar_plot('dcache_miss', "Corrected DCache Miss", 
-             "Corrected Robust Average DCache Miss Comparison", "corrected_robust_avg_dcache_miss.png", corrected_summary)
+    # 5. Generate bar plots
+    bar_plot('cycle_count', "Cycle Count", "Corrected Robust Avg Cycle Count", "cycle_count_comparison.png", corrected_summary)
+    bar_plot('icache_miss', "ICache Miss", "Corrected Robust Avg ICache Miss", "icache_miss_comparison.png", corrected_summary)
+    bar_plot('dcache_access', "DCache Access", "Corrected Robust Avg DCache Access", "dcache_access_comparison.png", corrected_summary)
+    bar_plot('dcache_miss', "DCache Miss", "Corrected Robust Avg DCache Miss", "dcache_miss_comparison.png", corrected_summary)
+    bar_plot('time_period_total',"Time Period Total","Corrected Robust Avg Time Period Total","time_period_total_comparison.png",corrected_summary)
 
 if __name__ == "__main__":
     main()

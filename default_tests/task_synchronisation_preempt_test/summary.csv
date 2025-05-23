@@ -1,36 +1,31 @@
-RTOS,Data Type,Metric,Min,Max,Jitter,Robust/Corrected Avg
+RTOS,Type,Metric,Min,Max,Jitter,Robust Avg
 freertos,RAW,time_period_total,11038242.0,11038242.0,0.0,11038242.0
-freertos,RAW,cycle_count,1615.0,2632.0,1017.0,1622.0
+freertos,RAW,cycle_count,1393.53,2410.53,1017.0000000000002,1400.53
 freertos,RAW,icache_miss,0.0,16.0,16.0,0.0
 freertos,RAW,dcache_access,361.0,363.0,2.0,362.0
 freertos,RAW,dcache_miss,0.0,2.0,2.0,0.0
 freertos,CORRECTED,time_period_total,11038242.0,11038242.0,0.0,11038242.0
-freertos,CORRECTED,cycle_count,1408.375,2425.375,1017.0,1415.375
-freertos,CORRECTED,icache_miss,-0.16666666666666666,15.833333333333334,16.0,-0.16666666666666666
-freertos,CORRECTED,dcache_access,329.0,331.0,2.0,330.0
+freertos,CORRECTED,cycle_count,1172.06,2189.0600000000004,1017.0000000000002,1179.06
+freertos,CORRECTED,icache_miss,0.0,16.0,16.0,0.0
+freertos,CORRECTED,dcache_access,361.0,363.0,2.0,362.0
 freertos,CORRECTED,dcache_miss,0.0,2.0,2.0,0.0
 threadx,RAW,time_period_total,47249850.0,47249850.0,0.0,47249850.0
-threadx,RAW,cycle_count,656.0,1478.0,822.0,656.0
+threadx,RAW,cycle_count,434.13,1256.13,822.0000000000001,434.13
 threadx,RAW,icache_miss,0.0,15.0,15.0,0.0
 threadx,RAW,dcache_access,167.0,169.0,2.0,167.0
 threadx,RAW,dcache_miss,0.0,0.0,0.0,0.0
 threadx,CORRECTED,time_period_total,47249850.0,47249850.0,0.0,47249850.0
-threadx,CORRECTED,cycle_count,656.0,1478.0,822.0,656.0
+threadx,CORRECTED,cycle_count,212.26,1034.2600000000002,822.0000000000001,212.26
 threadx,CORRECTED,icache_miss,0.0,15.0,15.0,0.0
 threadx,CORRECTED,dcache_access,167.0,169.0,2.0,167.0
 threadx,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
 zephyr,RAW,time_period_total,54423559.0,54423559.0,0.0,54423559.0
-zephyr,RAW,cycle_count,444.0,703.0,259.0,444.0
+zephyr,RAW,cycle_count,411.17,670.17,258.99999999999994,411.17
 zephyr,RAW,icache_miss,0.0,4.0,4.0,0.0
 zephyr,RAW,dcache_access,114.0,114.0,0.0,114.0
 zephyr,RAW,dcache_miss,0.0,0.0,0.0,0.0
 zephyr,CORRECTED,time_period_total,54423559.0,54423559.0,0.0,54423559.0
-zephyr,CORRECTED,cycle_count,415.0,674.0,259.0,415.0
+zephyr,CORRECTED,cycle_count,378.34000000000003,637.3399999999999,258.99999999999994,378.34000000000003
 zephyr,CORRECTED,icache_miss,0.0,4.0,4.0,0.0
-zephyr,CORRECTED,dcache_access,97.0,97.0,0.0,97.0
+zephyr,CORRECTED,dcache_access,114.0,114.0,0.0,114.0
 zephyr,CORRECTED,dcache_miss,0.0,0.0,0.0,0.0
-
-RTOS,Calculated robust time per iteration (us)
-freertos,2.7178240882923204
-threadx,0.6349226505480969
-zephyr,0.5512318663320053
