@@ -166,7 +166,7 @@ def plot_cycle_counts(filename, analysis, rtos, size):
     plt.plot(iterations, combined_cycles, marker='o', label='Combined Cycle')
     plt.title(f"{rtos} {size*4} bytes send/received Cycle Count")
     plt.xlabel("Iteration")
-    plt.ylabel("Normalized Cycle Count")
+    plt.ylabel("adjusted Cycle Count")
     plt.legend()
     plt.grid(True)
 
@@ -196,7 +196,7 @@ def plot_combined_average_cycle_counts(summary):
         plt.plot(sizes, avg_cycles, marker='o', label=rtos)
 
     plt.xlabel("Message Size (bytes)")
-    plt.ylabel("Robust Average normalized Cycle Count")
+    plt.ylabel("Robust Average adjusted Cycle Count")
     plt.title("Comparison of Robust Average Cycle Counts Among RTOS over Message Sizes")
     plt.grid(True)
     plt.legend()
@@ -242,7 +242,7 @@ def plot_cache_comparison(summary):
             axs[i].set_xticks(x)
             axs[i].set_xticklabels(rtos_names)
             axs[i].set_title(f"{metric} (Msg Size: {size} bytes)")
-            axs[i].set_ylabel("Normalized Value")
+            axs[i].set_ylabel("adjusted Value")
             axs[i].grid(True, axis='y')
         plt.tight_layout()
         plt.savefig(os.path.join("plot", f"cache_comparison_{size}.png"), dpi=300)

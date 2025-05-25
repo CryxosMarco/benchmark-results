@@ -171,7 +171,7 @@ def main():
 
     # Plot 1: Cycle Count over Profile Points
     # Define consistent color mapping
-    color_map = {'Freertos': 'steelblue', 'Threadx': 'forestgreen', 'Zephyr': 'darkorange'}
+    color_map = {'Freertos': 'steelblue', 'Threadx': 'darkorange', 'Zephyr': 'forestgreen'}
     plt.figure(figsize=(8,6))
     for sys,data in tests.items():
         name = sys.capitalize()
@@ -204,7 +204,7 @@ def main():
     fig, ax = plt.subplots(figsize=(8,6))
 
     # Define consistent color mapping
-    color_map = {'Freertos': 'steelblue', 'Threadx': 'forestgreen', 'Zephyr': 'darkorange'}
+    color_map = {'Freertos': 'steelblue', 'Threadx': 'darkorange', 'Zephyr': 'forestgreen'}
 
     names = [it['system'] for it in summary]
     rob_cycles = [it['rob_cycle'] for it in summary]
@@ -215,12 +215,12 @@ def main():
     for bar in bars:
         h = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2, h, f'{h:.1f}', ha='center', va='bottom', fontsize=8)
-    ax.set_title('Average Normalized Cycle Count Comparison')
+    ax.set_title('Average adjusted Cycle Count Comparison')
     ax.set_xlabel('RTOS')
     ax.set_ylabel('Average Adjusted Cycle Count')
     ax.grid(axis='y')
     plt.tight_layout()
-    plt.savefig(os.path.join(out_dir,'average_normalized_cycle_comparison.png'), dpi=300)
+    plt.savefig(os.path.join(out_dir,'average_adjusted_cycle_comparison.png'), dpi=300)
     plt.close()
 
     # Plot 4: Average Locking Operations Comparison

@@ -239,7 +239,7 @@ def plot_overall_comparison(summary):
     avg_processing = [item['avg_overall'] for item in summary]
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(x, avg_processing, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = plt.bar(x, avg_processing, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     # Add text annotations above the bars
     for bar in bars:
         height = bar.get_height()
@@ -269,7 +269,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Total Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_totals, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_totals, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Total")
@@ -285,7 +285,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Percentage Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pcts, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_pcts, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Percentage (%)")
@@ -306,7 +306,7 @@ def plot_avg_cycle_comparison(summary):
 
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(x, avg_cycles, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = plt.bar(x, avg_cycles, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     # Add text annotations above the bars
     for bar in bars:
         height = bar.get_height()

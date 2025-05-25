@@ -180,8 +180,8 @@ def bar_plot(metric, ylabel, title, filename, summary_dict):
     # map each RTOS to its specified color
     color_map = {
         'freertos': 'steelblue',
-        'threadx': 'forestgreen',
-        'zephyr':   'darkorange'
+        'threadx': 'darkorange',
+        'zephyr':   'forestgreen'
     }
     # collect values and corresponding colors
     values = [summary_dict[r][metric]['robust_avg'] for r in rtoses]

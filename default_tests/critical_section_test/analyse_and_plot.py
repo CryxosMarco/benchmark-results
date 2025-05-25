@@ -184,7 +184,7 @@ def plot_pmu_metric(metric_label, values, rtos, base_filename):
     plt.figure(figsize=(8, 6))
     plt.plot(indices, values, 'bo-', label=metric_label)
     plt.xlabel("Profile Index")
-    plt.ylabel(f"normalized {metric_label}")
+    plt.ylabel(f"adjusted {metric_label}")
     plt.title(f"{rtos.capitalize()} - {metric_label} over Profile Points")
     plt.legend()
     plt.grid(True)
@@ -199,7 +199,7 @@ def plot_pmu_metric(metric_label, values, rtos, base_filename):
 def plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss):
     """
     Generate a single combined plot comparing cache metrics for one RTOS.
-    Plots ICache Miss, DCache Access, and DCache Miss (normalized values) versus profile point index.
+    Plots ICache Miss, DCache Access, and DCache Miss (adjusted values) versus profile point index.
     Saves the plot as "plot/<base_filename>_cache_comparison.png".
     """
     plt.figure(figsize=(8, 6))
@@ -210,7 +210,7 @@ def plot_cache_metrics(rtos, base_filename, icache, dcache_access, dcache_miss):
     if dcache_miss:
         plt.plot(np.arange(1, len(dcache_miss)+1), dcache_miss, 'go-', label="DCache Miss")
     plt.xlabel("Profile Point Index")
-    plt.ylabel("normalized Cache Metric")
+    plt.ylabel("adjusted Cache Metric")
     plt.title(f"{rtos.capitalize()} - Combined Cache Metrics")
     plt.legend()
     plt.grid(True)
@@ -231,7 +231,7 @@ def plot_overall_comparison(summary):
     avg_processing = [item['avg_overall'] for item in summary]
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(x, avg_processing, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = plt.bar(x, avg_processing, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     # Add text annotations above the bars
     for bar in bars:
         height = bar.get_height()
@@ -261,7 +261,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Total Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_totals, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_totals, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Total")
@@ -277,7 +277,7 @@ def plot_overall_jitter_comparison(summary):
     
     # Jitter Percentage Plot
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pcts, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_pcts, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
     plt.ylabel("Jitter Percentage (%)")
@@ -298,14 +298,14 @@ def plot_avg_cycle_comparison(summary):
 
     x = np.arange(len(rtoses))
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(x, avg_cycles, color=['steelblue', 'forestgreen', 'darkorange'])
+    bars = plt.bar(x, avg_cycles, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     # Add text annotations above the bars
     for bar in bars:
         height = bar.get_height()
         plt.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.1f}', ha='center', va='bottom')
     plt.xticks(x, rtoses)
     plt.xlabel("RTOS")
-    plt.ylabel("Average Cycle Count (PMU-normalized)")
+    plt.ylabel("Average Cycle Count (PMU-adjusted)")
     plt.title("Average Cycle Count Comparison Between RTOSes")
     plt.grid(True, axis='y')
     
@@ -349,7 +349,7 @@ def main():
 
         pmu_meas = parse_pmu_metrics(test_file, calibration)
         if pmu_meas:
-            # Build lists of normalized cache metrics
+            # Build lists of adjusted cache metrics
             icache         = [m.get('icache', 0.0)         for m in pmu_meas]
             dcache_access  = [m.get('dcache_access', 0.0)  for m in pmu_meas]
             dcache_miss    = [m.get('dcache_miss', 0.0)    for m in pmu_meas]

@@ -329,7 +329,7 @@ def main():
         values = [summary_dict[rtos][metric]['robust_avg'] for rtos in rtoses]
         plt.figure()
         # plot bars in different colors
-        plt.bar(rtoses, values, color=['steelblue', 'forestgreen', 'darkorange'])
+        plt.bar(rtoses, values, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
         plt.xlabel("RTOS")
         plt.ylabel(ylabel)
         plt.title(title)

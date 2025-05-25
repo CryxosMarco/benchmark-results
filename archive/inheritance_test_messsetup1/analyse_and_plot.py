@@ -277,7 +277,7 @@ def plot_cycle_jitter(summary):
     # Plot Absolute Jitter
     plt.figure(figsize=(8,6))
     x = np.arange(len(rtoses))
-    plt.bar(x, jitter_abs, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_abs, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.ylabel("Cycle Count Jitter (Absolute)")
     plt.title("Cycle Count Jitter (Absolute)")
@@ -288,7 +288,7 @@ def plot_cycle_jitter(summary):
     
     # Plot Percentage Jitter
     plt.figure(figsize=(8,6))
-    plt.bar(x, jitter_pct, color=['steelblue', 'forestgreen', 'darkorange'])
+    plt.bar(x, jitter_pct, color=['steelblue', 'darkorange', 'forestgreen'], edgecolor='black')
     plt.xticks(x, rtoses)
     plt.ylabel("Cycle Count Jitter (%)")
     plt.title("Cycle Count Jitter (%)")
