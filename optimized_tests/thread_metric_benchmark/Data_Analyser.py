@@ -1,6 +1,6 @@
 
 # Copyright (c) 2024 Marco Milenkovic IBV - Echtzeit- und Embedded GmbH & Co. KG
-#
+# MIT - Licence
 # This file is part of the Performance Evaluation of 
 # Synchronization and Context Switching in RTOS.
 #
